@@ -1,0 +1,6 @@
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Sevice\bin\Debug\TestingSystem.Sevice.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Sevice\bin\Debug\TestingSystem.Sevice.pdb
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Sevice\obj\Debug\TestingSystem.Sevice.csprojAssemblyReference.cache
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Sevice\obj\Debug\TestingSystem.Sevice.csproj.CoreCompileInputs.cache
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Sevice\obj\Debug\TestingSystem.Sevice.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Sevice\obj\Debug\TestingSystem.Sevice.pdb

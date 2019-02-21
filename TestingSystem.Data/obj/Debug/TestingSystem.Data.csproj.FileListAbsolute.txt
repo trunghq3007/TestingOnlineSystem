@@ -1,0 +1,16 @@
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll.config
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Data.pdb
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Models.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Models.pdb
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.xml
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csprojAssemblyReference.cache
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CoreCompileInputs.cache
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CopyComplete
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.pdb
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.AddGroupTable.resources
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.GenerateResource.cache

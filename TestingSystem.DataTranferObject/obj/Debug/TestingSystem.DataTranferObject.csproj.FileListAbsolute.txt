@@ -1,0 +1,6 @@
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.pdb
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csprojAssemblyReference.cache
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CoreCompileInputs.cache
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.dll
+D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.pdb
