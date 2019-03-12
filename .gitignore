@@ -1,0 +1,17 @@
+
+*.cache
+
+/.vs
+/TestingSystem.Sevice/obj
+/TestingSystem.Sevice/bin
+/TestingSystem.Models/obj
+/TestingSystem.Models/bin
+/TestingSystem.Data/obj
+/TestingSystem.Data/bin
+/TestingSystem.DataTranferObject/obj
+/TestingSystem.DataTranferObject/bin
+/TestingSystem/obj
+/TestingSystem/bin
+/TestingSystem.Common/obj
+/TestingSystem.Common/bin
+/.vs/TestingSystem/v15/*.suo

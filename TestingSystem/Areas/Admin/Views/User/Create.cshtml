@@ -1,0 +1,119 @@
+﻿@model TestingSystem.Models.User
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<section class="content-header">
+    <h1>
+        Create User
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li><a href="#">UserAccount</a></li>
+        <li class="active">Create</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Create</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate role="form" action="@Url.Action("Create", "User", new { area = "Admin" })" method="post">
+            @Html.AntiForgeryToken()
+            <div class="box-body">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">UserName</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group has-feedback">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="Password" id="Password"
+                               required="Password is a required field"
+                               pattern=".{5,16}" title="Password must have 5-16 characters"
+                               class="form-control" placeholder="Password">
+                        <span class="glyphicon fa fa-key form-control-feedback"></span>
+                    </div>
+                    @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
+                    <div class="col-sm-6">
+                        <input type="password" name="comfirmPassword" id="password2"
+                               required="Retype password is a required field"
+                               pattern=".{5,16}" title="Password must have 5-16 characters"
+                               class="form-control" placeholder="Retype password">
+                        <span class="glyphicon fa fa-key form-control-feedback"></span>
+                    </div>
+                </div>
+            
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Role</label>
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.RoleId, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Name</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Note</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Note, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Note, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Address</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Status</label>
+                    <div class="col-sm-6">
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="Status" id="checkbox" onchange="checkstatus(this)"> Active</label>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <a href="Index"><div ui-sref="products" class="btn btn-default" disableValidation="true">Cancel</div></a>
+                <button type="submit" class="btn btn-success pull-right">Save</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section>
+<script language="JavaScript">
+    function checkstatus(id) {
+        if (id.checked == true)
+            id.value = 1
+        else
+            id.value = 0;
+    }
+
+</script>

@@ -1,0 +1,72 @@
+﻿@using Unity.Injection
+@model TestingSystem.DataTranferObject.MatrixRoleAction
+@{
+    ViewBag.Title = "ActionRole";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Matrix Role Action</h2>
+@{
+    var action = @Model.ListAction;
+    var role = @Model.ListRoles;
+    var maxtrixData = @Model.ListRoleActions;
+
+}
+
+
+<table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%;">
+    <tr>
+        <th> Action/ Role</th>
+        @foreach (var item in @role)
+        {
+            <th>@item.RoleName</th>
+        }
+    </tr>
+    @for (int j = 0; j < @action.Count(); j++)
+    {
+        <tr>
+            <th>@action.ElementAt(j).ActionName</th>
+            @for (int i = 0; i < @role.Count(); i++)
+            {
+                <th>
+                    @foreach (var item in @maxtrixData)
+                    {
+                        if (@item.ActionId == @action.ElementAt(j).ActionId && @item.RoleId == @role.ElementAt(i).RoleId)
+                        {
+                            if (@item.IsTrue == true)
+                            {
+                                <input id="@item.Id" type="checkbox" name="cb" value="" checked="checked" onclick="handleClick(this);"><br>
+                            }
+                            else
+                            {
+                                <input id="@item.Id" type="checkbox" name="cb" value="" onclick="handleClick(this);"><br>
+                            }
+                            <script>
+                                function handleClick(cb) {
+                                    @item.IsTrue = cb.checked;   
+                                    display("Click, new value = " + @item.IsTrue);
+                                }
+                                function display(msg) {
+                                    var p = document.createElement('p');
+                                    p.innerHTML = msg;
+                                    document.body.appendChild(p);
+                                }
+                            </script>                                              
+                        }
+                    }
+                </th>
+            }
+        </tr>
+    }
+</table>
+<form class="form-horizontal" novalidate role="form" action="@Url.Action("ActionRole", "Role", new {area = "Admin"})" method="post">
+    @for (int i = 0; i < @maxtrixData.Count(); i++)
+    {
+        <input type="hidden" name="actionResults[@i].Id" value="@maxtrixData.ElementAt(i).Id" />
+        <input type="hidden" name="actionResults[@i].RoleId" value="@maxtrixData.ElementAt(i).RoleId" />
+        <input type="hidden" name="actionResults[@i].ActionId" value="@maxtrixData.ElementAt(i).ActionId" />
+        <input type="hidden" name="actionResults[@i].IsTrue" value="@maxtrixData.ElementAt(i).IsTrue" />
+    }
+    <input type="submit" />
+</form>
+

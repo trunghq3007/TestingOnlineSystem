@@ -1,0 +1,70 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Khôi phục mật khẩu</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo">
+            <a href="/"><b>Reset password</b></a>
+        </div>
+        <div class="register-box-body">
+            <p class="login-box-msg">Reset password:</p>
+            @*@using (Html.BeginForm(new {@id="form-login"}))*@
+            <form id="form-login" method="post">
+                <input type="hidden" name="email" value="@ViewBag.email"/>
+                <div class="form-group has-feedback">
+                    <input type="password" name="pass"
+                           required="Password is a required field"
+                           pattern=".{5,16}" title="Password must have 5-16 characters"
+                           class="form-control" placeholder="New password">
+                    <span class="glyphicon fa fa-key form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="comfirmpass"
+                           required="Password is a required field"
+                           pattern=".{5,16}" title="Password must have 5-16 characters"
+                           class="form-control" placeholder="Retype password">
+                    <span class="glyphicon fa fa-key form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <a href="/Login" class="text-center">Sign in.</a>
+                    </div>
+                    <!-- /.col -->
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Change</button>
+                    </div>
+                    <!-- /.col -->
+                </div>
+            </form>
+        </div>
+        <!-- /.form-box -->
+    </div>
+    <!-- /.register-box -->
+    <!-- jQuery 3 -->
+    <script src="~/Assets/AdminLayout/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/Assets/AdminLayout/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Assets/AdminLayout/plugins/iCheck/icheck.min.js"></script>
+</body>
+</html>
+

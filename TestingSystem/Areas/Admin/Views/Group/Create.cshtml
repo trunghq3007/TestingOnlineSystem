@@ -1,0 +1,81 @@
+﻿@model TestingSystem.Models.Group
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<section class="content-header">
+    <h1>
+        Thêm Nhóm
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Group</a></li>
+        <li class="active">Add Group</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Add Group</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal box-body">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.GroupId)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GroupName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.GroupName, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" name="GroupName" id="GroupName" onchange="UserCheckCreate()" value="">
+                        @Html.ValidationMessageFor(model => model.GroupName, "", new { @class = "text-danger" })
+                        <p id="Status2"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn-sm btn-primary" style="border: none;" id="btnsub2">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div><!-- /.box -->
+    <a href="@Url.Action("Index")"><button class="btn btn-success">Back</button></a>
+</section>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<script>
+    function UserCheckCreate() {
+        $("#Status2").html("Checking...");
+        $.post("@Url.Action("_CheckGroupNameAvailableCreate", "Group")",
+            {
+                userdata: $("#GroupName").val()
+            },
+        function (data) {
+            if (data == 0) {
+                $("#Status2").html('<font color="Green">Available !. you can take it.</font>');
+                $("#GroupName").css("border-color", "Green");
+                $("#btnsub2").css("display", "block");
+            }
+            else {
+                $("#Status2").html('<font color="Red">Group Name Exists!</font>');
+                $("#GroupName").css("border-color", "Red");
+                $("#btnsub2").css("display", "none");
+            }
+        });
+    }
+</script>

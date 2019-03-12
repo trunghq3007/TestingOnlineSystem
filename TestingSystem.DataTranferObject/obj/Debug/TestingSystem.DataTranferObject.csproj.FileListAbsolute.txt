@@ -1,6 +1,60 @@
-D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.dll
-D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.pdb
-D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csprojAssemblyReference.cache
-D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CoreCompileInputs.cache
-D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.dll
-D:\TheAnh\Mock 1- Project\Project\TestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.pdb
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.pdb
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.Models.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.Mvc.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Razor.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.Razor.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.Models.pdb
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.Mvc.xml
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.xml
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Razor.xml
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.Razor.xml
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csprojAssemblyReference.cache
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CoreCompileInputs.cache
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CopyComplete
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.dll
+D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.pdb
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.pdb
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.Models.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.Mvc.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.Razor.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.Models.pdb
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.Mvc.xml
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.xml
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.Razor.xml
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csprojAssemblyReference.cache
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CopyComplete
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.dll
+C:\Users\admin\Desktop\New folder\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.pdb
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.DataTranferObject.pdb
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.Models.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.Mvc.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Razor.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.Razor.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\TestingSystem.Models.pdb
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.Mvc.xml
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.xml
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Razor.xml
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.Razor.xml
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csprojAssemblyReference.cache
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CoreCompileInputs.cache
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.csproj.CopyComplete
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.dll
+D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.DataTranferObject\obj\Debug\TestingSystem.DataTranferObject.pdb

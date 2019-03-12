@@ -1,0 +1,54 @@
+﻿@model TestingSystem.DataTranferObject.RoleDetail
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<section class="content-header">
+    <h1>
+       Role Detail
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Tài khoản</a></li>
+        <li class="active">Thêm mới</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title"> Role Detail</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate role="form" action="@Url.Action("Detail","Role",new {area ="Admin" })" method="get">
+            <div class="box-body">
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Role Name</label>
+                    <div class="col-sm-6">
+                        <label for="inputEmail3" class="col-sm-2 control-label">@Model.Role.RoleName</label>    
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Role Description</label>
+                    <div class="col-sm-6">
+                        <label for="inputEmail3" class="col-sm-2 control-label">@Model.Role.Description</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Role Action :</label>
+                    <div class="col-sm-6">
+                        @foreach (var item in @Model.ListAction)
+                        {
+                            <button class="btn" disabled>@item.ActionName</button>
+                        }
+                    </div>
+                </div>
+                
+
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <button class="btn"> @Html.ActionLink("Back", "Index", "Role")</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section>

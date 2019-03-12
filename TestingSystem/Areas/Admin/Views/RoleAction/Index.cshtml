@@ -1,0 +1,117 @@
+﻿@model TestingSystem.DataTranferObject.MatrixRoleAction
+@{
+    ViewBag.Title = "ActionRole";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var action = @Model.ListAction;
+    var role = @Model.ListRoles;
+    var maxtrixData = @Model.ListRoleActions;
+}
+<link href="~/Assets/RoleAction/style.css" rel="stylesheet" />
+<section class="content-header">
+    <h1>
+        Bảng phân quyền
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Trang chủ</a></li>
+        <li><a href="#">Phân quyền</a></li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Bảng phân quyền:</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <div class="formm">
+            <form class="form-horizontal" action="/Admin/RoleAction/Index" method="post">
+                <table style="font-family: arial, sans-serif; border-collapse: collapse; width: 100%; padding: 10px">
+                    <tr class="headerr">
+                        <th width="5%" class="text-left">Thao tác</th>
+                        @foreach (var item in @role)
+                        {
+                            <th style="text-align: center">@item.RoleName</th>
+                        }
+                    </tr>
+                    @for (int j = 0; j < @action.Count(); j++)
+                    {
+                        <tr>
+                            @if (action.ElementAt(j).Description != "(Tự động quét)")
+                            {
+                                <th class="text-left">@action.ElementAt(j).Description</th>
+                            }
+                            else
+                            {
+                                <th class="text-left">
+                                    <i style="font-weight: 100">
+                                        @action.ElementAt(j).ActionName
+                                        (Không có chi tiết)
+                                    </i>
+                                </th>
+                            }
+                            @for (int i = 0; i < @role.Count(); i++)
+                            {
+                                <th class="text-center">
+                                    @foreach (var item in @maxtrixData)
+                                    {
+                                        if (@item.ActionId == @action.ElementAt(j).ActionId && @item.RoleId == @role.ElementAt(i).RoleId)
+                                        {
+                                            <div class="form-check">
+                                                <label>
+                                                    <input type="checkbox" name="list" value="@item.Id" checked='@item.IsTrue'>
+                                                    <span class="label-text"></span>
+                                                </label>
+                                            </div>
+                                        }
+                                    }
+
+                                </th>
+                            }
+                        </tr>
+                    }
+                </table>
+                <br />
+                <a href="/Admin/HomeAdmin"><div ui-sref="products" class="btn btn-default">Hủy</div></a>
+                <button type="submit" class="btn btn-success pull-right" onclick="Load();">Lưu</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<div class="load-wrapp">
+    <div class="load-5">
+        <p>Updating... Please wait some seconds...</p>
+        <div class="ring-2">
+            <div class="ball-holder">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<link href="~/Content/loadding.css" rel="stylesheet" />
+<script>
+    function Load() {
+        var a=confirm('Cảnh báo','Bạn có thực sự muốn quét lại chức năng của hệ thống?');
+        if(a) {
+            $(".load-wrapp").show();
+            return a;
+        }
+    }
+</script>
+
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        if (window.innerWidth > 999) {
+            $(window).scroll(function () {
+                if ($(window).scrollTop() >= 50) {
+                    $('.headerr').css('position', 'fixed');
+                } else {
+                    $('.headerr').css('position', 'relative');
+                }
+            });
+        }
+    };
+</script>
+

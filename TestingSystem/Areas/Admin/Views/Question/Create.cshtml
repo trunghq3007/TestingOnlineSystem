@@ -1,0 +1,322 @@
+﻿
+@using TestingSystem.DataTranferObject.Question
+@using TestingSystem.Models
+@model List<TestingSystem.Models.Answer>
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var listCategories = ViewData["Category"] as List<QuestionCategory>;
+    var listLevels = ViewData["Level"] as List<Level>;
+    int count = 0;
+}
+<style>
+    .card {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+</style>
+<section class="content-header">
+    <h1>
+        Create Question
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href=""><i class="fa fa-dashboard"></i>Home</a></li>
+        <li class="active"><a href="">Question</a> </li>
+        <li class="active"><a href="">Create</a> </li>
+    </ol>
+    <br />
+    <div class="box">
+        <div class="clearfix"></div>
+    </div>
+</section>
+
+<div class="card">
+    <p></p>
+    <div class="card-body">
+        <form action="/Admin/Question/Create" method="post" enctype="multipart/form-data" onsubmit="return Validate()">
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    <label class="control-label col-md-2 " style="margin-bottom: 10px" for="Content">Content Question</label>
+                    <div class="col-md-10">
+                        <textarea class="myin" name="Content" id="Content" required></textarea>
+                        <span class="check-input" style="color:red;display:none">Please input Content Question!</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2 " for="imgInp">Image</label>
+                    <div class="col-md-10">
+                        <img id="FileImage" src="~/Content/QuestionUpload/Images/noimage.png" alt="your image" class="img-thumbnail" width="150" />
+                        <input type="file" name="Image" class="form-control" id="imgInp" style="width: 375px;" />
+                    </div>
+                </div>
+                <label class="control-label col-md-2" for="Level">Level</label>
+                <div class="col-md-10">
+                    <div class="input-group mb-3">
+                        <select class="form-control myin" id="Level" name="Level" style="margin-left:-9px;width: 375px; margin-bottom:15px" required>
+                            <option value="" selected disabled hidden>--Choice one--</option>
+                            @foreach (var item in listLevels)
+                            {
+                                <option value="@item.LevelStep">@item.Name</option>
+                            }
+                        </select>
+                        <span class="check-input" style="color:red;display:none">Please choice Level!</span>
+                    </div>
+                </div>
+                <label class="control-label col-md-2" for="CategoryID">Category</label>
+                <div class="col-md-10">
+                    <div class="input-group mb-3">
+                        <select class="form-control myin" id="CategoryID" name="CategoryID" style="margin-left: -8px;width: 375px; float: left" required>
+                            <option value="" selected disabled hidden>--Choice one--</option>
+                            @if (listCategories != null)
+                            {
+                                foreach (var item in listCategories)
+                                {
+                                    <option value="@item.CategoryID">@item.Name</option>
+                                }
+                            }
+                        </select>
+                        <button class="btn btn-danger" type="button" data-toggle="modal" data-target="#ModalAddCate" style="">+</button>
+                        <span class="check-input" style="color:red;display:none">Please choice Category!</span>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-md-2" for="checkActive" style="margin-top: 14px;">Is Active</label>
+                    <div class="col-md-10 ">
+                        <input type="checkbox" id="checkActive" name="IsActive" value="true" style="margin-top: 21px;margin-left: 3px;">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" style="padding-bottom: 25px;">
+                <table id="dataTable" class="table table-bordered" cellpadding="0" cellspacing="0" style="margin-left:44px">
+                    <tr>
+                        <th></th>
+                        <th>Answer Content</th>
+                        <th>IsCorrect</th>
+                        <th><input type="button" class="btn btn-success" id="addNew" value="Add More Aswer" style="float: left;margin-right:40px;" /></th>
+                    </tr>
+                    @if (Model != null && Model.Count > 0)
+                    {
+                        int j = 0;
+                        foreach (var i in Model)
+                        {
+                            // count++;
+                            <tr style="border:1px solid black">
+                                <td style="text-align:center;"><b>Answer</b></td>
+                                <td>
+                                    @Html.TextBoxFor(a => a[j].AnswerContent, new { @class = "form-control myin", required = "required" })
+                                    <span class="check-input" style="color:red;display:none">Please input Content Aswer!</span>
+                                </td>
+
+                                <td>@Html.CheckBoxFor(a => a[j].IsCorrect, new { @id = "chk1", @class = "chkWebSite", value = "true" })</td>
+                                <td>
+                                    @if (j > 0)
+                                    {
+                                        <a href="#" class="remove">Remove</a>}
+                                </td>
+                            </tr>
+                            j++;
+                        }
+                    }
+                </table>
+                <div style="margin-left: 178px">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                    <a class="btn btn-info" href="/Admin/Question/Index">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="ModalAddCate" tabindex="-1" role="dialog" aria-labelledby="ModalAddCate" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Category</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="Name">Category Name</label>
+                    <input type="text" name="Name" class="form-control" id="cateName" onchange="CategoryCheckCreate()" />
+                    <span id="checkExist"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="AddCate">Add</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/Question/ckeditor/ckeditor.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        CKEDITOR.replace('Content');
+    });
+</script>
+<script>
+    function readURL(input) {
+
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#FileImage').attr('src', e.target.result);
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+
+    $("#imgInp").change(function () {
+        readURL(this);
+    });
+</script>
+<script>
+    $('#AddCate').off('click').click(function () {
+        debugger;
+        var catename = $('[name=Name]');
+        var validate = false;
+        if (catename.val() === "") {
+            catename.css('border', '1px solid red');
+        }
+        else {
+            catename.css('border', '1px solid green');
+            validate = true;
+        }
+        if (validate) {
+            var categoryObj = {
+                Name: $('[name=Name]').val(),
+                IsActive: $('[name=IsActive]').val()
+            };
+            $.ajax({
+                url: "/Admin/Question/AddCategory",
+                type: 'POST',
+                dataType: 'JSON',
+                data: JSON.stringify(categoryObj),
+                contentType: "application/json",
+                success: function (result) {
+                    //if (result > 0) {
+                    $('#CategoryID').append($('<option>', {
+                        value: result,
+                        text: catename.val()
+                    }));
+                    $("#ModalAddCate").modal("hide");
+                    $("#cateName").val('');
+                    // }
+                    //else {
+                    //    console.log('Add Category Fail!');
+                    //}
+                }
+            });
+        }
+    });
+
+</script>
+
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script language="javascript">
+    $(document).ready(function () {
+        //1. Add new row
+        $("#addNew").click(function (e) {
+            e.preventDefault();
+            var $tableBody = $("#dataTable");
+            var $trLast = $tableBody.find("tr:last");
+            var $trNew = $trLast.clone();
+
+            var suffix = $trNew.find(':input:first').attr('name').match(/\d+/);
+            $trNew.find("td:last").html('<a href="javascript:void(0)" class="remove">Remove</a>');
+
+            $.each($trNew.find(':input'), function (i, val) {
+                // Replaced Name
+                var oldN = $(this).attr('name');
+                var newN = oldN.replace('[' + suffix + ']', '[' + (parseInt(suffix) + 1) + ']');
+                $(this).attr('name', newN);
+                //Replaced value
+                var type = $(this).attr('type');
+                if (type.toLowerCase() == "text") {
+                    $(this).attr('value', '');
+                }
+
+                // If you have another Type then replace with default value
+                $(this).removeClass("input-validation-error");
+
+            });
+            $trLast.after($trNew);
+
+            // Re-assign Validation
+            var form = $("form")
+                .removeData("validator")
+                .removeData("unobtrusiveValidation");
+            $.validator.unobtrusive.parse(form);
+        });
+
+        // 2. Remove
+
+        setTimeout(function () {
+            $('a.remove').on("click", function (e) {
+                debugger;
+                e.preventDefault();
+                $(this).parent().parent().remove();
+            });
+        },
+            3000);
+    });
+</script>
+<script>
+    function Validate() {
+        var item = document.getElementsByClassName('myin');
+        var item1 = document.getElementsByClassName('check-input');
+        var valid = true;
+        for (var i = 0; i < item.length; i++) {
+            if (item[i].value == "") {
+                item[i].style.border = '1px solid red';
+                item1[i].style.display = 'block';
+                valid = false;
+            }
+            if (item[i].value != "") {
+                item[i].style.border = '1px solid gray';
+                item1[i].style.display = 'none';
+            }
+        }
+        return valid;
+    }
+</script>
+<script>
+    function CategoryCheckCreate() {
+        $("#checkExist").html("Checking...");
+        $.post("@Url.Action("_CheckCategoryNameAvailableCreate", "Question")",
+            {
+                userdata: $("#cateName").val()
+            },
+            function (data) {
+                if (data == 0) {
+                    $("#checkExist").html('<font color="Green">Available !. you can take it.</font>');
+                    $("#cateName").css("border-color", "Green");
+                    $("#AddCate").css("display", "inline-block");
+                }
+                else {
+                    $("#checkExist").html('<font color="Red">Group Name Exists!</font>');
+                    $("#cateName").css("border-color", "Red");
+                    $("#AddCate").css("display", "none");
+                }
+            });
+    }
+</script>
+
+
+
+
+

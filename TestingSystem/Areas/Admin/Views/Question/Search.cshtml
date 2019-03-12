@@ -1,0 +1,240 @@
+﻿@using TestingSystem.DataTranferObject.Question
+@using TestingSystem.Models
+@model IEnumerable<TestingSystem.DataTranferObject.Question.QuestionDto>
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    int stt = 0;
+    var listCategories = ViewData["Category"] as List<QuestionCategory>;
+    var listLevels = ViewData["Level"] as List<Level>;
+}
+<style>
+</style>
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Question
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i>Home</a></li>
+        <li class="active"><a href="">Question</a> </li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="clearfix"></div>
+            </div>
+
+            <!-- /.box-header -->
+            <div class="box-body">
+                @using (Html.BeginForm("Search", "Question", FormMethod.Post))
+                {
+                    <div class="row">
+                        <div class="col-md-6" style="margin-bottom:15px">
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="" name="keySearch" placeholder="Key Search">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Search</button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="@Url.Action("Create","Question")">
+                                <div class="btn btn-success">Create</div>
+                            </a>
+                            <a href="@Url.Action("QuestionExcelAnswer","Question")">
+                                <div class="btn btn-success"><span class="glyphicon glyphicon-open"></span>Import Question</div>
+                            </a>
+                        </div>
+                    </div>
+                }
+                <!-- tools box -->
+                <div class="box box-solid collapsed-box" style="background-color:#ecf0f5">
+                    <div class="box-header ui-sortable-handle" style="cursor: move;">
+                        <!-- tools box -->
+                        <div class="pull-right box-tools">
+                            <button type="button" id="clickfilter" class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="" style="margin-right: 5px;" data-original-title="Collapse">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- /. tools -->
+                        <i class="fa fa-filter"></i>
+                        <h3 class="box-title" for="clickfilter">
+                            Filter
+                        </h3>
+                    </div>
+                    <div class="box-body">
+                        <div class="container" style="width: 100%">
+                            <form action="/Admin/Question/Index" method="post">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <div class="form-group">
+                                            <label for="">Create By</label>
+                                            <input type="text" class="form-control" id="CreatedByFilter" name="CreatedBy" style="width: 249px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="">From Date</label>
+                                            <input type="date" class="form-control" id="FromDate" name="FromDate" style="width: 162px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="">To Date</label>
+                                            <input type="date" class="form-control" id="ToDate" name="ToDate" style="width: 162px;">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="">Category</label>
+                                            <select class="form-control" id="CategoryIDFilter" name="CategoryID" style="width: 160px;">
+                                                <option value="" selected disabled hidden>--Choice one--</option>
+                                                @if (listCategories != null)
+                                                {
+                                                    foreach (var item in listCategories)
+                                                    {
+                                                        <option value="@item.CategoryID">@item.Name</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-2">
+                                        <div class="form-group">
+                                            <label for="">Level</label>
+                                            <select class="form-control" id="LevelFilter" name="Level" style="width: 160px;">
+                                                <option value="" selected disabled hidden>--Choice one--</option>
+                                                @if (listLevels != null)
+                                                {
+                                                    foreach (var item in listLevels)
+                                                    {
+                                                        <option value="@item.LevelStep">@item.Name</option>
+                                                    }
+                                                }
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-1">
+                                        <input type="submit" style="margin-top: 24px;" id="btnFilter" value="Filter" class="btn btn-warning" />
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <form action="@Url.Action("Delete", "Question")" id="form-delete" method="post">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)" /></td>
+                                <th width="7%">STT</th>
+                                <th>Content</th>
+                                <th>Category</th>
+                                <th>Level</th>
+                                <th>IsActive</th>
+                                @*<th width="5%">Created</th>*@
+                                <th width="7%">Date</th>
+                                <th width="12%">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                stt++;
+                                <tr>
+                                    <td><input type="checkbox" id="checkone" name="ids" value="@item.QuestionID" onchange="changee(this);" /></td>
+                                    <td>@stt</td>
+                                    <td>
+                                        @Html.Raw(HttpUtility.HtmlDecode(@item.Content))
+                                    </td>
+                                    @*@{
+                                            if (item.Image != null)
+                                            {
+                                                <td><img src="/Content/QuestionUpload/Images/@item.Image" width="90px" /></td>
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                            }
+                                        }*@
+
+                                    <td>@item.CategoryName</td>
+                                    <td>@item.LevelName</td>
+                                    <td><input type="checkbox" checked="@item.IsActive" disabled="" /></td>
+                                    @*<td>@item.CreatedName</td>*@
+                                    <td>@Convert.ToDateTime(@item.CreatedDate).ToString("dd/MM/yyyy")</td>
+                                    <td>
+                                        <a href='@Url.Action("Edit", "Question", new {id = @item.QuestionID})'>
+                                            <div class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></div>
+                                        </a>
+                                        <a href='@Url.Action("Detail", "Question", new {id = @item.QuestionID})'>
+                                            <div class="btn  btn-sm btn-success"><i class="fa fa-eye"></i></div>
+                                        </a>
+                                        <a href='@Url.Action("Delete", "Question", new {ids = @item.QuestionID})' onclick="return confirm('Are you sure you want to Delete?');">
+                                            <div class="btn  btn-sm btn-danger"><i class="fa fa-trash"></i></div>
+                                        </a>
+
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                    <a onclick="return confirm('Are you sure you want to Multi Delete?');">
+                        <button type="submit" class="btn btn-danger" id="btn-delete" disabled>Delete</button>
+                    </a>
+                </form>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+<script language="JavaScript">
+    function Check(source) {
+        checkboxes = document.getElementsByName('ids');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+        if (source.checked == true)
+            document.getElementById("btn-delete").disabled = false;
+        else
+            document.getElementById("btn-delete").disabled = true;
+    }
+
+    function changee(id) {
+        var j = 0;
+        checkboxes = document.getElementsByName('ids');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            if (checkboxes[i].checked == true)
+                j = 1;
+        }
+        if (j == 1) {
+            document.getElementById("btn-delete").disabled = false;
+        }
+        else {
+            document.getElementById("btn-delete").disabled = true;
+        }
+    }
+    function reload(val) {
+        window.location.href = "User?filter=" + val.value;
+    }
+    function status(val) {
+        window.location.href = "User?status=" + val.value;
+    }
+</script>
+
+
+
+

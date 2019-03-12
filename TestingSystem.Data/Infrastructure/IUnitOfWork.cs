@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestingSystem.Data.Infrastructure
+﻿namespace TestingSystem.Data.Infrastructure
 {
+    /// <summary>
+    /// Defines the <see cref="IUnitOfWork" />
+    /// </summary>
     public interface IUnitOfWork
     {
+        /// <summary>
+        /// The Commit
+        /// </summary>
         void Commit();
     }
 }

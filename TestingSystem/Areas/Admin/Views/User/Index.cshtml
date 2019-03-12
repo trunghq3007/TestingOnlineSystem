@@ -1,0 +1,208 @@
+﻿@model TestingSystem.Models.User
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    int stt = 0;
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        List account
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Account</a></li>
+        <li class="active">List user</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            @*<div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Hiển thị danh sách tài khoản</h3>
+                </div>
+                <div class="clearfix"></div>
+            </div>*@
+            <!-- /.box-header -->
+            <div class="box-body">
+                @using (Html.BeginForm("Index", "User", FormMethod.Get))
+                {
+                    <div class="row">
+                        <div class="col-md-6" style="margin-bottom:15px">
+                            <div class="input-group">
+                                <input type="text" class="form-control" value="@ViewBag.SearchString" name="SearchString" placeholder="Keyword">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Search</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div>
+                        <div class="col-md-6">
+                            <a href="/Admin/User/Create">
+                                <div class="btn btn-success">Create</div>
+                            </a>
+                        </div>
+                    </div>
+                }
+                <div class="box box-solid collapsed-box" style="background-color:#ecf0f5">
+                    <div class="box-header ui-sortable-handle" style="cursor: move;">
+                        <!-- tools box -->
+                        <div class="pull-right box-tools">
+                            <button type="button" class="btn btn-primary btn-sm pull-right" data-widget="collapse" data-toggle="tooltip" title="" style="margin-right: 5px;" data-original-title="Collapse">
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </div>
+                        <!-- /. tools -->
+
+                        <i class="fa fa-filter"></i>
+
+                        <h3 class="box-title">
+                            Filter
+                        </h3>
+                    </div>
+                    <div class="box-body" style="">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="exampleSelect1">Role</label>
+                                        <select class="form-control" name="filter" id="selectRole" onchange="reload(this);">
+                                            <option>--Roles--</option>
+                                            @foreach (var item in ViewBag.role)
+                                            {
+                                                <option value="@item.RoleId" label="@item.RoleName"></option>
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="form-group">
+                                        <label for="exampleSelect1">Status</label>
+                                        <select class="form-control" name="filter" onchange="status(this);">
+                                            <option selected="selected">--Status--</option>
+                                            <option name="status" value="1">Active</option>
+                                            <option name="status" value="0">Disable</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                @*<div class="form-group">
+                                        <label for="inputEmail3" class=" pull-left control-label ">Quyền</label>
+                                        <div class="col-sm-2">
+                                            <select name="filter" onchange="reload(this);">
+                                                <option selected="selected">Quyền</option>
+                                                @foreach (var item in ViewBag.role)
+                                                {
+                                                    <option value="@item.RoleId">@item.RoleName</option>
+                                                }
+                                            </select>
+                                        </div>
+                                        <label for="inputEmail3" class=" pull-left control-label ">Nhóm tài khoản</label>
+                                        <div class="col-sm-2">
+                                            <select name="filter" onchange="status(this);">
+                                                <option selected="selected" class="form-group">Nhóm tài khoản</option>
+                                                <option name="status" value="1">Active</option>
+                                                <option name="status" value="0">Disable</option>
+                                            </select>
+                                        </div>
+                                    </div>*@
+                            </div>
+
+                        </div>
+
+
+                        <div class="clearfix"></div>
+
+                    </div>
+
+                </div>
+                <form action="@Url.Action("DeleteMutil")" id="form-delete" method="post">
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)" /></td>
+                                <th width="7%">Rank</th>
+                                <th>Fullname</th>
+                                <th>Username</th>
+                                <th>Role</th>
+                                <th width="12%">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in ViewBag.ListUser)
+                            {
+                                stt++;
+                                <tr>
+                                    <td><input type="checkbox" id="checkone" name="list" value="@item.UserId" onchange="changee(this);" /></td>
+                                    <td>@stt</td>
+                                    <td>
+                                        @item.Name
+                                    </td>
+                                    <td>@item.UserName</td>
+                                    <td>@item.Roles.RoleName</td>
+                                    <td>
+                                        <a href='@Url.Action("Edit","User", new {UserId = @item.UserId })'>
+                                            <div class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></div>
+                                        </a>
+                                        <a href='@Url.Action("Delete","User", new {UserId = @item.UserId })' onclick="return confirm('Are you sure you want to Delete?');">
+                                            <div class="btn  btn-sm btn-danger"><i class="fa fa-trash"></i></div>
+                                        </a>
+                                        <a href='@Url.Action("Detail","User", new {UserId = @item.UserId })'>
+                                            <div class="btn  btn-sm btn-success"><i class="fa fa-eye"></i></div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+
+                    </table>
+                    <a onclick="return confirm('Are you sure you want to Multi Delete?');">
+                        <button type="submit" class="btn btn-danger" id="btn-delete" disabled>Delete</button>
+                    </a>
+                </form>
+            </div>
+            <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+
+    </div>
+    <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+<script language="JavaScript">
+    function Check(source) {
+        checkboxes = document.getElementsByName('list');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+        if (source.checked == true)
+            document.getElementById("btn-delete").disabled = false;
+        else
+            document.getElementById("btn-delete").disabled = true;
+    }
+
+    function changee(id) {
+        var j = 0;
+        checkboxes = document.getElementsByName('list');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            if (checkboxes[i].checked == true)
+                j = 1;
+        }
+        if (j == 1) {
+            document.getElementById("btn-delete").disabled = false;
+        }
+        else {
+            document.getElementById("btn-delete").disabled = true;
+        }
+    }
+    function reload(val) {
+        window.location.href = "User?filter=" + val.value;
+
+    }
+    function status(val) {
+        window.location.href = "User?status=" + val.value;
+    }
+</script>

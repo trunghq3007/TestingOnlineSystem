@@ -41,7 +41,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionService.cs" />
+    <Compile Include="AnswerService.cs" />
+    <Compile Include="ExamPaperQuestionService.cs" />
+    <Compile Include="ExamPaperService.cs" />
+    <Compile Include="GroupService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionCategorySevice.cs" />
+    <Compile Include="QuestionService.cs" />
+    <Compile Include="RoleActionService.cs" />
+    <Compile Include="RoleService.cs" />
+    <Compile Include="UserGroupService.cs" />
+    <Compile Include="UserService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestingSystem.DataTranferObject\TestingSystem.DataTranferObject.csproj">
+      <Project>{833A4585-3AC7-4553-BBBE-64F70EADF5D6}</Project>
+      <Name>TestingSystem.DataTranferObject</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestingSystem.Data\TestingSystem.Data.csproj">
+      <Project>{A61D7353-4E51-4242-8DD1-66615C53C063}</Project>
+      <Name>TestingSystem.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestingSystem.Models\TestingSystem.Models.csproj">
+      <Project>{b0244f25-247f-4f72-8c6e-72967cf69a57}</Project>
+      <Name>TestingSystem.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,0 +1,185 @@
+﻿@model  IEnumerable<TestingSystem.Models.Group>
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+                Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+                int stt = 0;
+}
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        List Group
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Group")"><i class="fa fa-dashboard"></i> Home</a></li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Show List Group</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-6" style="margin-bottom:15px">
+                            <div class="input-group" style="width: 100%">
+                                @using (Html.BeginForm("Search", "Group", FormMethod.Post))
+                                {
+                                    <input type="text" class="form-control" placeholder="Group Name" id="nameGroup" name="nameGroup" style="width: 80%">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="submit">Search</button>
+                                    </span>
+                                }
+                            </div><!-- /input-group -->
+                        </div>
+                        <div class="col-md-6">
+                            <a href="@Url.Action("Create")"><button class="btn btn-success">Add new</button></a>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="row">
+                        <div class="col-md-6" style="margin-bottom:15px">
+                            <h5>Filter by CreatedDate</h5>
+                            @using (Html.BeginForm("Index", "Group", FormMethod.Post))
+                            {
+                               
+                                <input type="date" class="form-control" placeholder="@DateTime.Now" id="startCreatedDate" name="StartCreatedDate" style="width: 30%;
+    float: left;">
+                                <input type="date" class="form-control" placeholder="Từ khóa" id="endCreatedDate" name="EndCreatedDate" style="width: 30%;
+    float: left;">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">Filter</button>
+                                </span>
+                            }
+                        </div>
+                        <div class="col-md-6">
+                        </div>
+                    </div>
+                    <!---->
+                    <span id="Status"></span>
+                    <form action="@Url.Action("DeleteMutil")" id="form-delete" method="post">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    <td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)" /></td>
+                                    <th>Rank</th>
+                                    <th>Group Name</th>
+                                    <th>Created Date</th>
+                                    <th>Updated Date</th>
+                                    <th>Description</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    stt++;
+                                    <tr>
+                                        <td><input type="checkbox" id="checkone" name="list" value="@item.GroupId" onchange="changee(this);" /></td>
+                                        <td>@stt</td>
+                                        <td>@Html.DisplayFor(modelItem => item.GroupName)</td>
+                                        <td>
+                                            @item.CreatedDate.ToString("MM/ dd/ yyyy")
+                                        </td>
+                                        <td>
+                                            @item.UpdatedDate.ToString("MM/ dd/ yyyy")
+                                        </td>
+                                        <td>
+                                            @Html.DisplayFor(modelItem => item.Description)
+                                        </td>
+                                        <td>
+                                            <a href='@Url.Action("Edit","Group", new {id = @item.GroupId })'>
+                                                <div class="btn btn-sm btn-primary"><i class="fa fa-pencil"></i></div>
+                                            </a>
+                                            <a href='@Url.Action("Details", "Group", new { id=item.GroupId })'>
+                                                <div class="btn  btn-sm btn-success"><i class="fa fa-eye"></i></div>
+                                            </a>
+                                            <a href='@Url.Action("Delete","Group", new {id = @item.GroupId })' onclick="return confirm('Are you sure you want to Delete?');">
+                                                <div class="btn  btn-sm btn-danger" onclick="checkDel(@item.GroupId)"><i class="fa fa-trash"></i></div>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <a onclick="return confirm('Are you sure you want to Multi Delete?');">
+                            <button type="submit" class="btn btn-danger" id="btn-delete" disabled>Xóa</button>
+                        </a>
+                    </form>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->
+<script language="JavaScript">
+    function Check(source) {
+        checkboxes = document.getElementsByName('list');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+        if (source.checked == true)
+            document.getElementById("btn-delete").disabled = false;
+        else
+            document.getElementById("btn-delete").disabled = true;
+
+    }
+
+    function changee(id) {
+        var j = 0;
+        checkboxes = document.getElementsByName('list');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            if (checkboxes[i].checked == true)
+                j = 1;
+        }
+        if (j == 1) {
+            document.getElementById("btn-delete").disabled = false;
+        }
+        else {
+            document.getElementById("btn-delete").disabled = true;
+        }
+    }
+    function checkDel(idGroup) {
+        $("#Status").html("Checking...");
+        $.post("@Url.Action("_CheckDeleteAvailable", "Group")",
+            {
+                idGroup: idGroup
+            },
+        function (data) {
+            if (data == 0) {
+                del(idGroup)
+            }
+            else {
+                $("#Status").html('<font color="Red">Cannot Delete.</font>');
+            }
+        });
+    }
+    function del(idGroup) {
+        $.ajax({
+        url: '@Url.Action("Delete", "Group")',
+        data: { id: idGroup },
+        type: 'POST',
+        success: function (data) {
+            $("#Status").html('<font color="Green">Delete Successful!</font>');
+        }
+    });
+    }
+    function reload() {
+        $.ajax({
+        url: '@Url.Action("Index", "Group")',
+        type: 'GET',
+        success: function (data) {
+            
+        }
+    });
+    }
+</script>

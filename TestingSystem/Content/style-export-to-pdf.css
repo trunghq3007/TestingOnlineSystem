@@ -1,0 +1,58 @@
+﻿@font-face {
+    font-family: tahoma_0;
+    src: url('../../fonts/tahoma_0.ttf') format('truetype');
+}
+
+body {
+    /*font-family: tahoma_0;*/
+}
+
+.Container {
+    width: 100%;
+    margin: auto;
+    /*border: 1px red double;*/
+}
+
+.Main {
+    width: 80%;
+    margin: auto;
+    /*border: 1px red double;*/
+}
+
+.Bool {
+    float: right;
+    width: 20%;
+    /*border: 1px red double;*/
+    margin-top: 3%;
+}
+
+.Content {
+    width: 100%;
+    /*border: 1px red double;*/
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.ContentAnswer, .Image{
+    padding-left: 20px;
+}
+
+.Image {
+    width: 40%;
+    /*border: 1px red double;*/
+    margin-bottom: 1%;
+}
+
+.MainAnswer {
+    margin-bottom: 1%;
+    margin-top: 1%;
+    /*border: 1px red double;*/
+}
+
+.checkbox {
+}
+
+.ExamPaper {
+    width: 80%;
+    /*border: 1px red double;*/
+}

@@ -1,0 +1,348 @@
+﻿/*Hai custom alert modal*/
+.alert-modal-container .modal-body {
+    padding: 0 !important;
+}
+
+.alert-modal-container .modal-footer {
+    padding-right: 15px;
+}
+
+.alert-modal-container .modal-footer {
+    padding-right: 15px;
+}
+
+.alert-modal-btn .btn {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    border-radius: 0;
+    padding: 8px;
+    width: 90px;
+    font-weight: 600;
+}
+
+.msgbox-delete-btn .btn-delete {
+    background: #3ca4ab;
+    color: white;
+}
+
+    .msgbox-delete-btn .btn-delete:hover {
+        border: 1px solid #3ca4ab !important;
+        background: #0c7c87 !important;
+        cursor: pointer;
+    }
+
+.msgbox-delete-btn .btn-cancel {
+    color: #3ca4ab;
+    background: #ffffff;
+    border: 1px solid #3ca4ab;
+}
+
+    .msgbox-delete-btn .btn-cancel:hover {
+        background-color: #3ca4ab;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+.msgbox-error-btn .btn-cancel {
+    color: #d45759;
+    background: #ffffff;
+    border: 1px solid #d45759;
+}
+
+    .msgbox-error-btn .btn-cancel:hover {
+        background-color: #d45759;
+        color: #ffffff;
+        cursor: pointer;
+    }
+
+.modal-wrap {
+    background-color: #3ca4ab;
+    position: relative;
+}
+
+    .modal-wrap:after {
+        clip: rect(0px,70px,200px,0px);
+        content: "\f059";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        position: absolute;
+        font-size: 150px;
+        color: rgba(255,255,255,0.25);
+        top: 90%;
+        left: 50%;
+        margin: -130px 0px 0px 230px;
+        z-index: 1;
+        line-height: 150px;
+    }
+
+.error-modal-wrap:after {
+    clip: rect(0px,70px,200px,0px);
+    content: "\f06a";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position: absolute;
+    font-size: 150px;
+    color: rgba(255,255,255,0.25);
+    top: 90%;
+    left: 50%;
+    margin: -128px 0px 0px 230px;
+    z-index: 1;
+    line-height: 150px;
+}
+
+.error-modal-wrap {
+    background-color: #d45759;
+    position: relative;
+}
+
+.alert-modal {
+    width: 600px;
+}
+
+.modal-inner {
+    position: relative;
+    z-index: 2;
+}
+
+div.modal-body-header {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgba(255,255,255, 0.2);
+    color: #ffffff;
+    font-family: 'QuickSand', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 0 15px 25px;
+}
+
+.modal-body-content {
+    padding: 15px 15px 10px 25px;
+}
+
+    .modal-body-content span {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        color: #ffffff;
+        display: block;
+        padding-bottom: 5px;
+        height: 25px;
+    }
+
+.msgbox-delete-btn .btn-cancel:focus,
+.msgbox-delete-btn .btn-delete:focus {
+    outline: none;
+}
+
+div#error-msgbox-modal {
+    z-index: 1060;
+}
+
+/* ghi đè css file modal less, để popup hiện chính giữa*/
+.modal-open .modal {
+    overflow-x: hidden;
+    /* overflow-y: auto; */
+}
+
+.alert-modal {
+    margin: auto;
+    top: 100px;
+}
+
+
+.delete-modal-height {
+    height: 77px;
+}
+
+[type="date"] {
+    background: #fff url("Images/calendar_2.png") 97% 50% no-repeat;
+}
+
+    [type="date"]::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+
+
+[type="date"] {
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 3px 5px;
+    /*box-shadow: inset 0 3px 6px rgba(0,0,0,0.1);*/
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff !important;
+}
+
+.navbar-inverse {
+    background-color: #478dd3 !important;
+    border-color: #478dd3 !important;
+}
+
+
+.has-error .form-control {
+    color: #a94442;
+    border-color: #a94442 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+}
+
+.has-success .form-control {
+    border-color: #3c763d !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+}
+
+a.update-row, a.add-question-row {
+    padding-right: 7px;
+    border: 1px solid #1f9e5c;
+    color: #1f9e5c;
+    padding-left: 7px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+a.delete-row {
+    padding-right: 8px;
+    border: 1px solid #db6464;
+    color: #db6464;
+    padding-left: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+a.update-row:hover, a.add-question-row:hover {
+    background-color: #1f9e5c;
+    color: white;
+    opacity: 0.9;
+}
+
+a.group-btn {
+    color: #1f9e5c;
+    border: 1px solid #1f9e5c;
+    border-radius: unset;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+    a.group-btn:hover {
+        background-color: #1f9e5c;
+        color: white;
+        opacity: 0.9;
+    }
+
+a, a:hover {
+    text-decoration: none;
+}
+
+
+    a.btn-delete-all {
+        color: #db6464;
+        border: 1px solid #db6464;
+        border-radius: unset;
+        padding-left: 25px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        padding-right: 25px;
+    }
+
+        a.btn-delete-all:hover {
+            background-color: #db6464;
+            color: white;
+            opacity: 0.9;
+        }
+
+
+
+    a.delete-row:hover {
+        background-color: #db6464;
+        color: white;
+        opacity: 0.9;
+    }
+
+div.button-area {
+    margin-bottom: 30px;
+}
+
+.glyphicon {
+    font-size: 12px !important;
+}
+
+input[type="search"] {
+    -webkit-appearance: button !important;
+}
+
+.dt-body-center.sorting_disabled {
+    text-align: center;
+}
+
+
+div.content-wrapper{
+    padding: 20px;
+}
+
+
+body{
+    padding-top: 0px !important;
+}
+
+
+/* style for poppup */
+div#form-area {
+    margin: 0 auto;
+    padding-bottom: 5px;
+}
+
+button#random {
+    margin-top: 20px;
+}
+
+div.modal-header {
+    padding-bottom: 8px !important;
+    padding-top: 8px !important;
+    background-color: #2F7FA7 !important;
+    color: white !important;
+}
+
+h5.modal-title {
+    font-size: 18px !important; 
+}
+
+.modal-header .close {
+    margin-top: -24px !important;
+}
+
+div.modal-content {
+    background-color: #ECF0F5;
+}
+
+.modal-footer {
+    border-top-color: #fff !important;
+}
+
+hr {
+    border-top: 1px solid #fff !important;
+}
+
+.modal-footer {
+    padding-bottom: 10px !important;
+    padding-top: 10px !important;
+}
+
+#btn-add-question {
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+a#export-exam {
+    margin-left: 13px;
+}
+
+    a#export-exam .btn-success {
+        margin-bottom: 8px;
+    }

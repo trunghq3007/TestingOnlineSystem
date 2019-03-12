@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestingSystem.Data.Infrastructure
+﻿namespace TestingSystem.Data.Infrastructure
 {
+    using System;
+
     public class Disposable : IDisposable
     {
         private bool isDisposed;

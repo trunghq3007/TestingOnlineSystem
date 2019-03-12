@@ -1,0 +1,86 @@
+﻿@using TestingSystem.DataTranferObject.Question
+@using TestingSystem.Models
+
+@model List<TestingSystem.DataTranferObject.Question.QuestionDto>
+@{
+                /**/
+
+                var examPaper = (ExamPaper)ViewBag.ExamPaper;
+                var answers = (List<Answer>)ViewBag.Answers;
+                var stt = 0;
+}
+<html>
+<head>
+    <link href="~/Content/style-export-to-pdf.css" rel="stylesheet" />
+</head>
+<body style="font-family: tahoma_0;">
+    <div class="Container">
+        <h1 style="text-align: center">@examPaper.Title</h1>
+        <br />
+        <div class="ExamPaper" style="width: 100%; float: left; margin-left: 10% ; margin-bottom: 5%">
+            <div class="Username">Full Name: </div><br />
+            <div class="Time">
+                Time: @examPaper.Time Minute
+            </div><br />
+            <div class="date">
+                Date: ...../...../.....
+            </div><br />
+            <div class="NumberOfQuestion">
+                Number Of Question : @*@examPaper.NumberOfQuestion*@
+            </div>
+        </div>
+        <div class="Main">
+            <br />
+            @foreach (var item in Model)
+            {
+                var i = 0;
+                <div class="Content">
+                    <b>
+                        Question @(stt + 1):
+                    </b>
+                    @item.Content
+                </div>
+                foreach (var answer in answers)
+                {
+                    if (answer.QuestionID == item.QuestionID)
+                    {
+                        if (answer.IsCorrect == true)
+                        {
+                            i++;
+                        }
+                    }
+                }
+
+                if (i >= 2)
+                {
+                    <div class="Bool">
+                        <span>(Choose Multiple)</span>
+                    </div>
+                }
+
+                if (item.Image != null)
+                {
+                    <div class="Image">
+                        <img class="image1" style="width: 100px;height: 100px; " src="~/Content/QuestionUpload/Images/@item.Image" />
+                    </div>
+                }
+                char charter = 'A';
+                <div class="ContentAnswer">
+                    @foreach (var answerTemp in answers)
+                    {
+
+                        if (answerTemp.QuestionID == item.QuestionID)
+                        {
+                            <div class="MainAnswer">
+                                @charter . <span style="margin-left: 1%"> @answerTemp.AnswerContent</span>
+                            </div>
+                            charter++;
+                        }
+                    }
+                </div>
+                stt++;
+            }
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+﻿@model TestingSystem.Models.Group
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<section class="content-header">
+    <h1>
+        Edit Group
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="@Url.Action("Index", "Group")"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Edit</a></li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Edit Group</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-horizontal box-body">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.GroupId)
+                @Html.HiddenFor(model => model.CreatedDate)
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.GroupName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @*@Html.EditorFor(model => model.GroupName, new { htmlAttributes = new { @class = "form-control" } })*@
+                        <input type="text" class="form-control" name="GroupName" id="GroupName" onchange="UserCheck()" value="@Model.GroupName">
+                        @Html.ValidationMessageFor(model => model.GroupName, "", new { @class = "text-danger" })
+                        <p id="Status"></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Save" class="btn btn-primary" id="btnsub"/>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div><!-- /.box -->
+    <a href="@Url.Action("Index")"><button class="btn btn-success">Back</button></a>
+</section>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+
+<script>
+    function UserCheck() {
+        $("#Status").html("Checking...");
+        $.post("@Url.Action("_CheckUsernameAvailable", "Group")",
+            {
+                userdata: $("#GroupName").val(),
+                idGroup: $("#GroupId").val()
+            },
+        function (data) {
+            if (data == 0) {
+                $("#Status").html('<font color="Green">Available !. you can take it.</font>');
+                $("#GroupName").css("border-color", "Green");
+                $("#btnsub").css("display", "block");
+
+            }
+            else {
+                $("#Status").html('<font color="Red">Cannot Edit!</font>');
+                $("#GroupName").css("border-color", "Red");
+                $("#btnsub").css("display", "none");
+            }
+        });
+    }
+</script>

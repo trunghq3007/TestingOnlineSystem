@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using TestingSystem.App_Start;
 
 namespace TestingSystem
 {
@@ -16,6 +13,11 @@ namespace TestingSystem
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            //
+            DatabaseSetup.Initialize();
+            // Autofac and Automapper configurations
+            log4net.Config.XmlConfigurator.Configure();
+            Bootstrapper.Run();
         }
     }
 }

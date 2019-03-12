@@ -2,19 +2,25 @@ namespace TestingSystem.Data.Migrations
 {
     using System.Data.Entity.Migrations;
 
+    /// <summary>
+    /// Defines the <see cref="Configuration" />
+    /// </summary>
     internal sealed class Configuration : DbMigrationsConfiguration<TestingSystem.Data.TestingSystemEntities>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Configuration"/> class.
+        /// </summary>
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(TestingSystemEntities context)
+        /// <summary>
+        /// The Seed
+        /// </summary>
+        /// <param name="context">The context<see cref="TestingSystem.Data.TestingSystemEntities"/></param>
+        protected override void Seed(TestingSystem.Data.TestingSystemEntities context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
         }
     }
 }

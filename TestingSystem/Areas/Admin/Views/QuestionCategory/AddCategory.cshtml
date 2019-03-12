@@ -1,0 +1,80 @@
+﻿@model TestingSystem.Models.QuestionCategory
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<section class="content-header">
+    <h1>
+        Create New Category
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Create New Quetstion Category</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Create New Category</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate role="form" action="@Url.Action("AddCategory", "QuestionCategory", new { area = "Admin" })" method="post">
+            @Html.AntiForgeryToken()
+            <div class="box-body">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Category Name</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", onchange = "CategoryCheckCreate()" } })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                    <span id="Status"></span>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">IsActive</label>
+                    <div class="col-sm-6">
+                        <div class="checkbox">
+                            <label><input type="checkbox" name="IsActive" id="checkbox" onchange="checkstatus(this)"> IsActive</label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <a href="@Url.Action("Index","QuestionCategory")" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn btn-success pull-right" id="btnsub2">Save</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section>
+<script language="JavaScript">
+    function checkstatus(id) {
+        if (id.checked == true)
+            id.value = true;
+        else
+            id.value = false;
+    }
+    function CategoryCheckCreate() {
+        $("#Status").html("Checking...");
+        $.post("@Url.Action("_CheckCategoryNameAvailableCreate", "QuestionCategory")",
+            {
+                userdata: $("#Name").val()
+            },
+            function (data) {
+                if ($("#Name").val() == "") {
+                    $("#Name-error").css("display", "none");
+                }
+                if (data == 0) {
+                    $("#Status").html('<font color="Green">Available !. you can take it.</font>');
+                    $("#Name").css("border-color", "Green");
+                    $("#btnsub2").css("display", "block");
+                }
+                else {
+                    $("#Status").html('<font color="Red">Category Name Exists!</font>');
+                    $("#Name").css("border-color", "Red");
+                    $("#btnsub2").css("display", "none");
+                }
+            });
+    }
+</script>

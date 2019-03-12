@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <domain>http://localhost:56562</domain>
+  <email>
+    <username>cmcgdp.net@gmail.com</username>
+    <pass>gdp06.net</pass>
+    <sendAs>cmcgdp.net@gmail.com</sendAs>
+    <name>Online Testing System</name>
+    <smtp>smtp.gmail.com</smtp>
+    <port>587</port>
+  </email>
+</root>

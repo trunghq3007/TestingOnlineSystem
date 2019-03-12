@@ -1,0 +1,132 @@
+﻿@model TestingSystem.DataTranferObject.UserRegister
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Register</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/bower_components/Ionicons/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/dist/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="~/Assets/AdminLayout/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition register-page">
+    <div class="register-box">
+        <div class="register-logo">
+            <a href="/"><b>Register</b> member</a>
+        </div>
+        <div class="register-box-body">
+            <p class="login-box-msg">Input your info to Regiser</p>
+            @*@using (Html.BeginForm(new {@id="form-login"}))*@
+            <form id="form-login" method="post">
+                <div class="form-group has-feedback">
+                    <input type="text" name="fullname" class="form-control" placeholder="Full name"
+                           pattern=".{5,50}" required="Full name is a required field" 
+                           title="Must have 5-50 characters" >
+                    <span class="glyphicon fa fa-id-card form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="email" name="email" required="Email is a required field" class="form-control" placeholder="Email">
+                    <span class="glyphicon fa fa-envelope-o form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="text" name="username" class="form-control" placeholder="User name"
+                           pattern="[a-z,0-9]{5,16}" required="Username is a required field"
+                           title="Letters and numbers only, 5-16 characters" >
+                    <span class="glyphicon fa fa-user-o form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="password" id="password1"
+                           required="Password is a required field"
+                           pattern=".{5,16}" title="Password must have 5-16 characters"
+                           class="form-control" placeholder="Password">
+                    <span class="glyphicon fa fa-key form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" name="comfirmPassword" id="password2"
+                           required="Retype password is a required field"
+                           pattern=".{5,16}" title="Password must have 5-16 characters"
+                           class="form-control" placeholder="Retype password">
+                    <span class="glyphicon fa fa-key form-control-feedback"></span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-8">
+                        <div class="checkbox icheck">
+                            <label>
+                                <input id="cbRegister"
+                                       style="display: block;
+                                        width: 50%; height: 50%; margin: 0px; padding: 0px; background: rgb(255, 255, 255);
+                                        border: 0px; "
+                                       required="true" type="checkbox" /> I accept the<a href="#cbRegister"> terms</a>
+                                in the license agreement.
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                    </div>
+                </div>
+            </form>
+            <a href="/Login" class="text-center">Sign in.</a>
+        </div>
+    </div>
+    <script src="~/Assets/AdminLayout/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="~/Assets/AdminLayout/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- iCheck -->
+    <script src="~/Assets/AdminLayout/plugins/iCheck/icheck.min.js"></script>
+<script>
+    $(function () {
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '10%',
+                
+        });
+    });  
+
+    function Submit(x) {
+        var a = document.getElementById('cbRegister');
+        if (!a.check) {
+            x.submit = false;
+        }
+    }
+</script>
+
+
+    <script src="~/Scripts/notify.min.js"></script>
+    <link href="~/Content/style.css" rel="stylesheet" />
+    @if (TempData["Success"] != null)
+    {
+        <script type="text/javascript">
+            $.notify(@Html.Raw(Json.Encode(TempData["Success"])), "success");
+        </script>
+    }
+        
+    @if (!string.IsNullOrEmpty((string)TempData["Failure"]))
+    {
+        <script type="text/javascript">
+            $.notify(@Html.Raw(Json.Encode(TempData["Failure"])), "danger");
+        </script>
+
+        @Html.Partial("_MessageBoxError")
+            @*<script type="text/javascript">
+                $("#error-msgbox-modal #error-msg").text(@Html.Raw(Json.Encode(TempData["Failure"])));
+                $("#error-msgbox-modal #error-msg1").text('');
+                $('#error-msgbox-modal').modal('show');
+            </script>*@
+    }
+
+</body>
+</html>

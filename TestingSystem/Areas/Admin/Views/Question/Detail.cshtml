@@ -1,0 +1,86 @@
+﻿@model TestingSystem.DataTranferObject.Question.QuestionDto
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    int stt = 0;
+}
+<style>
+    .right {
+        width: 100px;
+    }
+</style>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div style="width: 700px;margin-left: 100px">
+    <table class="table">
+        <tbody>
+            <tr>
+                <th scope="row" class="right">Content </th>
+                <td>
+                    @Html.Raw(HttpUtility.HtmlDecode(@Model.Content))
+                    <br />
+                    @{
+                        if (Model.Image != null)
+                        {
+                            <img src="/Content/QuestionUpload/Images/@Model.Image" width="100px" />
+                        }
+                        else
+                        {
+                            <p></p>
+                        }
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="right">Answer</th>
+                <td>
+                    @foreach (var item in ViewBag.listAnswerByQuestion)
+                    {
+                        stt++;
+                        if (item.IsCorrect == true)
+                        {
+                            <span><b>@stt</b>  </span><b id="contentAnswer" style="color: darkgreen">@item.AnswerContent</b>
+                            <p> </p>
+                        }
+                        else
+                        {
+                            <span><b>@stt</b>  </span>@item.AnswerContent
+                            <p> </p>
+                        }
+
+                    }
+                </td>
+            </tr>
+            <tr>
+                <th scope="row" class="right">Level</th>
+                <td>@Model.LevelName</td>
+            </tr>
+            <tr>
+                <th scope="row" class="right">Category</th>
+                <td>@Model.CategoryName<d>
+            </tr>
+            <tr>
+                <th scope="row" class="right">IsActive</th>
+                <td>@Model.IsActive</td>
+            </tr>
+            <tr>
+                <th scope="row" class="right">Created</th>
+                <td>by <b>@Model.CreatedName</b>  when <em>@Model.CreatedDate</em></td>
+            </tr>
+            @*<tr>
+                    <th scope="row">Create Date</th>
+                    <td>@Model.CreatedDate</td>
+                </tr>*@
+            <tr>
+                <th scope="row" class="right">Modified</th>
+                <td>by <b>@Model.ModifiedName</b> when <em>@Model.ModifiedDate</em></td>
+            </tr>
+            @*<tr>
+                    <th scope="row">Modified Date</th>
+                    <td>@Model.ModifiedDate</td>
+                </tr>*@
+        </tbody>
+    </table>
+    <div class="col-md-10">
+        <a class="btn btn-primary" href="/Admin/Question/Index">Back to List</a>
+    </div>
+</div>

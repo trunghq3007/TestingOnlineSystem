@@ -1,0 +1,82 @@
+﻿@model List<TestingSystem.Models.Roles>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Content Header (Page header) -->
+<section class="content-header">
+    <h1>
+        Role Manager 
+    </h1>
+    <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">tài khoản</a></li>
+        <li class="active">Role List</li>
+    </ol>
+</section>
+<!-- Main content -->
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">Hiển thị danh sách Roles</h3>
+                </div>
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-6" style="margin-bottom:15px">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Từ khóa">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">Tìm kiếm</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div>
+                        <div class="col-md-6">
+                            <a href="@Url.Action("CreateRole","Role")"><button class="btn btn-success">Thêm mới</button></a>
+                        </div>
+                    </div>
+                    <table id="example2" class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+
+                            <th width="7%">STT</th>
+                            <th>Role Name</th>
+                            <th>Role Description</th>    
+                            <th width="12%">Thao tác</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.RoleId</td>
+                                <td>
+                                    @item.RoleName
+                                </td>
+                                <td>@item.Description</td>
+ 
+                                <td>
+                                    <a href='@Url.Action("Edit","Role", new {id = @item.RoleId })' onclick=""><button class="btn  btn-sm btn-primary"><i class="fa fa-pencil"></i></button></a>
+                                    <a href='@Url.Action("Delete","Role", new {id = @item.RoleId })' onclick="return confirm('Are you sure you want to Delete?')"><button class="btn  btn-sm btn-danger"><i class="fa fa-trash"></i></button></a>
+                                    <a href='@Url.Action("Detail","Role", new {id = @item.RoleId })' onclick=""><button class="btn  btn-sm btn-success"><i class="fa fa-eye"></i></button></a>
+                                </td>
+                            </tr>
+                        }
+                 
+                        </tbody>
+                    </table>
+                    <button class="btn btn-danger" disabled>Xóa</button>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+</section>
+<!-- /.content -->

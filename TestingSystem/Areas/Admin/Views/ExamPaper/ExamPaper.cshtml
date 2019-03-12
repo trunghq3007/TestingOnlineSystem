@@ -1,0 +1,359 @@
+﻿@using TestingSystem.DataTranferObject.Question
+@model TestingSystem.Models.ExamPaper
+@{
+    /**/
+
+    ViewBag.Title = "Exam Paper";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    var isUpdate = ViewBag.IsUpdate;
+    var status = ViewBag.Status;
+    var questions = (List<QuestionDto>)ViewBag.Questions;
+}
+
+<section class="content-header">
+    <h1 style="display:inline !important">
+        Exam Paper
+    </h1>
+    <a href="/Admin/ExamPaper/ExportToPdfView/?examPaperId=@Model.ExamPaperID" id="export-exam">
+        <div class="btn btn-success"><span class="glyphicon glyphicon-save"></span>  Export exam</div>
+    </a>
+    <ol class="breadcrumb">
+        <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Exam Paper</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Exam paper</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate role="form" action="@Url.Action("ExamPaper", "ExamPaper")" method="post">
+            @Html.AntiForgeryToken()
+            <div class="box-body">
+                @Html.HiddenFor(model => model.ExamPaperID)
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Title</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control",@placeholder= "Exam paper title" } })
+                        @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Time</label>
+                    <div class="col-sm-6">
+                        @Html.EditorFor(model => model.Time, new { htmlAttributes = new { @class = "form-control", @id = "time", @placeholder = "Exam paper time" } })
+                        @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Status</label>
+                    <div class="col-sm-6">
+                        <select class="form-control" name="Status">
+                            @if (status == true)
+                            {
+                                <option selected value="true">Public</option>
+                                <option value="false">Draff</option>
+                            }
+                            else
+                            {
+                                <option value="true">Public</option>
+                                <option selected value="false">Draff</option>
+                            }
+                        </select>
+                        @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">IsActive</label>
+                    <div class="col-sm-6">
+                        <div class="checkbox">
+                            @{var isActive = (Model.IsActive ? "true" : "false");}
+                            <label><input class="form-check-input" name="IsActive" type="checkbox" id="isActive" value="@isActive" checked="@Model.IsActive"> IsActive</label>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <a href="/Admin/ExamPaper/Index"><div ui-sref="products" class="btn btn-default" disableValidation="true">Cancel</div></a>
+                <button type="submit" class="btn btn-success pull-right">Save</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section>
+<section class="content">
+    <div class="row">
+        <div class="col-xs-12">
+            <h4 class="box-title" style="display:inline !important">Question list of exam paper</h4>
+            @if (isUpdate)
+            {
+                <button type="button" id="btn-add-question" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span>   Add question</button>
+            }
+            <div class="box">
+                <div class="clearfix"></div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+
+                @*<form action="@Url.Action("Delete","ExamPaperQuestion")" id="form-delete" method="post">*@
+                <table id="questionExamTable" class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)" /></td>
+                            <th width="65%">Content</th>
+                            <th width="15%">Category</th>
+                            <th width="5%">Level</th>
+                            <th width="5%">IsActive</th>
+                            <th width="5%">Action</th>
+                        </tr>
+                    </thead>
+                    @*<tbody>
+                @foreach (var item in questions)
+                {
+                    <tr>
+                        <td><input type="checkbox" id="checkone" name="ids" value="@item.ExamPaperQuestionID" onchange="changee(this);" /></td>
+                        <td>
+                            @item.Content
+                        </td>
+                        <td>@item.CategoryName</td>
+                        <td>@item.LevelName</td>
+                        <td><input type="checkbox" checked="@item.IsActive" disabled="" /></td>
+
+                        <td>
+                            <a href="javascript:void(0)" class="remove-question-exam" data-val-id="@item.ExamPaperQuestionID">
+                                <div class="btn  btn-sm btn-danger"><i class="fa fa-trash"></i></div>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>*@
+
+                </table>
+                <a id="delete-multiple">
+                    @if (isUpdate)
+                    {
+                        <button type="submit" class="btn btn-danger" id="btn-delete-multiple" disabled>Delete</button>
+                    }
+                </a>
+                @*</form>*@
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+@Html.Partial("~/Areas/Admin/Views/ExamPaperQuestion/ExamPaperQuestions.cshtml");
+<script>
+    function Check(source) {
+        checkboxes = document.getElementsByName('ids');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            checkboxes[i].checked = source.checked;
+        }
+        if (source.checked == true)
+            document.getElementById("btn-delete-multiple").disabled = false;
+        else
+            document.getElementById("btn-delete-multiple").disabled = true;
+    }
+
+    function changee(id) {
+        var j = 0;
+        checkboxes = document.getElementsByName('ids');
+        for (var i = 0, n = checkboxes.length; i < n; i++) {
+            if (checkboxes[i].checked == true)
+                j = 1;
+        }
+        if (j == 1) {
+            document.getElementById("btn-delete-multiple").disabled = false;
+        }
+        else {
+            document.getElementById("btn-delete-multiple").disabled = true;
+        }
+    }
+</script>
+@section scripts{
+    <script language="JavaScript" type="text/javascript">
+
+        $(document).ready(function () {
+            $("#isActive").change(function () {
+                if ($(this).prop("checked") === true) {
+                    $("#isActive").val("true");
+                }
+                else if ($(this).prop("checked") === false) {
+                    $("#isActive").val("false");
+                }
+            });
+
+            var examPaperQuestionTable = $('#questionExamTable').DataTable({
+            //orderCellsTop: true,
+            //fixedHeader: true,
+            "loadingRecords": "Đang tải...",
+            "processing": "Đang thực hiện...",
+            "destroy": true,
+            "ajax": {
+                "url": "/Admin/Question/GetQuestionsByExamPaperId/?examPaperId=@Model.ExamPaperID",
+                "type": "GET",
+                "datatype": "json"
+            },
+            "columns": [
+                { "data": "ExamPaperQuestionID", "width": "3%" },
+                { "data": "Content", "width": "60%" },
+                { "data": "CategoryName", "width": "20%" },
+                { "data": "LevelName", "width": "5%" },
+                {
+                    "data": "IsActive", "width": "3%", "render": function (data) {
+                        if (data) {
+                            return '<input type="checkbox" disabled checked/>';
+                        }
+                        else {
+                            return '<input type="checkbox" disabled />';
+                        }
+                    }
+                },
+
+                {
+                    "data": "ExamPaperQuestionID", "width": "3%", "render": function (data) {
+                                                  return '<a href="javascript:void(0)" class="remove-question-exam" data-val-id="'+data+'"><div class="btn  btn-sm btn-danger"><i class="fa fa-trash"></i></div></a>'
+                    },
+                }
+            ],
+            'columnDefs': [{
+                'targets': 0,
+                'searchable': false,
+                'orderable': false,
+                'className': 'dt-body-center',
+                'render': function (data, type, full, meta) {
+                    return '<input type="checkbox" class="checkone"  onchange="changee(this);" name="ids" value="' + $('<div/>').text(data).html() + '">';
+                }
+            }],
+            'order': [[1, 'asc']]
+            });
+
+            $('#questionExamTable').on('click', '.remove-question-exam', function (e) {
+                debugger;
+                var ids = [];
+                var id = $(this).data("val-id");
+                if (ids.indexOf(id) < 0) {
+                    ids.push(id);
+                }
+                $('#delete-msgbox-modal').modal('show').off('click', '#btn-delete').on('click', '#btn-delete', function (e) {
+                    $.ajax({
+                        url: "/Admin/ExamPaperQuestion/Delete/",
+                        data: {
+                            ids: ids
+                        },
+                        traditional: true,
+                        type: "Get",
+                        datatype: "json",
+                        error: function (status) {
+                            $("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+                            $("#error-msgbox-modal #error-msg1").text('');
+                            $('#error-msgbox-modal').modal('show');
+                        },
+                        success: function (data) {
+                            if (data.status) {
+                                debugger;
+                                $.notify("Delete question successfully!", "success");
+                                examPaperQuestionTable.ajax.reload();
+                            }
+                        }
+                    });
+                    e.stopPropagation();
+                });
+            });
+
+
+            $("#delete-multiple").on("click",
+                function (e) {
+                    var data = $('#questionExamTable').DataTable().$('input.checkone:checkbox:checked');
+                    debugger;
+                    if (data.length === 0) {
+                        $("#error-msgbox-modal #error-msg").text('Please choose record to delete!');
+                        $("#error-msgbox-modal #error-msg1").text('');
+                        $('#error-msgbox-modal').modal('show');
+                    } else {
+                        var ids = [];
+                        $.each(data, function (index, elem) {
+                            var rowId = $(elem).val();
+                            if (ids.indexOf(rowId) < 0) {
+                                ids.push(rowId);
+                            }
+                        });
+                        debugger;
+                        $('#delete-msgbox-modal').modal('show').off('click', '#btn-delete').on('click', '#btn-delete', function (e) {
+                            $.ajax({
+                                url: "/Admin/ExamPaperQuestion/Delete/",
+                                data: {
+                                    ids: ids
+                                },
+                                type: "Get",
+                                datatype: "json",
+                                traditional: true,
+                                error: function (data) {
+                                    $("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+                                    $("#error-msgbox-modal #error-msg1").text('');
+                                    $('#error-msgbox-modal').modal('show');
+                                },
+                                success: function (data) {
+                                    if (data.status) {
+                                        debugger;
+                                        $.notify("Delete questions successfully!", "success");
+                                        examPaperQuestionTable.ajax.reload();
+                                        //location.reload();
+                                    }
+                                }
+                            });
+                            e.stopPropagation();
+                        });
+                    }
+                });
+
+
+            $('#btn-add-question').click(function () {
+
+                var categoryId;
+                categoryId = $('#CategoryId').val();
+                if (categoryId === null) {
+                    debugger;
+                    $.ajax({
+                        url: "/Admin/ExamPaper/GetQuestionCategoriesIsActive/",
+                        type: "GET",
+                        data: {
+
+                        },
+                        datatype: "json",
+                        error: function (status) {
+                            debugger;
+                            $("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+                            $("#error-msgbox-modal #error-msg1").text('');
+                            $('#error-msgbox-modal').modal('show');
+                        },
+                        success: function (data) {
+                            $.each(data, function (index, item) {
+                                //ko hieu sao phai viet nhu the nay moi dc
+                                var j = item.length;
+                                for (var i = 0; i < j; i++) {
+                                    debugger;
+                                    $('#CategoryId').append($('<option>', {
+                                        value: item[i].CategoryID,
+                                        text: item[i].Name
+                                    }));
+                                }
+                                $('#CategoryId').val(item[0].CategoryID).trigger('change');
+                            });
+
+                        }
+                    });
+                }
+                $('#basicExampleModal').modal('show');
+            });
+
+
+            document.getElementById("time").addEventListener('input', restrictToInteger);
+            function restrictToInteger() {
+                this.value = this.value.replace(/[^\d]/g, '');
+            }
+
+        });
+    </script>
+}
+

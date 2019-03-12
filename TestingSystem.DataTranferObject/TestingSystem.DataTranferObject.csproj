@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,7 +42,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExamPaper\ExamPaperFilterModel .cs" />
+    <Compile Include="GroupFilter.cs" />
+    <Compile Include="MatrixRoleAction.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question\Level.cs" />
+    <Compile Include="Question\QuestionAnswerDTO.cs" />
+    <Compile Include="Question\QuestionDto.cs" />
+    <Compile Include="Question\QuestionFilterModel.cs" />
+    <Compile Include="Question\TranferID.cs" />
+    <Compile Include="RoleDetail.cs" />
+    <Compile Include="UserDetail.cs" />
+    <Compile Include="UserLogin.cs" />
+    <Compile Include="UserRegister.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestingSystem.Models\TestingSystem.Models.csproj">
+      <Project>{b0244f25-247f-4f72-8c6e-72967cf69a57}</Project>
+      <Name>TestingSystem.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

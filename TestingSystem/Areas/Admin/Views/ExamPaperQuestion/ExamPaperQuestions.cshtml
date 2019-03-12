@@ -1,0 +1,194 @@
+﻿<!-- Modal -->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add questions into exam paper</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="tablecontainer">
+                    <div id="form-area" class="row">
+                        <div class="col-md-4">
+                            Question category
+                            <select class="form-control" id="CategoryId" name="CategoryId">
+                                <option value="" id="tempOption" selected disabled hidden>-- Choose category --</option>
+                                @*<option value="149">SQL</option>
+                                <option value="154">JavaScript</option>
+                                <option value="173">PHP</option>*@
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            Number of question
+                            <input class="form-control" type="text" id="RandomNumber" name="RandomNumber" />
+                        </div>
+                        <div class="col-md-4">
+                            <button id="random" class="btn btn-success">Random question</button>
+                        </div>
+                    </div>
+                    <div>
+                        <hr />
+                        <table id="questionTable" class="table table-bordered table-hover">
+                            <thead>
+                                <tr>
+                                    @*<th><input type="checkbox" name="select_all" value="1" id="question-select-all"></th>*@
+                                    <th>S.No.</th>
+                                    <th>Content</th>
+                                    <th>Category</th>
+                                    <th>Level</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <br />
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@if (TempData["Success"] != null)
+{
+    <script type="text/javascript">
+            $.notify(@Html.Raw(Json.Encode(TempData["Success"])), "success");
+    </script>
+}
+
+@Html.Partial("_MessageBoxError");
+@if (!string.IsNullOrEmpty((string)TempData["Failure"]))
+{
+    <script type="text/javascript">
+            // !!!??? chỗ html.raw, ko hiểu sao ko nhận ViewData
+            $("#error-msgbox-modal #error-msg").text(@Html.Raw(Json.Encode(TempData["Failure"])));
+            $("#error-msgbox-modal #error-msg1").text('');
+            $('#error-msgbox-modal').modal('show');
+    </script>
+}
+@Html.Partial("_MessageBoxDelete");
+
+<script>
+    $(document).ready(function () {
+
+        $('#CategoryId').change(function () {
+            debugger;
+            var categoryId = $(this).val();
+            var examPaperId = $('#ExamPaperID').val();
+            var questionTable = $('#questionTable').DataTable({
+                "destroy": true,
+                "processing": true,
+                "ajax": {
+                    "url": "/Admin/Question/GetQuestionsByQuestionCategoryIdAndExamPaperId/?categoryId=" + categoryId + "&examPaperId=" + examPaperId,
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "QuestionID", "width" : "3%" },
+                    { "data": "Content", "width": "65%" },
+                    { "data": "CategoryName", "width": "24%" },
+                    { "data": "LevelName", "width": "5%" },
+                    {
+                        "data": "QuestionID", "width": "3%", "render": function (data) {
+                            return '<a class="add-question-row" data-questionid-val="' + data + '" href="javascript:void(0)"><span class="glyphicon glyphicon-plus"></span></a>';
+                        },
+                    }
+                ],
+                "fnRowCallback": function (nRow, aData, iDisplayIndex) {
+                    $("td:first", nRow).html(iDisplayIndex + 1);
+                    return nRow;
+                },
+                'columnDefs': [{
+                    'targets': 0,
+                    'searchable': false,
+                    'orderable': false,
+                    'className': 'dt-body-center',
+                    //'render': function (data, type, full, meta) {
+                    //    return '<input type="checkbox" class="add-all-question-checkbox" name="id[]" value="' + $('<div/>').text(data).html() + '">';
+                    //}
+                }],
+                'order': [[1, 'asc']]
+
+            });
+
+            setTimeout(function () {
+                $(".add-question-row").on("click",
+                    function (e) {
+                        //var ids = [];
+                        var id = $(this).data("questionid-val");
+                        var examPaperId = $('#ExamPaperID').val();
+                        debugger;
+                        //if (ids.indexOf(id) < 0) {
+                        //    ids.push(id);
+                        //}
+                        $.ajax({
+                            url: "/Admin/ExamPaperQuestion/Insert/",
+                            data: {
+                                examPaperId: examPaperId,
+                                questionId: id,
+                            },
+                            traditional: true,
+                            type: "POST",
+                            datatype: "json",
+                            error: function (status) {
+                                //$("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+                                //$("#error-msgbox-modal #error-msg1").text('');
+                                //$('#error-msgbox-modal').modal('show');
+                            },
+                            success: function (data) {
+                                if (data.status) {
+                                    debugger;
+                                    //$.notify("Add question into exam paper successfully!", "success");
+                                    $('#questionTable').DataTable().ajax.reload();
+                                    $('#questionExamTable').DataTable().ajax.reload();
+                                }
+                                //location.reload();
+                            }
+
+                        });
+                    });
+
+            }, 8000);
+        });
+
+        $('#random').on("click", function () {
+            var number = $('#RandomNumber').val();
+            var categoryId = $('#CategoryId').val();
+            var examPaperId = $('#ExamPaperID').val();
+            debugger;
+            $.ajax({
+                url: "/Admin/ExamPaperQuestion/RandomQuestionsByCategoryIdAndExamPaperIdAndNumber/?categoryId=" + categoryId + "&examPaperId=" + examPaperId + "&number=" + number,
+                traditional: true,
+                type: "GET",
+                datatype: "json",
+                error: function (status) {
+                    //$("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+                    //$("#error-msgbox-modal #error-msg1").text('');
+                    //$('#error-msgbox-modal').modal('show');
+                },
+                success: function (data) {
+                    if (data.status) {
+                        debugger;
+                        //$.notify("Random question into exam paper successfully!", "success");
+                        $('#questionTable').DataTable().ajax.reload();
+                        $('#questionExamTable').DataTable().ajax.reload();
+                    }
+                }
+
+            });
+
+        });
+
+        document.getElementById("RandomNumber").addEventListener('input', restrictToInteger);
+
+        function restrictToInteger() {
+            this.value = this.value.replace(/[^\d]/g, '');
+        }
+    });
+</script>

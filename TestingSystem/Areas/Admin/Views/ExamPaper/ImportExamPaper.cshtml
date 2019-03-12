@@ -1,0 +1,63 @@
+﻿@{
+
+                ViewBag.Title = "Import exam paper from excel file";
+                Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div class="col-sm-7">
+    <p style="font-size:24px">Import exam paper from excel file</p>
+    <a href="@Url.Action("ExamPaperTemplateFile","ExamPaper")">
+        <div class="btn btn-success"><span class="glyphicon glyphicon-save"></span>  Download Template Exam</div>
+    </a>
+    <hr />
+    <div style="font-size:14px">
+        <form class="form-horizontal" action="@Url.Action("ImportExamPaper","ExamPaper")" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label class="col-sm-3">Choose excel file:</label>
+                <div class="col-sm-4">
+                    <input type="file" required name="excelfile" accept=".xlsx, .xls" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-1"></label>
+                <label class="col-sm-3"></label>
+                <div class="col-sm-7">
+                    <p style="color:darkorange">@ViewBag.ThongBao</p>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom:200px">
+                <div class="col-sm-3">
+                    <button type="submit" class="btn btn-primary form-control">Save</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+</div>
+@section scripts{
+
+    @if (TempData["Success"] != null)
+    {
+        <script type="text/javascript">
+            $.notify(@Html.Raw(Json.Encode(TempData["Success"])), "success");
+        </script>
+    }
+
+    @Html.Partial("_MessageBoxError");
+    @if (!string.IsNullOrEmpty((string)TempData["Failure"]))
+    {
+        <script type="text/javascript">
+            $("#error-msgbox-modal #error-msg").text(@Html.Raw(Json.Encode(TempData["Failure"])));
+            $("#error-msgbox-modal #error-msg1").text('');
+            $('#error-msgbox-modal').modal('show');
+        </script>
+        //function xacNhan() {
+        //    onSubmit="return xacNhan()
+        //    return confirm("Bạn có muốn lưu lại ?");
+        //}
+    }
+}
+
+

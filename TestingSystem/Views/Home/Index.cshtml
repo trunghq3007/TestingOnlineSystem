@@ -1,31 +1,637 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Home Page";
 }
+<!-- Header Carousel -->
+<header id="myCarousel" class="main-header "style="z-index: -1; padding-bottom:50px">
+    <section class="slide-wrapper">
+      
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item slides active">
+                    <div class="slide-1">
+                        <img src="~/Assets/Image/slider1.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-2">
+                        <img src="~/Assets/Image/slider2.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-3">
+                        <img src="~/Assets/Image/slider3.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-4">
+                        <img src="~/Assets/Image/slider4.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-5">
+                        <img src="~/Assets/Image/slider5.png" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="fa fa-angle-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="fa fa-angle-right"></span>
+            </a>
+        </div>
+        <!-- Controls -->
+    </section>
+</header>
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+@*<div class="container">
+    <div class="row no-margin">
+        <div class="content-wrapper">
+            <div id="InfoHightlight">
+                <div class="all-master-hot">
+                    <div class="top-master-hot">
+                        <div class="col-xs-12 col-sm-12 col-md-12 pull-left no-padding">
+                            <h2 style="font-size: 20px;">Thông tin đào tạo</h2>
+                        </div>
+                    </div>
+                    <div class="col-md-12 no-padding">
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+                        <div class="theme-item col-xs-12 col-md-6 padding-left-0 padding-top-15">
+                            <div class="row" style="height: 170px;">
+                                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                                    <figure class="pull-left">
+                                        <img class="img-responsive" src="~/Assets/Image/44270184_127945954847306_6548503655157334016_n7cd8aa0c-716b-4264-9e46-7470db0814fb.jpg" alt="CMC TOEIC TEST 2018" style="padding: 0px !important; height: 170px;">
+                                    </figure>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12" style="padding-top: 10px; padding-right: 20px;">
+                                    <h4>
+                                        <a href="/">
+                                            CMC TOEIC TEST 2018
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        <i class="fa fa-calendar"></i> 22/10/2018 | <span style="text-transform: capitalize;"><i class="fa fa-user"></i> admin@cmc.com.vn</span>
+                                    </p><div class="hidden-xs hidden-md">
+                                        Đến hẹn lại lên, Người CMC lại nô nức nhau đăng ký thi Toiecevent- online. Chỉ mới một tuần...
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="mask-brg" href="/"></a>
+                            <div class="actions">
+                                <a class="view-all" href="javascript:void(0)" data-toggle="modal" data-target="#infoNav-22">CHI TIẾT</a>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="infoNav-22">
+                            <div class="container">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="">
+                                                <div class="well no-padding">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="line-height: 22px; font-size: 15px;">
+                                                            <div class="row hidden-md hidden-lg">
+                                                                <h1 class="text-center">CMC TOEIC TEST 2018</h1>
+                                                            </div>
+
+                                                            <div class="box-modal-content col-lg-12">
+                                                                <h3 class="hidden-xs hidden-sm">CMC TOEIC TEST 2018</h3>
+                                                                <p>
+                                                                    <i class="fa fa-calendar"></i> 22/10/2018 | <span style="text-transform: capitalize;"><i class="fa fa-user"></i> admin@cmc.com.vn</span>
+                                                                </p>
+                                                                <hr>
+                                                                <div class="padding-left-15">
+                                                                    <p class="text-justify padding-left-15 padding-right-20" style="line-height: 25px;">
+                                                                    </p><p style="margin-left:0cm; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Đến hẹn lại lên, Người CMC lại nô nức nhau đăng ký thi Toiecevent- online. Chỉ mới một tuần thôi con số đăng ký BTC nhận được đã lên đến gần 400 thí sinh.&nbsp; Để đồng hành cũng như tiếp thêm sức mạnh cho các bạn thí sinh, Trung tâm Phát triển Nguồn lực xin gửi đến các bạn một số mẹo làm bài thi hữu ích.</span></strong></span></span></p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Mẹo 1: Canh thời gian làm bài và làm bài theo thứ tự hợp ký để tiết kiệm thời gian </span></strong></span></span></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p style="margin-left:36pt; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">Cấu trúc đề: &nbsp;100 câu Listening ( 45 phút)</span></span></span></p>
+                                                                    <p style="margin-left:36pt; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 100 câu Reading&nbsp; (75 phút)</span></span></span></p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Mẹo 2 : Không dây dưa ở 1 câu quá lâu</span></strong><span style="color:black"> &nbsp;( khi bạn dừng lại quá lâu ở một câu so với thời gian cần dành cho câu đó bạn có thể để trống câu đó và quay lại làm sau. Hoặc chọn 1 đáp án và chuyển sang câu tiếp theo)</span></span></span></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Mẹo 3: Loại trừ những đáp án sai</span></strong></span></span></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Mẹo 4: Khi gặp từ &nbsp;vựng khó, đừng hoảng loạn mà hãy tìm gợi ý</span></strong></span></span></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Không nhất thiết chúng ta phải hiểu hết tất cả từ vựng mới làm được bài vì: </span></span></span></p>
+                                                                    <p style="margin-left:36pt; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Đôi khi từ vựng khó không ảnh hưởng đến việc chọn đáp án.</span></span></span></p>
+                                                                    <p style="margin-left:36pt; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Nếu từ vựng khó &nbsp;có liên quan đến câu hỏi, bạn có thể đoán nghĩa của chúng thông qua các từ ngữ và các câu văn xung quanh nó.</span></span></span></p>
+                                                                    <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">Cho nên, khi gặp từ mới hay từ lạ, bạn hãy cứ bình tĩnh nhìn xem xung quanh có gợi ý gì để bạn đoán nghĩa không nhé. Khi luyện thi Toeic, bạn hãy kiềm chế việc mở từ điển mỗi khi gặp từ lạ mà hãy cố gắng đoán xem từ đó có nghĩa là gì, và rồi bạn sẽ cảm thấy bất ngờ với khả năng đoán nghĩa của minh đấy.</span></span></span></p>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Mẹo 5: Cảnh giác các loại bẫy ( phát âm, từ đồng nghĩa – gần âm- đa nghĩa….)</span></strong></span></span></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <ul>
+                                                                        <li>
+                                                                            <p><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Mẹo 6: Không bỏ trống bất kỳ câu nào</span></strong></span></span></p>
+                                                                        </li>
+                                                                    </ul>
+                                                                    <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">Với một vài mẹo được đúc rút ra từ những kinh nghiệm thưc tế, rất mong sẽ là công cụ hữu ích giúp cho các bạn thí sinh đạt được kết quả cao trong kỳ thi.</span></span></span></p>
+                                                                    <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><span style="color:black">Để có cái nhìn rõ nét cũng như được nghe chia sẻ thực tế từ nhưng anh/chị đạt kết quả cao trong các kỳ thi trước đó, các tip ôn tập và làm bài thi hiệu quả, Trung tâm Phát triển Nguồn lực trân trọng kính mời các bạn đến tham dự Hội thảo” Kick off toeic” vào lúc 14:30 ngày 23/10/2018, tại Phòng 1,2 tầng 17, tòa CMC.</span></span></span></p>
+                                                                    <p style="margin-left:0cm; margin-right:0cm"><span style="font-size:12px"><span style="font-family:Tahoma,Geneva,sans-serif"><strong><span style="color:black">Chúc các bạn có một kỳ thi hiệu quả và đạt kết quả cao.</span></strong></span></span></p>
+                                                                    <p></p><hr>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                        </div>
+                        <div class="theme-item col-xs-12 col-md-6 padding-left-0 padding-top-15">
+                            <div class="row" style="height: 170px;">
+                                <div class="col-md-6 col-sm-6 col-xs-12 no-padding">
+                                    <figure class="pull-left">
+                                        <img class="img-responsive" src="~/Assets/Image/PREVIAHOJACARTAIMAGEN2890781d2-b372-491b-b17b-c4a76dbcd305.png" alt="Công văn hướng dẫn triển khai khóa đào tạo Quản trị rui ro trực tuyến của tập đoàn công nghê CMC" style="padding: 0px !important; height: 170px;">
+                                    </figure>
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12" style="padding-top: 10px; padding-right: 20px;">
+                                    <h4>
+                                        <a href="/">
+                                            Công văn hướng dẫn triển khai khóa đào tạo Quản...
+                                        </a>
+                                    </h4>
+                                    <p>
+                                        <i class="fa fa-calendar"></i> 07/09/2018 | <span style="text-transform: capitalize;"><i class="fa fa-user"></i> NTHAI1@CORP.CMC.COM.VN</span>
+                                    </p><div class="hidden-xs hidden-md">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="mask-brg" href="/"></a>
+                            <div class="actions">
+                                <a class="view-all" href="javascript:void(0)" data-toggle="modal" data-target="#infoNav-20">CHI TIẾT</a>
+                            </div>
+                        </div>
+                        <div class="modal fade" id="infoNav-20">
+                            <div class="container">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">×</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="">
+                                                <div class="well no-padding">
+                                                    <div class="row">
+                                                        <div class="col-md-12" style="line-height: 22px; font-size: 15px;">
+                                                            <div class="row hidden-md hidden-lg">
+                                                                <h1 class="text-center">Công văn hướng dẫn triển khai khóa đào tạo Quản trị rui ro trực tuyến của tập đoàn công nghê CMC</h1>
+                                                            </div>
+
+                                                            <div class="box-modal-content col-lg-12">
+                                                                <h3 class="hidden-xs hidden-sm">CÔNG VĂN HƯỚNG DẪN TRIỂN KHAI KHÓA ĐÀO TẠO QUẢN TRỊ RUI RO TRỰC TUYẾN CỦA TẬP ĐOÀN CÔNG NGHÊ CMC</h3>
+                                                                <p>
+                                                                    <i class="fa fa-calendar"></i> 07/09/2018 | <span style="text-transform: capitalize;"><i class="fa fa-user"></i> NTHAI1@CORP.CMC.COM.VN</span>
+                                                                </p>
+                                                                <hr>
+                                                                <div class="padding-left-15">
+                                                                    <p class="text-justify padding-left-15 padding-right-20" style="line-height: 25px;">
+                                                                    </p><p><img alt="" src="~/Assets/Image/CV972018vvTrienkhaiDaotaoQTRRtructuyentoanTapdoan9108e4e4-f3dd-4517-bd78-1fc353569ea8.pdf"><img alt="" src="~/Assets/Image/1d6028128-c74b-4cef-bf7c-f778620fd7a3.jpg"> <img alt="" src="~/Assets/Image/2c346ac0c-b27d-4bca-960e-7a19557a3088.jpg"></p>
+                                                                    <p></p><hr>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="ExaminationhightLight">
+                <div class="all-right-content-course-home-border">
+                </div>
+                <div class="all-master-hot">
+                    <div class="top-master-hot">
+                        <div class="col-xs-12 col-sm-12 col-sm-12 col-md-12 pull-left no-padding">
+                            <h2>Đợt thi nổi bật</h2>
+                        </div>
+                    </div>
+
+
+                    <div class="content-master-hot bxslider">
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                            <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_EntryTest C# Basic_Corp_18_01">
+                                <div class="col-md-3 no-padding ">
+                                    <div class="event-icon">
+                                        <h4>
+                                            <b>
+                                                Tháng 11
+                                            </b>
+                                            <span></span>
+                                        </h4>
+                                        <p class="exam-calendar-date text-center">
+                                            <b>13</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                    <a href="https://learn.cmc.com.vn/thong-tin-bai-thi/5164?cid=3">
+                                        <span class="exam-title">
+                                            Exam_EntryTest C# Basic_Corp_18_01
+                                        </span>
+                                    </a>
+
+                                    <div class="box-label-exam">
+                                        <div class="col-md-12 col-xs-12 no-padding">
+                                            <span>Đăng ký tự do</span>
+                                        </div>
+                                        <div class="hidden-sm no-padding margin-top-5">
+                                            <p class="col-md-6 col-xs-6 no-padding">
+                                                <i class="fa fa-calendar"></i>
+                                                13/11/2018
+                                            </p>
+                                            <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                <i class="fa fa-calendar"></i>
+                                                Không giới hạn
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                            <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_ TestJavaDay3_Corp_18_01">
+                                <div class="col-md-3 no-padding ">
+                                    <div class="event-icon">
+                                        <h4>
+                                            <b>
+                                                Tháng 10
+                                            </b>
+                                            <span></span>
+                                        </h4>
+                                        <p class="exam-calendar-date text-center">
+                                            <b>11</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                    <a href="https://learn.cmc.com.vn/thong-tin-bai-thi/5133?cid=3">
+                                        <span class="exam-title">
+                                            Exam_ TestJavaDay3_Corp_18_01
+                                        </span>
+                                    </a>
+
+                                    <div class="box-label-exam">
+                                        <div class="col-md-12 col-xs-12 no-padding">
+                                            <span>Đăng ký tự do</span>
+                                        </div>
+                                        <div class="hidden-sm no-padding margin-top-5">
+                                            <p class="col-md-6 col-xs-6 no-padding">
+                                                <i class="fa fa-calendar"></i>
+                                                11/10/2018
+                                            </p>
+                                            <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                <i class="fa fa-calendar"></i>
+                                                Không giới hạn
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                            <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="	Exam_ TestJavaDay2_Corp_18_01">
+                                <div class="col-md-3 no-padding ">
+                                    <div class="event-icon">
+                                        <h4>
+                                            <b>
+                                                Tháng 10
+                                            </b>
+                                            <span></span>
+                                        </h4>
+                                        <p class="exam-calendar-date text-center">
+                                            <b>09</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                    <a href="https://learn.cmc.com.vn/thong-tin-bai-thi/5132?cid=3">
+                                        <span class="exam-title">
+                                            Exam_ TestJavaDay2_Corp_18_01
+                                        </span>
+                                    </a>
+
+                                    <div class="box-label-exam">
+                                        <div class="col-md-12 col-xs-12 no-padding">
+                                            <span>Đăng ký tự do</span>
+                                        </div>
+                                        <div class="hidden-sm no-padding margin-top-5">
+                                            <p class="col-md-6 col-xs-6 no-padding">
+                                                <i class="fa fa-calendar"></i>
+                                                09/10/2018
+                                            </p>
+                                            <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                <i class="fa fa-calendar"></i>
+                                                Không giới hạn
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                            <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_ TestJavaDay1_Corp_18_01">
+                                <div class="col-md-3 no-padding ">
+                                    <div class="event-icon">
+                                        <h4>
+                                            <b>
+                                                Tháng 10
+                                            </b>
+                                            <span></span>
+                                        </h4>
+                                        <p class="exam-calendar-date text-center">
+                                            <b>08</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                    <a href="https://learn.cmc.com.vn/thong-tin-bai-thi/5131?cid=3">
+                                        <span class="exam-title">
+                                            Exam_ TestJavaDay1_Corp_18_01
+                                        </span>
+                                    </a>
+
+                                    <div class="box-label-exam">
+                                        <div class="col-md-12 col-xs-12 no-padding">
+                                            <span>Đăng ký tự do</span>
+                                        </div>
+                                        <div class="hidden-sm no-padding margin-top-5">
+                                            <p class="col-md-6 col-xs-6 no-padding">
+                                                <i class="fa fa-calendar"></i>
+                                                08/10/2018
+                                            </p>
+                                            <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                <i class="fa fa-calendar"></i>
+                                                Không giới hạn
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                            <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_Quiz SQL day 2_Corp_18_02">
+                                <div class="col-md-3 no-padding ">
+                                    <div class="event-icon">
+                                        <h4>
+                                            <b>
+                                                Tháng 09
+                                            </b>
+                                            <span></span>
+                                        </h4>
+                                        <p class="exam-calendar-date text-center">
+                                            <b>10</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                    <a href="https://learn.cmc.com.vn/thong-tin-bai-thi/4103?cid=3">
+                                        <span class="exam-title">
+                                            Exam_Quiz SQL day 2_Corp_18_02
+                                        </span>
+                                    </a>
+
+                                    <div class="box-label-exam">
+                                        <div class="col-md-12 col-xs-12 no-padding">
+                                            <span>Đăng ký tự do</span>
+                                        </div>
+                                        <div class="hidden-sm no-padding margin-top-5">
+                                            <p class="col-md-6 col-xs-6 no-padding">
+                                                <i class="fa fa-calendar"></i>
+                                                10/09/2018
+                                            </p>
+                                            <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                <i class="fa fa-calendar"></i>
+                                                Không giới hạn
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                            <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_Quiz SQL day 1_Corp_18_01">
+                                <div class="col-md-3 no-padding ">
+                                    <div class="event-icon">
+                                        <h4>
+                                            <b>
+                                                Tháng 09
+                                            </b>
+                                            <span></span>
+                                        </h4>
+                                        <p class="exam-calendar-date text-center">
+                                            <b>07</b>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                    <a href="https://learn.cmc.com.vn/thong-tin-bai-thi/1049?cid=3">
+                                        <span class="exam-title">
+                                            Exam_Quiz SQL day 1_Corp_18_01
+                                        </span>
+                                    </a>
+
+                                    <div class="box-label-exam">
+                                        <div class="col-md-12 col-xs-12 no-padding">
+                                            <span>Đăng ký tự do</span>
+                                        </div>
+                                        <div class="hidden-sm no-padding margin-top-5">
+                                            <p class="col-md-6 col-xs-6 no-padding">
+                                                <i class="fa fa-calendar"></i>
+                                                07/09/2018
+                                            </p>
+                                            <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                <i class="fa fa-calendar"></i>
+                                                Không giới hạn
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="ajax-modal-checkRegisterTypeExam" class="modal fade" tabindex="-1" data-width="500" style="margin-top: 0px">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                            <h4 class="modal-title"> <b>Thông báo</b></h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="" id="contentMessageRegisterExam">
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="modal-footer" style="border: none;">
+                                <button type="button" data-dismiss="modal" class="btn green">Đóng</button>
+                            </div>
+                        </div>
+                    </div>
+                    <script src="~/Assets/Image/nguoidung_dotthi_noibat_trangchu.js.tải xuống"></script>
+                    <script>
+/*script tooltip cho box listexam*/
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })</script>
+                </div>
+            </div>
+            <div id="CourseHighlights">
+                <div class="all-right-content-course-home-border">
+                </div>
+
+
+                <div class="all-master-hot">
+                    <div class="top-master-hot">
+                        <div class="col-xs-6 col-sm-6 col-sm-6 col-md-8 pull-left no-padding">
+                            <h2>
+                                Khóa học Nổi bật
+
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="content-master-hot" style="">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 box-info-home" aria-hidden="false">
+                            <div class="box-info-tab-home">
+                                <div class="box-info-tab-course  box-info-tab-course-home">
+                                    <div class="wish-list-course">
+                                        <i class="fa fa-bookmark " onclick="redirectToLogin()" style="cursor: pointer" data-toggle="tooltip" title="" data-original-title="Quan tâm"></i>
+                                    </div>
+                                    <a href="https://learn.cmc.com.vn/thong-tin-khoa-hoc/1180?cid=2">
+                                        <div class="all_info_course_img">
+                                            <img src="~/Assets/Image/images93c82c52-c7e7-458d-88aa-a8e8cf9e39e4.jpg">
+                                        </div>
+                                    </a>
+                                    <a href="https://learn.cmc.com.vn/thong-tin-khoa-hoc/1180?cid=2">
+                                        <h2>
+                                            Course Quản lý thời gian Corp_18_01
+                                        </h2>
+                                    </a>
+                                    <span class="price-home">
+                                        Đăng ký tự do
+
+                                    </span>
+                                    <div class="course-desciption" style="display:block;">
+                                    </div>
+                                </div>
+                                <div class="all_like_view">
+                                    <span class="pull-left margin-top-10 like-icon" id="totalLike_1180" onclick="redirectToLogin()">
+                                        <i class="fa fa-thumbs-up"></i> <span>24</span> người thích
+                                    </span>
+                                    <span class="pull-right margin-top-10">
+                                        473 <i class="fa fa-users green"></i>
+                                    </span>
+                                </div>
+                            </div>
+                            <a class="mask-brg" href="javascript:void(0)"></a>
+                            <div class="actions" style="display:block;">
+                                <a class="view-all" href="https://learn.cmc.com.vn/thong-tin-khoa-hoc/1180?cid=2">CHI TIẾT</a>
+                                <a class="view-learn" href="javascript:void(0)" onclick="redirectToLogin()">HỌC TẬP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div id="ajax-modal-CheckExistUserIdInCourse" class="modal fade" tabindex="-1" data-width="500" style="margin-top: 0px">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title"><b>Thông báo </b></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="">
+                                    Thành công
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="border: none;">
+                            <button type="button" data-dismiss="modal" class="btn green">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" id="urlCourseWishlist" value="https://learn.cmc.com.vn/Course/CourseWishList">
+                <input type="hidden" id="urlLike" value="https://learn.cmc.com.vn/Course/LikeCourse">
+                <input id="lblWishlist" name="lblWishlist" type="hidden" value="Quan tâm">
+                <input id="lblUnWishlist" name="lblUnWishlist" type="hidden" value="Bỏ quan tâm">
+                <input type="hidden" id="Mess_KhoaHocHetHanVaoHoc" value="Khóa học đã hết hạn">
+                <input type="hidden" id="Mess_KhoaHocChuaBatDau" value="Khóa học chưa bắt đầu">
+                <input type="hidden" id="Mess_KhoaHocHocVienChuaDuocDuyet" value="Khóa học này bạn chưa được kiểm duyệt">
+                <input type="hidden" id="Mess_KhoaHocChuaCoBaiGiang" value="Khóa học chưa có bài giảng.">
+                <input type="hidden" id="urlCheckOnLearn" value="https://learn.cmc.com.vn/Course/CheckOnLearn">
+                <input type="hidden" id="urlViewCourse" value="https://learn.cmc.com.vn/khong-gian-lop-hoc/">
+                <div id="ajax-modal" class="modal mess fade" tabindex="-1" data-width="500" style="background: #fff; left: 50%;height: 180px">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                        <h4 class="modal-title"><b>Thông báo </b></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="">
+                                    Hoàn thành
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer" style="border: none;">
+                            <button type="button" data-dismiss="modal" class="btn">Đóng</button>
+                        </div>
+                    </div>
+                </div>
+                <style>
+
+                    .modal.mess {
+                        top: 20%;
+                    }
+                </style>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</div>*@
+<input id="sbuh_username" type="hidden">
+<input type="hidden" id="sessionUserId">
+
