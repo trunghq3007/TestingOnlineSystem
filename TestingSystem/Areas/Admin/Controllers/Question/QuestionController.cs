@@ -72,12 +72,6 @@ namespace TestingSystem.Areas.Admin.Controllers.Question
             ViewBag.listQuestionDtos = listQuestionDtos;
             return View();
         }
-        //[ActionName("GetQuestions")]
-        //public ActionResult GetQuestions(QuestionFilterModel searchModel)
-        //{
-        //    var listQuestionDtos = questionService.GetAllQuestionDtos(searchModel);
-        //    return Json(new { data = listQuestionDtos.OrderBy(x => x.CategoryID) }, JsonRequestBehavior.AllowGet);
-        //}
         public ActionResult Search(string keySearch, QuestionFilterModel searchModel)
         {
             var listCategory = questionCategorySevice.GetAllQuestionCategoriesActive();

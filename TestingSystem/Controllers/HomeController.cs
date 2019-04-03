@@ -7,16 +7,18 @@
     /// <summary>
     /// Defines the <see cref="HomeController" />
     /// </summary>
-    public class HomeController : ClientController
+    public class HomeController : Controller
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="HomeController"/> class.
         /// </summary>
         /// <param name="userService">The userService<see cref="IUserService"/></param>
-        public HomeController(IUserService userService) : base(userService)
+        /// 
+        private readonly IUserService userService;
+        public HomeController(IUserService userService) 
         {
+            this.userService = userService;
         }
-
         /// <summary>
         /// The Index
         /// </summary>

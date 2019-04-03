@@ -21,7 +21,16 @@ namespace TestingSystem.Sevice
         int Delete(int id);
 
         int GetNumberOfQuestionByExamPaperId(int examPaperId);
-    }
+
+        IEnumerable<ExamPaper> ListExamPapersTop();
+
+        IEnumerable<ExamPaper> GetExamPaperByExamID(int examID);
+        IEnumerable<ExamPaper> SearchExamPapersIsActive(string keySearch);
+		//string GetCode(int idExamPaper);
+
+  //      ExamPaper FindCode(string code);
+        IEnumerable<ExamPaper> GetAllExamPapersIsActive();
+	}
     public class ExamPaperService : IExamPaperService
     {
         private readonly IExamPaperRepository examPaperRepository;
@@ -72,6 +81,40 @@ namespace TestingSystem.Sevice
         public int GetNumberOfQuestionByExamPaperId(int examPaperId)
         {
             return examPaperRepository.GetNumberOfQuestionByExamPaperId(examPaperId);
+        }
+
+		public IEnumerable<ExamPaper> ListExamPapersTop()
+		{
+			return examPaperRepository.ListExamPapersTop();
+		}
+
+        public IEnumerable<ExamPaper> GetExamPaperByExamID(int examID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<ExamPaper> SearchExamPapersIsActive(string keySearch)
+        {
+	        return examPaperRepository.SearchExamPapersIsActive(keySearch);
+        }
+
+        //public string GetCode(int idExamPaper)
+        //{
+        //    return examPaperRepository.GetCode(idExamPaper);
+        //}
+
+        //public ExamPaper FindCode(string code)
+        //{
+	       // return examPaperRepository.FindCode(code);
+        //}
+
+        //public IEnumerable<ExamPaper> GetExamPaperByExamID(int examID)
+        //{
+        //    return examPaperRepository.FindCode(code);
+        //}
+        public IEnumerable<ExamPaper> GetAllExamPapersIsActive()
+        {
+	        return examPaperRepository.GetAllExamPapersIsActive();
         }
     }
 }

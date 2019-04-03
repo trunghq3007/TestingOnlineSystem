@@ -1,0 +1,100 @@
+﻿@{
+    ViewBag.Title = "ShowExamPaperById";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutExamine.cshtml";
+    int i = 0, j = 0;
+    bool checkmulti = false;
+    string dcn = "dangcannhac";
+}
+<style>
+	.checkboxva {
+		float: left;
+	}
+
+	.myquestion {
+		padding-left: 20px;
+	}
+
+	.radiova {
+		float: left;
+	}
+
+	.myanswer {
+		padding-left: 10px;
+	}
+</style>
+<div>
+    @foreach (var item in ViewBag.ListQuestion)
+    {
+        i++;
+        j = i - 1;
+        dcn += j;
+        <div style="float:left; width: 55%;padding-left: 20px;">
+            <div><input type="checkbox" name="checkbox" value="@i" id="@dcn" class="checkboxva" /><p class="myquestion">Câu hỏi số @i</p></div>
+            <div>@item.Content</div>
+        </div>
+        dcn = "dangcannhac";
+        <div style="float:left; width: 43%;">
+            @foreach (var itemMulti in ViewBag.ListQuestionCheckMulti)
+            {
+                if (item.QuestionID == itemMulti.QuestionID)
+                {
+                    checkmulti = itemMulti.CheckMulti;
+                }
+            }
+            @if (checkmulti == true)
+            {
+                foreach (var item2 in ViewBag.ListAnswer)
+                {
+                    if (item.QuestionID == item2.QuestionID)
+                    {
+                        <p><input type="checkbox" name="@item2.QuestionID" value="@i" class="radiova" id="@item2.AnswerID" onclick="AddWS(this.id)"/><span class="myanswer">@item2.AnswerContent</span></p>
+                    }
+                }
+            }
+            else
+            {
+                foreach (var item2 in ViewBag.ListAnswer)
+                {
+                    if (item.QuestionID == item2.QuestionID)
+                    {
+                        <p><input type="radio" name="@item2.QuestionID" value="@i" class="radiova" id="@item2.AnswerID" onclick="AddWS(this.id)"/><span class="myanswer">@item2.AnswerContent</span></p>
+                    }
+                }
+            }
+            @{
+                checkmulti = false;
+            }
+        </div>
+        <div style="clear: both;">
+            <hr>
+        </div>
+    }
+    @Html.Hidden("RedirectTo", Url.Action("_ShowResult", "TestLogin", new { countQ = Enumerable.Count(ViewBag.ListQuestion), passscore = ViewBag.PassScore , title = ViewBag.TitleTest }))
+</div>
+<script>
+    $(document).ready(function () {
+        $('.radiova').click(function (e) {
+            var i = $(this).val();
+            $("#" + (i - 1)).addClass("datraloi");
+            localStorage.setItem("" + (i-1), "datraloi");
+        });
+        $('.checkboxva').click(function (e) {
+            var i = $(this).val();
+            if ($(this).prop('checked') == true) {
+                $("#" + (i - 1)).addClass("dangcannhac");
+                localStorage.setItem("dangcannhac" + (i-1), "dangcannhac");
+            } else {
+                $("#" + (i - 1)).removeClass("dangcannhac");
+            }
+        });
+    });
+</script>
+
+@*<script>
+    window.addEventListener("beforeunload", function (e) {
+        var confirmationMessage = "\o/";
+
+        (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+        alert("sdsa");                          //Webkit, Safari, Chrome
+    });
+</script>*@

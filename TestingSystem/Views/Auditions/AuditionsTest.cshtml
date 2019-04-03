@@ -1,0 +1,261 @@
+﻿
+@{
+	ViewBag.Title = "AuditionsTest";
+	Layout = null;
+}
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://learn.cmc.com.vn/login -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Trung tâm phát triển nguồn nhân lực CMC - Đăng Nhập</title>
+	<link href="~/Content/Root/font-awesome.min.css" rel="stylesheet" />
+	<link href="~/Content/Root/bootstrap.min.css" rel="stylesheet" />
+	<link href="~/Content/Root/login.min.css" rel="stylesheet" />
+	<link href="~/Content/Root/simple-line-icons.min.css" rel="stylesheet" />
+	<link href="~/Content/Root/components.css" rel="stylesheet" />
+	<link href="~/Content/Root/customize.css" rel="stylesheet" />
+	<style>
+
+
+		#search-query:focus {
+			border: 1px solid #20b2aa;
+		}
+
+		.col-lg-9 {
+			padding: 0;
+		}
+
+		.col-lg-3 {
+			padding: 0;
+		}
+
+		.row {
+			margin: 0 auto;
+			padding: 0;
+		}
+
+		.ColumnParent {
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+
+<!-- BEGIN PAGE LEVEL STYLES -->
+<!-- END PAGE LEVEL STYLES -->
+
+
+<body class="login">
+	<div id="divloader" style="display: none;"></div>
+	<div id="markloading" style="display: none;"></div>
+	<!-- BEGIN LOGO -->
+	<div class="logo">
+		<a href="https://learn.cmc.com.vn/login">
+			<img src="~/Content/Root/2017119141915274_logocmc.png" width="200" class="img-responsive" alt="" />
+		</a>
+	</div>
+	<!-- END LOGO -->
+	<!-- BEGIN LOGIN -->
+	<!--Main-->
+
+	<div id="form-main">
+		<div class="container">
+			<div class="row">
+				<h2>Nhập mã code của kỳ thi của bạn.</h2>
+				<div class="col-lg-12" id="ColumnParent">
+					<form action="/Auditions/MyAuditionsTest" method="post" class="col-lg-12">
+						<div class="col-lg-12" id="Column1">
+							<input type="text" name="code" class="form-control input-lg " placeholder="Nhập mã code của kỳ thi" id="search-query" style="margin-left: 10px" />
+						</div>
+						<div class="col-lg-12" id="Column2">
+							<button class="input-lg btn btn-primary" type="submit" style="margin-top: 20px; margin-left: 480px">
+								Nhập Mã
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!--O dang nhap-->
+		<div class="content">
+			<!-- BEGIN LOGIN FORM -->
+			<div class="login-form">
+				<h3 class="form-title">Đăng nhập tài khoản.</h3>
+				<input id="returnUrl" name="returnUrl" type="hidden" value="">
+				<input type="hidden" id="msgRequiredUsername" value="Hãy nhập tên người dùng!">
+				<input type="hidden" id="msgRequiredPassword" value="Hãy nhập mật khẩu!">
+				<input type="hidden" id="msgRequiredCaptcha" value="Hãy nhập captcha!">
+				<div class="form-group">
+					<!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
+					<label class="control-label visible-ie8 visible-ie9">Username</label>
+					<div class="input-icon">
+						<i class="fa fa-user"></i>
+						<input autocomplete="off" class="form-control input-icon placeholder-no-fix" id="UserName" name="UserName" placeholder="Tên tài khoản" required="True" type="text" value="">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label visible-ie8 visible-ie9">Password</label>
+					<div class="input-icon">
+						<i class="fa fa-lock"></i>
+						<input type="Password" autocomplete="off" class="form-control input-icon placeholder-no-fix" id="PassWord" name="PassWord" placeholder="Mật khẩu" required="True" value="">
+					</div>
+				</div>
+				<div class="form-actions">
+					<label class="checkbox">
+						<input type="checkbox" id="remember" class="margin-left-0" name="b_RememberMe_AgreePolicy" value="true">
+						<label for="remember" style="padding-left:15px;"><span></span>  Ghi nhớ tài khoản</label>
+					</label>
+					<div class="row">
+						<div class="col-md-12">
+							<button class="btn btn-primary submit-login" reauth="False" id="btnLogin" style="border-style: none;">Đăng nhập <i class="m-icon-swapright m-icon-white"> </i> </button>
+							<button id="btn-back" type="button" class="btn red btn-outline pull-right"> <i class="m-icon-swapleft m-icon-white"> </i> Quay lại </button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<input id="tokenLogin" value="ffLCyebZjCG8dUKDqBkX7bgd113ePwdLIsyGsb6Ci0dA9UqduW_YpWlX13RwORtq-pMXdLjOseEHPpDvqpbV9CuwXLzBdgNQAi-89tob6TvdhFPz_BUvx_09UmvUSXSIDsL8wg2:2tazzXrQn6HtYckH2gY6Cid0RYAGc-j5OVHCwczu3gJHZbeqmHgjCTBlNpLP-K32Ce6FrSE4qzryUWvmyjBk3ZegspjK283RzbpcwWKqYgQ4FczlkpU3HjFtGGa1UAQBFJcpiQ2" hidden="">
+
+	<!--Main-->
+	<div class="copyright"> 2019 © CMC Corporation. </div>
+	<!-- END LOGIN -->
+	<!-- BEGIN CORE PLUGINS -->
+	<script src="~/Content/Root/bundles_js_dangnhap.js"></script>
+	<script src="~/Content/Root/customize.js"></script>
+	<!-- END CORE PLUGINS -->
+	<!-- BEGIN PAGE LEVEL PLUGINS -->
+	<script src="~/Content/Root/jquery.backstretch.min.js"></script>
+	<!-- END PAGE LEVEL PLUGINS -->
+
+
+
+	<input type="hidden" id="hiddenUrlCommon" value="https://learn.cmc.com.vn">
+	<script type="text/javascript">
+		//Begin - hiện thông báo
+
+		var s_Mess = '';
+		if (s_Mess != '') {
+			bootbox.alert(s_Mess, function () {
+				s_Mess = '';
+			});
+		}
+
+		//End - hiện thông báo
+		// Xử lý đăng nhập bằng google app Begin
+		function GoogleApp_Click() {
+			window.location.href = 'https://learn.cmc.com.vn/Login/LoginGoogleApp';
+		};
+		//-- End
+
+		//Xử lý đăng nhập
+		$(document).ready(function () {
+			$("#btnLogin").click(function () {
+				//determine action
+				var reauth = $(this).attr("reauth");
+				var CheckEmail = $('#UserName').val().trim();
+				var Email = "";
+				//check required fields
+				if ($('#UserName').val().trim() == '') {
+					bootbox.alert($('#msgRequiredUsername').val());
+					return;
+				}
+				else if (!Email.test(CheckEmail)) {
+					bootbox.alert("Tên người dùng phải ở định dạng Email");
+					return;
+				}
+				else if ($('#PassWord').val().trim() == '') {
+					bootbox.alert($('#msgRequiredPassword').val());
+					return;
+					//} else if (reauth == 'False') {
+					//    if ($('#Capchar').val().trim() == '') {
+					//        bootbox.alert($('#msgRequiredCaptcha').val());
+					//        return;
+					//    }
+				}
+
+				var url;
+				if (reauth == 'False') {
+					url = '/Login/Authentication';
+				} else {
+					url = '/Login/ReAuthentication';
+				}
+
+				//post
+				//show loading overlay
+				$("#markloading").show();
+				$("#divloader").show();
+				$.ajax({
+					url: url,
+					headers: {
+						'RequestVerificationToken': 'Oax-F_pEDM4vtoeVmEgNPeMe0ydvq3slnCWxtP8vreCSNEYxsFez-p-b5I7ocdTMD6NhUDP70X_FfnPPVDmKWu_q7CwiuZzVJPvWPKhg1-0EpwvUms_dFprTQvVdPHGI-ckQbA2:D3ga71-fSlYdzNVCqhnsP7ZoXvdj6QT423C63ZA9P6rkW4k-UWT0XvM0qIkmIeYhXBLaDsV9NkhvbXBRB9LWJWWMitqRjCTZOt5eqsbH1mY3h8vXhSzmaxDymgsPN-dn0TRHxA2'
+					},
+					method: 'POST',
+					dataType: 'json',
+					data: {
+						user: $('#UserName').val(),
+						passwd: $('#PassWord').val(),
+						capchar: $('#Capchar').val(),
+						s_ImageUrl: '', //$('#s_ImageUrl').val(),
+						b_RememberMe_AgreePolicy: $('#remember').val(),
+						returnUrl: $('#returnUrl').val(),
+						type: localStorage.getItem("numtype")
+					},
+					success: function (data) {
+						//hide loading overlay
+						$("#markloading").hide();
+						$("#divloader").hide();
+
+						if (data.Status) {
+							window.location.href = data.RedirectUrl;
+						} else {
+							bootbox.alert(data.Message, function () {
+								$.ajax({
+									type: "GET",
+									url: '/Captcha/RegenCaptchaImage',
+									ContentType: "image/Jpeg",
+									success: function (img) {
+										$('#CaptchaImg').attr('src', img);
+									}
+								});
+							});
+						}
+					}
+				});
+			});
+
+			$('#PassWord').keypress(function (event) {
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if (keycode == '13') {
+					$("#btnLogin").click();
+				}
+			});
+
+			$('#Capchar').keypress(function (event) {
+				var keycode = (event.keyCode ? event.keyCode : event.which);
+				if (keycode == '13') {
+					$("#btnLogin").click();
+				}
+			});
+		});
+	</script>
+	@*<script src="~/Scripts/notify.min.js"></script>
+
+	@if (TempData["Success"] != null)
+	{
+		<script type="text/javascript">
+		$.notify(@Html.Raw(Json.Encode(TempData["Success"])), "success");
+		</script>
+	}
+
+	@if (!string.IsNullOrEmpty((string)TempData["Failure"]))
+	{
+		<script type="text/javascript">
+		$.notify(@Html.Raw(Json.Encode(TempData["Failure"])), "danger");
+		</script>
+	}*@
+</html>
+

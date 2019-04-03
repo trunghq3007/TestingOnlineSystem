@@ -1,5 +1,6 @@
 ﻿namespace TestingSystem.Areas.Admin.Controllers.ExamPaper
 {
+    using Newtonsoft.Json.Linq;
     using OfficeOpenXml;
     using Rotativa.MVC;
     using System;
@@ -66,6 +67,7 @@
         {
             var examPapers = new List<ExamPaper>();
             examPapers = examPaperService.GetAll().ToList();
+            ViewBag.CountExamPaper = examPapers.Count();
             foreach (var item in examPapers)
             {
                 item.NumberOfQuestion = examPaperService.GetNumberOfQuestionByExamPaperId(item.ExamPaperID);
@@ -179,6 +181,8 @@
                     {
                         examPaper.ModifiedDate = DateTime.Now;
                         examPaper.ModifiedBy = int.Parse(Session["Name"].ToString());
+						//lay so cau hoi
+						examPaper.NumberOfQuestion=examPaperService.GetNumberOfQuestionByExamPaperId(examPaper.ExamPaperID);
                         if (examPaperService.Edit(examPaper) > 0)
                         {
                             Success = "Update exam paper successfully!";
@@ -542,5 +546,20 @@
             return Json(new { data = listCategory }, JsonRequestBehavior.AllowGet);
         }
 
+        //public JsonResult _GetCode(int idExamPaper)
+        //{
+        //    var str = examPaperService.GetCode(idExamPaper);
+        //    if (str != "") {
+        //        return Json(str, JsonRequestBehavior.AllowGet);
+        //    }
+        //    else
+        //    {
+        //        return Json(null);
+        //    }
+        //}
+        //public JsonResult GetCodeExamPaper()
+        //{
+        //    GetCode();
+        //}
     }
 }

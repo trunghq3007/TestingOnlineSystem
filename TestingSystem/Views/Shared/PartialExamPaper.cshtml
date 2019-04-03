@@ -1,0 +1,88 @@
+﻿@model List<TestingSystem.Models.ExamPaper>
+<div id="ExaminationhightLight">
+    <div class="all-right-content-course-home-border">
+
+    </div>
+    <div class="all-master-hot">
+        <div class="top-master-hot">
+            <div class="col-xs-12 col-sm-12 col-sm-12 col-md-12 pull-left no-padding">
+                <h2>Đợt thi nổi bật</h2>
+            </div>
+
+        </div>
+        <div class="content-master-hot bxslider">
+            @foreach (var item in Model)
+            {
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                    <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_EntryTest C# Basic_Corp_18_01">
+                        <div class="col-md-3 no-padding ">
+                            <div class="event-icon">
+                                <h4>
+                                    <b>
+                                       @item.CreatedDate.Value.Month
+                                    </b>
+                                    <span></span>
+                                </h4>
+                                <p class="exam-calendar-date text-center">
+                                    <b> @item.CreatedDate.Value.Day</b>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                            <a href="@Url.Action("ShowExamPaperById", "TestNotLogin", new { idExamPaper = item.ExamPaperID})">
+                                <span class="exam-title">
+                                    @item.Title
+                                </span>
+                            </a>
+
+                            <div class="box-label-exam">
+                                <div class="col-md-12 col-xs-12 no-padding">
+                                    <span>Đăng ký tự do</span>
+                                </div>
+                                <div class="hidden-sm no-padding margin-top-5">
+                                    <p class="col-md-6 col-xs-6 no-padding">
+                                        <i class="fa fa-calendar"></i>
+                                        13/11/2018
+                                    </p>
+                                    <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                        <i class="fa fa-calendar"></i>
+                                        Không giới hạn
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+        </div>
+
+        <div id="ajax-modal-checkRegisterTypeExam" class="modal fade" tabindex="-1" data-width="500" style="margin-top: 0px">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h4 class="modal-title"> <b>Thông báo</b></h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="" id="contentMessageRegisterExam">
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer" style="border: none;">
+                    <button type="button" data-dismiss="modal" class="btn green">Đóng</button>
+                </div>
+            </div>
+        </div>
+        <script src="/root/giaodien/js_morong/dotthi/nguoidung/nguoidung_dotthi_noibat_trangchu.js"></script>
+        <script>
+    /*script tooltip cho box listexam*/
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+        </script>
+
+    </div>
+</div>

@@ -87,18 +87,13 @@
         public DbSet<Candidate> Candidates { get; set; }
 
         /// <summary>
-        /// Gets or sets the TestResults
-        /// </summary>
-        public DbSet<TestResult> TestResults { get; set; }
-
-        /// <summary>
-        /// Gets or sets the ManagerTests
-        /// </summary>
-        public DbSet<ManagerTest> ManagerTests { get; set; }
-
-        /// <summary>
         /// The Commit
         /// </summary>
+        public DbSet<ExamTest> ExamTests { get; set; }
+
+        public DbSet<TestResult> TestResults { get; set; }
+        public DbSet<CandidatesTest> CandidatesTests { get; set; }
+
         public virtual void Commit()
         {
             base.SaveChanges();
@@ -110,6 +105,9 @@
         /// <param name="modelBuilder">The modelBuilder<see cref="DbModelBuilder"/></param>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            Database.SetInitializer<TestingSystemEntities>(null);
+            base.OnModelCreating(modelBuilder);
+
             // Configtion
             modelBuilder
                 .Entity<User>()
@@ -119,15 +117,6 @@
                 .Entity<User>()
                 .HasIndex(u => u.Email)
                 .IsUnique();
-
-
-
-
-
-
-
-
-
 
             // Dual foreign key QuestionCategory
             modelBuilder.Entity<QuestionCategory>()

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Web.Mvc;
+    using TestingSystem.BaseController;
     using TestingSystem.DataTranferObject;
     using TestingSystem.Models;
     using TestingSystem.Sevice;
@@ -10,7 +11,7 @@
     /// <summary>
     /// Defines the <see cref="LoginController" />
     /// </summary>
-    public class _LoginController : Controller
+    public class _LoginController:Controller
     {
 
         /// <summary>
@@ -70,24 +71,33 @@
         [HttpPost]
         public ActionResult Login(UserLogin user)
         {
+
             if (String.IsNullOrEmpty(user.password))
                 return RedirectToAction("Login");
             int id = userService.Login(user);
+          
             if (id > 0)
             {
+                var UserName = userService.GetUserById(id);
+                TempData["Name"] = UserName.Name;
+                TempData.Keep();
+
                 //Success = "Sign in success";
                 bool AdminPage = false;
                 Session.Add("Name", id);
                 List<RoleAction> myRoleActions = GetAction();
+               
                 foreach (var item in myRoleActions)
                 {
                     if (item.Action.ActionName == "LoginAdminLayout")
                         AdminPage = true;
                 }
+               
                 if (AdminPage)
                     return RedirectToAction("Index", "HomeAdmin", new { Area = "Admin" });
                 else
                     return RedirectToAction("Index", "Home");
+
             }
             else
             {
@@ -102,6 +112,7 @@
                     return View();
                 }
             }
+          
         }
 
         /// <summary>

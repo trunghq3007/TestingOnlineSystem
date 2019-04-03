@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0025)https://learn.cmc.com.vn/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <link rel="shortcut icon" href="https://learn.cmc.com.vn/favicon.ico">
+    <!-- Head END -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Assets/HomeLayout/css-frontend-dkp-home.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top opaque-navbar" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand" style="padding-top: 5px;">
+                    <img class="irc_mi" src="~/Assets/Image/logo_vn_white.png">
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right" style="color: red;">
+                    <li class="active">
+                        <a class="dropdown-toggle" href="/">
+                            Trang Chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" href="/">
+                            Thi thử
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" href="/Exam/Index">
+                            Đợt Thi
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" href="/">
+                            Khóa học
+                        </a>
+                    </li>
+                    <li>
+                        @if (Session["Name"] != null)
+                        {
+                            <a href="/Account/logout" class="login-cmc"><i class="fa fa-user fa-fw"></i> Đăng xuất</a>
+                        }
+                        else
+                        {
+                            <a href="/login" class="login-cmc"><i class="fa fa-user fa-fw"></i> Đăng nhập</a>
+                        }
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    @RenderBody()
+
+
+    <!-- Footer BEGIN -->
+
+    @*<div id="info-support-home">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 col-md-3">
+                <div class="margin-top-15">
+                    <img src="~/Assets/Image/logo.png" width="60%" alt="e-Learning" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 info-support-home-contact">
+                <h2>Liên hệ với chúng tôi</h2>
+                <ul>
+                    <li>
+                        024.7106.5555 (ext:8610)
+                    </li>
+                    <li>
+                        training.corp@cmc.com.vn
+                    </li>
+                    <li class="hidden">
+                        http://digitaledu.vn
+                    </li>
+                    <li>
+                        Mon - Sun: 24/24
+                    </li>
+                    <li>
+                        Địa chỉ: Tầng 9, tòa nhà CMC, 11 Duy Tân, Cầu Giấy, Hà Nội
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-3 info-support-home-abountme">
+                <h2>Hỗ trợ</h2>
+                <ul>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/">Giới thiệu về công ty</a>
+                    </li>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/intro?id=2">Hướng dẫn sử dụng</a>
+                    </li>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/F-A-Q">Câu hỏi thường gặp</a>
+                    </li>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/lien-he?cid=6">Liên hệ - Góp ý</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="hidden-xs hidden-sm col-md-2 info-support-home-payment">
+                <h2>về CMC elearning</h2>
+                <ul>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/">Giới thiệu - sứ mệnh</a>
+                    </li>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/">Chính sách quyền riêng tư</a>
+                    </li>
+                    <li>
+                        <a href="https://learn.cmc.com.vn/">Điều khoản sử dụng </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- BEGIN FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <!-- BEGIN COPYRIGHT -->
+                <div class="col-md-12 col-sm-12  text-center">
+                    Copyright © CMC Corporation, 2019
+                </div>
+                <!-- END COPYRIGHT -->
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->*@
+    <input type="hidden" id="urlCourseWishlist" value="https://learn.cmc.com.vn/Course/CourseWishList">
+    <input type="hidden" id="urlViewMoreCourse" value="https://learn.cmc.com.vn/Course/ViewMoreCourse">
+    <input type="hidden" id="urlLikeCourse" value="https://learn.cmc.com.vn/Course/LikeCourse">
+    <input type="hidden" id="checkUserLogin">
+    <input id="lblWishlist" name="lblWishlist" type="hidden" value="Quan tâm">
+    <input id="lblUnWishlist" name="lblUnWishlist" type="hidden" value="Bỏ quan tâm">
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/myjquery.js"></script>
+    <script src="~/Assets/HomeLayout/jsfontend.js"></script>
+    <script>
+
+        $(function () {
+            $('#bs-example-navbar-collapse-1 li a').click(function () {
+                var login = $("#checkUserLogin").val();
+                if (!login.trim()) {
+                    $.each($('#bs-example-navbar-collapse-1 li'),
+                        function (evt) {
+                            $(this).removeClass();
+                        });
+                    $($(this).parent()).addClass('active');
+                } else {
+                    return;
+                }
+            });
+
+        });</script>
+
+
+    <div id="topcontrol" title="Scroll Back to Top" style="position: fixed; bottom: 10px; right: 10px; opacity: 0; cursor: pointer;"><img src="./learn.cmc.com.vn_files/up.png" style="width:40px; height:40px"></div>
+</body>
+
+</html>

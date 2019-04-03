@@ -1,300 +1,100 @@
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\AppLog.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.dll.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\csc.exe
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\csc.exe.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\csc.rsp
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\csi.exe
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\csi.rsp
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\System.AppContext.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\System.Collections.Immutable.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\System.IO.FileSystem.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\System.Reflection.Metadata.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\vbc.exe
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\vbc.exe.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\vbc.rsp
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\VBCSCompiler.exe
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\roslyn\VBCSCompiler.exe.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Antlr3.Runtime.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Autofac.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Autofac.Integration.Mvc.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\AutoMapper.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\EntityFramework.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\EntityFramework.SqlServer.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\log4net.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Microsoft.Web.Infrastructure.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Newtonsoft.Json.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Diagnostics.DiagnosticSource.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.ValueTuple.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Helpers.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Mvc.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Optimization.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Razor.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.WebPages.Deployment.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.WebPages.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.WebPages.Razor.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Common.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Data.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.DataTranferObject.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Models.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Sevice.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Abstractions.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Container.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Mvc.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\WebActivatorEx.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\WebGrease.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Common.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.DataTranferObject.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Data.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Data.dll.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Models.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\TestingSystem.Sevice.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Autofac.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Autofac.Integration.Mvc.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\AutoMapper.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\EntityFramework.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\EntityFramework.SqlServer.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\log4net.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.ValueTuple.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Helpers.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Mvc.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Razor.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.WebPages.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.WebPages.Deployment.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.WebPages.Razor.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Web.Optimization.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Newtonsoft.Json.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Abstractions.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Container.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Mvc.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Unity.Mvc.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Antlr3.Runtime.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\System.Diagnostics.DiagnosticSource.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\obj\Debug\TestingSystem.csprojAssemblyReference.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\obj\Debug\TestingSystem.csproj.CoreCompileInputs.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\obj\Debug\TestingSystem.csproj.CopyComplete
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\obj\Debug\TestingSystem.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\obj\Debug\TestingSystem.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\AppLog.config
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.dll.config
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\csc.exe
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\csc.exe.config
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\csc.rsp
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\csi.exe
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\csi.rsp
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\System.AppContext.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\System.Diagnostics.StackTrace.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\System.IO.FileSystem.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\System.IO.FileSystem.Primitives.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\vbc.exe
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\vbc.exe.config
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\vbc.rsp
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\VBCSCompiler.exe
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Antlr3.Runtime.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Autofac.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Autofac.Integration.Mvc.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\AutoMapper.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\EntityFramework.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\EntityFramework.SqlServer.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\EPPlus.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\log4net.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Newtonsoft.Json.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Rotativa.Core.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Rotativa.MVC.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Diagnostics.DiagnosticSource.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.ValueTuple.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Helpers.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Mvc.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Optimization.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Razor.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.WebPages.Deployment.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.WebPages.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.WebPages.Razor.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Common.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Data.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.DataTranferObject.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Models.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Sevice.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Abstractions.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Container.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Mvc.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\WebActivatorEx.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\WebGrease.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Common.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.DataTranferObject.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Data.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Data.dll.config
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Models.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\TestingSystem.Sevice.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Autofac.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Autofac.Integration.Mvc.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\AutoMapper.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\EntityFramework.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\EntityFramework.SqlServer.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\EPPlus.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\log4net.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.ValueTuple.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Helpers.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Mvc.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Razor.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.WebPages.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.WebPages.Deployment.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.WebPages.Razor.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Web.Optimization.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Newtonsoft.Json.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Abstractions.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Container.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Mvc.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Unity.Mvc.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Antlr3.Runtime.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\System.Diagnostics.DiagnosticSource.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\admin\Desktop\New folder\TestingSystem\obj\Debug\TestingSystem.csprojAssemblyReference.cache
-C:\Users\admin\Desktop\New folder\TestingSystem\obj\Debug\TestingSystem.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\New folder\TestingSystem\obj\Debug\TestingSystem.csproj.CopyComplete
-C:\Users\admin\Desktop\New folder\TestingSystem\obj\Debug\TestingSystem.dll
-C:\Users\admin\Desktop\New folder\TestingSystem\obj\Debug\TestingSystem.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\EPPlus.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Rotativa.Core.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\Rotativa.MVC.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem\bin\EPPlus.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\AppLog.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.dll.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\csc.exe
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\csc.exe.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\csc.rsp
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\csi.exe
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\csi.rsp
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.CSharp.Core.targets
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\System.AppContext.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\System.Collections.Immutable.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\System.Diagnostics.StackTrace.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\System.IO.FileSystem.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\System.IO.FileSystem.Primitives.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\System.Reflection.Metadata.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\vbc.exe
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\vbc.exe.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\vbc.rsp
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\VBCSCompiler.exe
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\roslyn\VBCSCompiler.exe.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Antlr3.Runtime.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Autofac.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Autofac.Integration.Mvc.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\AutoMapper.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\EntityFramework.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\EntityFramework.SqlServer.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\EPPlus.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\log4net.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Microsoft.Web.Infrastructure.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Newtonsoft.Json.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Rotativa.Core.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Rotativa.MVC.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Diagnostics.DiagnosticSource.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.ValueTuple.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Helpers.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Mvc.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Optimization.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Razor.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.WebPages.Deployment.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.WebPages.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.WebPages.Razor.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Common.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Data.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.DataTranferObject.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Models.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Sevice.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Abstractions.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Container.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Mvc.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\WebActivatorEx.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\WebGrease.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Common.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.DataTranferObject.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Data.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Data.dll.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Models.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\TestingSystem.Sevice.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Autofac.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Autofac.Integration.Mvc.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\AutoMapper.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\EntityFramework.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\EntityFramework.SqlServer.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\EPPlus.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\log4net.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.ValueTuple.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Helpers.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Mvc.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Razor.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.WebPages.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.WebPages.Deployment.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.WebPages.Razor.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Web.Optimization.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Newtonsoft.Json.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Abstractions.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Container.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Mvc.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Unity.Mvc.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Antlr3.Runtime.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\System.Diagnostics.DiagnosticSource.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\obj\Debug\TestingSystem.csprojAssemblyReference.cache
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\obj\Debug\TestingSystem.csproj.CoreCompileInputs.cache
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\obj\Debug\TestingSystem.csproj.CopyComplete
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\obj\Debug\TestingSystem.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem\obj\Debug\TestingSystem.pdb
+D:\TestingOnline1\TestingSystem\bin\AppLog.config
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.dll.config
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.pdb
+D:\TestingOnline1\TestingSystem\bin\roslyn\csc.exe
+D:\TestingOnline1\TestingSystem\bin\roslyn\csc.exe.config
+D:\TestingOnline1\TestingSystem\bin\roslyn\csc.rsp
+D:\TestingOnline1\TestingSystem\bin\roslyn\csi.exe
+D:\TestingOnline1\TestingSystem\bin\roslyn\csi.rsp
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\TestingOnline1\TestingSystem\bin\roslyn\System.AppContext.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\System.Collections.Immutable.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\System.IO.FileSystem.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\System.Reflection.Metadata.dll
+D:\TestingOnline1\TestingSystem\bin\roslyn\vbc.exe
+D:\TestingOnline1\TestingSystem\bin\roslyn\vbc.exe.config
+D:\TestingOnline1\TestingSystem\bin\roslyn\vbc.rsp
+D:\TestingOnline1\TestingSystem\bin\roslyn\VBCSCompiler.exe
+D:\TestingOnline1\TestingSystem\bin\roslyn\VBCSCompiler.exe.config
+D:\TestingOnline1\TestingSystem\bin\Antlr3.Runtime.dll
+D:\TestingOnline1\TestingSystem\bin\Autofac.dll
+D:\TestingOnline1\TestingSystem\bin\Autofac.Integration.Mvc.dll
+D:\TestingOnline1\TestingSystem\bin\AutoMapper.dll
+D:\TestingOnline1\TestingSystem\bin\EntityFramework.dll
+D:\TestingOnline1\TestingSystem\bin\EntityFramework.SqlServer.dll
+D:\TestingOnline1\TestingSystem\bin\EPPlus.dll
+D:\TestingOnline1\TestingSystem\bin\log4net.dll
+D:\TestingOnline1\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\TestingOnline1\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\TestingOnline1\TestingSystem\bin\Microsoft.Web.Infrastructure.dll
+D:\TestingOnline1\TestingSystem\bin\Newtonsoft.Json.dll
+D:\TestingOnline1\TestingSystem\bin\Rotativa.Core.dll
+D:\TestingOnline1\TestingSystem\bin\Rotativa.MVC.dll
+D:\TestingOnline1\TestingSystem\bin\System.Diagnostics.DiagnosticSource.dll
+D:\TestingOnline1\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.dll
+D:\TestingOnline1\TestingSystem\bin\System.ValueTuple.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.Helpers.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.Mvc.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.Optimization.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.Razor.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.WebPages.Deployment.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.WebPages.dll
+D:\TestingOnline1\TestingSystem\bin\System.Web.WebPages.Razor.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Common.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Data.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.DataTranferObject.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Models.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Sevice.dll
+D:\TestingOnline1\TestingSystem\bin\Unity.Abstractions.dll
+D:\TestingOnline1\TestingSystem\bin\Unity.Container.dll
+D:\TestingOnline1\TestingSystem\bin\Unity.Mvc.dll
+D:\TestingOnline1\TestingSystem\bin\WebActivatorEx.dll
+D:\TestingOnline1\TestingSystem\bin\WebGrease.dll
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Common.pdb
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.DataTranferObject.pdb
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Data.pdb
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Data.dll.config
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Models.pdb
+D:\TestingOnline1\TestingSystem\bin\TestingSystem.Sevice.pdb
+D:\TestingOnline1\TestingSystem\bin\Autofac.xml
+D:\TestingOnline1\TestingSystem\bin\Autofac.Integration.Mvc.xml
+D:\TestingOnline1\TestingSystem\bin\AutoMapper.xml
+D:\TestingOnline1\TestingSystem\bin\EntityFramework.xml
+D:\TestingOnline1\TestingSystem\bin\EntityFramework.SqlServer.xml
+D:\TestingOnline1\TestingSystem\bin\EPPlus.xml
+D:\TestingOnline1\TestingSystem\bin\log4net.xml
+D:\TestingOnline1\TestingSystem\bin\System.Runtime.CompilerServices.Unsafe.xml
+D:\TestingOnline1\TestingSystem\bin\System.ValueTuple.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.Helpers.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.Mvc.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.Razor.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.WebPages.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.WebPages.Deployment.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.WebPages.Razor.xml
+D:\TestingOnline1\TestingSystem\bin\System.Web.Optimization.xml
+D:\TestingOnline1\TestingSystem\bin\Newtonsoft.Json.xml
+D:\TestingOnline1\TestingSystem\bin\Unity.Abstractions.pdb
+D:\TestingOnline1\TestingSystem\bin\Unity.Container.pdb
+D:\TestingOnline1\TestingSystem\bin\Unity.Mvc.pdb
+D:\TestingOnline1\TestingSystem\bin\Unity.Mvc.xml
+D:\TestingOnline1\TestingSystem\bin\Antlr3.Runtime.pdb
+D:\TestingOnline1\TestingSystem\bin\System.Diagnostics.DiagnosticSource.xml
+D:\TestingOnline1\TestingSystem\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\TestingOnline1\TestingSystem\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\TestingOnline1\TestingSystem\obj\Debug\TestingSystem.csprojAssemblyReference.cache
+D:\TestingOnline1\TestingSystem\obj\Debug\TestingSystem.csproj.CoreCompileInputs.cache
+D:\TestingOnline1\TestingSystem\obj\Debug\TestingSystem.csproj.CopyComplete
+D:\TestingOnline1\TestingSystem\obj\Debug\TestingSystem.dll
+D:\TestingOnline1\TestingSystem\obj\Debug\TestingSystem.pdb

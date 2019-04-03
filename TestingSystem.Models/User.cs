@@ -29,8 +29,7 @@
         /// Gets or sets the UserName
         /// </summary>
         [Required]
-        [MaxLength(20)]
-        [Remote("_IsAvailableName", "User", AdditionalFields = "OldUserName", HttpMethod = "POST", ErrorMessage = "Đã tồn tại trong dữ liệu")]
+        [MaxLength(50)]
         public string UserName { get; set; }
 
         /// <summary>
@@ -74,7 +73,6 @@
         /// </summary>
         [Required]
         [MaxLength(50)]
-        [Remote("_IsAvailableEmail", "User", AdditionalFields = "OldEmail", HttpMethod = "POST", ErrorMessage = "Đã tồn tại trong dữ liệu")]
         public string Email { get; set; }
 
         /// <summary>
@@ -103,12 +101,7 @@
         /// Gets or sets the UserGroups
         /// </summary>
         public virtual ICollection<UserGroup> UserGroups { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Candidates
-        /// </summary>
-        public virtual ICollection<Candidate> Candidates { get; set; }
-
+    
         /// <summary>
         /// Gets or sets the QuestionCategoriesCreateUser
         /// </summary>
@@ -138,5 +131,7 @@
         /// Gets or sets the ExamPapersModifiedUser
         /// </summary>
         public virtual ICollection<ExamPaper> ExamPapersModifiedUser { get; set; }
+
+        public virtual  Candidate Candidate { get; set; }
     }
 }

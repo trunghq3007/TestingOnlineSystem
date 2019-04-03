@@ -1,0 +1,432 @@
+﻿@using TestingSystem.Models
+@model TestingSystem.Models.Exam
+@{
+	/**/
+
+	ViewBag.Title = "Edit Exam";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+	int stt = 0;
+	int count = 0;
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+<link href="~/Scripts/DatetimePicker/css/gijgo.min.css" rel="stylesheet" />
+<style>
+	.gj-icon {
+		position: absolute;
+		left: 191px;
+		margin-top: 5px;
+	}
+
+	#StartDate, #EndDate {
+		margin-right: 0;
+		width: 220px;
+		position: relative;
+		border: 1px solid #cccccc;
+	}
+
+	#Description {
+		height: 200px;
+		width: 776px;
+	}
+
+	.mydate {
+		font-size: 14px;
+		font-family: inherit;
+		padding-left: 11px;
+	}
+</style>
+<section class="content-header">
+	<h4>
+		Edit Exam
+	</h4>
+	<ol class="breadcrumb">
+		<li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Edit Exam</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="box box-info">
+		<div class="box-header with-border">
+			<h3 class="box-title">Edit Exam</h3>
+		</div><!-- /.box-header -->
+		<!-- form start -->
+		<form class="form-horizontal" novalidate role="form" action="@Url.Action("Edit", "Exams", new { area = "Admin" })" method="post">
+			@Html.AntiForgeryToken()
+			<div class="box-body">
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+				<input type="hidden" name="ExamID" value="@Model.ExamID" />
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label"> Name</label>
+					<div class="col-sm-6">
+						<input type="text" name="ExamName" id="ExamName" class="form-control" value="@Model.ExamName" onchange="CategoryCheckCreate()" />
+						@Html.ValidationMessageFor(model => model.ExamName, "", new { @class = "text-danger" })
+					</div>
+					<span id="Status"></span>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Start Date</label>
+					<div class="col-sm-6">
+						<input id="StartDate" name="StartDate" class="form-control mydate" value="@Model.StartDate.ToString("MM/dd/yyyy")" />
+						@Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">End Date</label>
+					<div class="col-sm-6">
+						<input id="EndDate" name="EndDate" class="form-control mydate" value="@Model.EndDate.ToString("MM/dd/yyyy")" />
+						@Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Status</label>
+					<div class="col-sm-6">
+						<select class="form-control" id="" name="Status" style="width: 222px;" required>
+							@if (@Model.Status == 1)
+							{
+								<option selected value="1">Public</option>
+								<option value="2">Private</option>
+
+							}
+							else
+							{
+								<option selected value="2">Private</option>
+								<option value="1">Public</option>
+							}
+						</select>
+						@Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Description</label>
+					<div class="col-sm-6">
+						<textarea name="Description" id="Description">@Model.Description</textarea>
+						@Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+
+			</div><!-- /.box-body -->
+			<div class="box-footer">
+				<a href="@Url.Action("Index","Exams")" class="btn-cancel">Cancel</a>
+				<button type="submit" class="btn btn-success pull-right" id="btnsub2">Save</button>
+			</div><!-- /.box-footer -->
+		</form>
+	</div><!-- /.box -->
+</section>
+
+<section class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="box">
+				<div class="clearfix"></div>
+			</div>
+			<!-- /.box-header -->
+			<div class="box-body">
+				@*@using (Html.BeginForm("Index", "Exams", FormMethod.Post))
+					{
+						<div class="row">
+							<div class="col-md-6" style="margin-bottom:15px">
+								<div class="input-group">
+									<input type="text" class="form-control" value="" name="KeySearch" placeholder="Key Search">
+									<span class="input-group-btn">
+										<button class="btn btn-default" type="submit">Search</button>
+									</span>
+								</div>
+							</div>
+							<div class="col-md-6">*@
+				<button class="btn btn-sm btn-success">
+					@Html.ActionLink("Update Test", "UpdateTest", new { id = Model.ExamID }, new { @style = "color: white;" })
+				</button>
+				<p></p>
+				@*</div>
+						</div>
+					}*@
+				<form action="@Url.Action("_RemoveTestInExams", "Exams")" id="form-delete" method="post">
+					<input type="hidden" name="examID" value=" @Model.ExamID" />
+					<table id="example2" class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)" /></td>
+								<th width="7%">Number</th>
+								<th>Name</th>
+								<th>StartDate</th>
+								<th>EndDate</th>
+								<th>CreatedBy</th>
+								<th width="12%">Pass Score</th>
+								<th style="width: 47px">Action</th>
+
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (Test item in ViewBag.listTestByExamID)
+							{
+								stt++;
+								<tr>
+									<td><input type="checkbox" id="checkone" name="ids" value="@item.TestID" onchange="changee(this);" /></td>
+									<td>@stt</td>
+									<td>
+										@item.TestName
+									</td>
+									<td>@item.StartDate</td>
+									<td>@item.EndDate</td>
+									@*<td>@item.CreatedBy</td>*@
+									@foreach (User user in ViewBag.listUser)
+									{
+										count++;
+										if (item.CreatedBy == user.UserId)
+										{
+											<td>@user.Name</td>
+											count = 0;
+											break;
+										}
+										if (@count >= ViewBag.countUser)
+										{
+											<td>Know Name</td>
+											count = 0;
+										}
+
+									}
+									<td>@item.PassingScore</td>
+
+									<td>
+										<a href='@Url.Action("_RemoveTestInExams", "Exams", new {ids = @item.TestID, examID = Model.ExamID})' onclick="return confirm('Are you sure you want to delete this exam paper?');">
+											<div class="btn  btn-sm btn-danger"><i class="fa fa-trash"></i></div>
+										</a>
+										<a href='@Url.Action("UpdateCandidates", "CandidatatesTest", new {id= @item.TestID})'>
+											<div class="btn  btn-sm btn-github"><i class="glyphicon glyphicon-user"></i></div>
+										</a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+					<a onclick="return confirm('Are you sure you want to delete multiple exam paper?');">
+						<button type="submit" class="btn btn-danger" id="btn-delete" disabled>Delete</button>
+					</a>
+				</form>
+			</div>
+			<!-- /.box-body -->
+		</div>
+		<!-- /.box -->
+	</div>
+	<!-- /.col -->
+	<!-- /.row -->
+</section>
+
+@*<div class="modal fade" id="ModalAddExams" tabindex="-1" role="dialog" aria-labelledby="ModalAddExams" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Add Exam Paper</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<table id="example2" class="table table-bordered table-hover">
+						<thead>
+							<tr>
+								<td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)" /></td>
+								<th width="7%">Number</th>
+								<th>Title</th>
+								<th>Questions</th>
+								<th>Time</th>
+								<th>Status</th>
+								<th width="12%">Create Date</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (ExamPaper item in ViewBag.listExamPaperByExamID)
+							{
+								stt++;
+								<tr>
+									<td><input type="checkbox" id="checkone" name="ids" value="@item.ExamPaperID" onchange="changee(this);" /></td>
+									<td>@stt</td>
+									<td>
+										@item.Title
+									</td>
+									<td>@item.NumberOfQuestion</td>
+									<td>@item.Time</td>
+									<td>@item.Status</td>
+									<td>@item.CreatedDate</td>
+									<td></td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal" id="AddCate">Add</button>
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>*@
+
+@* my *@
+<script language="JavaScript">
+	function checkstatus(id) {
+		if (id.checked == true)
+			id.value = true;
+		else
+			id.value = false;
+	}
+	function CategoryCheckCreate() {
+		$("#Status").html("Checking...");
+		$.post("@Url.Action("_CheckExamsAvailableCreate", "Exams")",
+			{
+				userdata: $("#ExamName").val()
+			},
+			function (data) {
+				if ($("#ExamName").val() == "") {
+					$("#Name-error").css("display", "none");
+				}
+				if (data == 0) {
+					$("#Status").html('<font color="Green">Available !. you can take it.</font>');
+					$("#ExamName").css("border-color", "Green");
+					$("#btnsub2").css("display", "block");
+				}
+				else {
+					$("#Status").html('<font color="Red">Exams Exists!</font>');
+					$("#ExamName").css("border-color", "Red");
+					$("#btnsub2").css("display", "none");
+				}
+			});
+	}
+</script>
+<script src="~/Scripts/DatetimePicker/JS/gijgo.min.js"></script>
+<script>
+	//
+	$('#StartDate').datepicker({
+		uiLibrary: 'bootstrap3'
+	});
+	$('#EndDate').datepicker({
+		uiLibrary: 'bootstrap3'
+	});
+</script>
+
+
+<script language="JavaScript">
+	function Check(source) {
+		checkboxes = document.getElementsByName('ids');
+		for (var i = 0, n = checkboxes.length; i < n; i++) {
+			checkboxes[i].checked = source.checked;
+		}
+		if (source.checked == true)
+			document.getElementById("btn-delete").disabled = false;
+		else
+			document.getElementById("btn-delete").disabled = true;
+	}
+
+	function changee(id) {
+		var j = 0;
+		checkboxes = document.getElementsByName('ids');
+		for (var i = 0, n = checkboxes.length; i < n; i++) {
+			if (checkboxes[i].checked == true)
+				j = 1;
+		}
+		if (j == 1) {
+			document.getElementById("btn-delete").disabled = false;
+		}
+		else {
+			document.getElementById("btn-delete").disabled = true;
+		}
+	}
+	function reload() {
+		window.location.href = "Exams/Edit/@Model.ExamID"
+	}
+
+</script>
+@section scripts{
+	<script>
+		$(document).ready(function () {
+			$("#delete-multiple").on("click",
+				function (e) {
+					var data = $('#example2').DataTable().$('input.checkone:checkbox:checked');
+					debugger;
+					if (data.length === 0) {
+						$("#error-msgbox-modal #error-msg").text('Please choose record to delete!');
+						$("#error-msgbox-modal #error-msg1").text('');
+						$('#error-msgbox-modal').modal('show');
+					} else {
+						var ids = [];
+						$.each(data, function (index, elem) {
+							var rowId = $(elem).val();
+							if (ids.indexOf(rowId) < 0) {
+								ids.push(rowId);
+							}
+						});
+						debugger;
+						$('#delete-msgbox-modal').modal('show').off('click', '#btn-delete').on('click', '#btn-delete', function (e) {
+							$.ajax({
+								url: "/Admin/Exams/RemoveExamPaperInExams/",
+								data: {
+									ids: ids
+								},
+								type: "Get",
+								datatype: "json",
+								traditional: true,
+								error: function (data) {
+									$("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+									$("#error-msgbox-modal #error-msg1").text('');
+									$('#error-msgbox-modal').modal('show');
+								},
+								success: function (data) {
+									if (data.status) {
+										debugger;
+										$.notify("Delete exams successfully!", "success");
+
+									}
+									location.reload();
+								}
+
+							});
+							e.stopPropagation();
+						});
+					}
+
+				});
+
+			$(".delete-exam").on("click",
+				function (e) {
+					debugger;
+					var ids = [];
+					var id = $(this).data("val-id");
+					if (ids.indexOf(id) < 0) {
+						ids.push(id);
+					}
+					$('#delete-msgbox-modal').modal('show').off('click', '#btn-delete').on('click', '#btn-delete', function (e) {
+						$.ajax({
+							url: "/Admin/Exams/RemoveExamPaperInExams/",
+							data: {
+								ids: ids
+							},
+							traditional: true,
+							type: "Get",
+							datatype: "json",
+							error: function (status) {
+								$("#error-msgbox-modal #error-msg").text('Something went wrong, please try again!');
+								$("#error-msgbox-modal #error-msg1").text('');
+								$('#error-msgbox-modal').modal('show');
+							},
+							success: function (data) {
+								if (data.status) {
+									debugger;
+									$.notify("Delete exams successfully!", "success");
+									//examPaperQuestionTable.ajax.reload();
+									location.reload
+
+								}
+
+							}
+
+						});
+						e.stopPropagation();
+					});
+				});
+		});
+	</script>
+}
+

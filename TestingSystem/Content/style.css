@@ -346,3 +346,68 @@ a#export-exam {
     a#export-exam .btn-success {
         margin-bottom: 8px;
     }
+
+.btn-exam-va {
+    border-collapse: collapse;
+    border: none;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 25px;
+    color: #fff;
+    background: red;
+    margin: 10px;
+}
+.btn-exam-va-2 {
+    border-collapse: collapse;
+    border: none;
+    width: 100px;
+    height: 36px;
+    line-height: 39px;
+    font-size: 25px;
+    color: #fff;
+    background: #3c8dbc;
+    margin: 9px;
+}
+.sidebar-collapse .btn-exam-va  {
+    display: none;
+}
+.sidebar-collapse .btn-exam-va-2 {
+    -ms-transform: translate(-260px,0); /* IE 9 */
+    -webkit-transform: translate(-260px,0); /* Safari */
+    transform: translate(-260px,0); /* Standard syntax */
+}
+.pad-left-va {
+    padding-left: 15px;
+}
+.hr-va {
+    margin-right: 15px;
+    border-top: 1px solid #ccc !important;
+}
+.pad-left-5-va {
+    padding-left: 5px;
+}
+.color-va {
+    color: #3c8dbc;
+}
+.blueva {
+    font-size: 30px;
+}
+.datraloi {
+    background-color: #3c8dbc !important;
+}
+.dangcannhac {
+    background-color: #ed7a1f !important;
+}
+.btn-test-online {
+    color: white;
+    border: none;
+    background: #337ab7;
+    padding: 8px 13px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 5px;
+}
+.btn-test-online a {
+    color: white;
+}

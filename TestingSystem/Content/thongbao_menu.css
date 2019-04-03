@@ -1,0 +1,157 @@
+﻿.dropdown-menu > li.external {
+    border-radius: 4px 4px 0 0;
+    display: block;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+    .dropdown-menu > li.external > h3 {
+        display: inline-block;
+        float: left;
+        font-size: 13px;
+        margin: 0;
+        padding: 0;
+    }
+
+.dropdown-menu > li.external {
+    background: #eaedf2 none repeat scroll 0 0;
+}
+
+    .dropdown-menu > li.external > h3 {
+        color: #62878f;
+    }
+
+
+
+.dropdown-menu .dropdown-menu-list > li > a {
+    border-bottom: 1px solid #eff2f6 !important;
+    color: #888888;
+}
+
+.dropdown-menu .dropdown-menu-list > li a .time {
+    font-size: 12px;
+    font-weight: 400;
+    max-width: 75px;
+    opacity: 0.7;
+    padding: 1px 5px;
+    text-align: right;
+}
+
+
+.dropdown-menu .dropdown-menu-list > li > a {
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 16px 15px 18px;
+    white-space: normal;
+}
+
+    .dropdown-menu .dropdown-menu-list > li > a .time {
+        background: #f1f1f1 none repeat scroll 0 0;
+    }
+
+.dropdown-menu .dropdown-menu-list > li a .details .label-icon {
+    margin-right: 10px;
+}
+
+
+
+.dropdown-notification .dropdown-menu {
+    max-width: 275px;
+    min-width: 160px;
+    width: 275px;
+    /*z-index: 9995;*/
+    margin-left: -105px;
+}
+
+li.dropdown-notification .dropdown-menu .dropdown-menu-list > li a .details {
+    overflow: hidden;
+}
+
+.scroller {
+    padding: 0px !important;
+}
+
+.dropdown-menu {
+    box-shadow: 2px 2px rgba(102, 102, 102, 0.1);
+}
+
+.dropdown-notification .dropdown-menu ul > li > a:hover {
+    background-color: #fcfcfc;
+    color: #262626;
+    text-decoration: none;
+}
+
+.dropdown-notification .dropdown-menu ul > li {
+    position: relative;
+}
+
+.dropdown-notification .dropdown-menu .active > a {
+    background-color: #f5f5f5;
+}
+
+.removenoti {
+    position: absolute;
+    top: 40%;
+    right: 6px;
+    cursor: pointer;
+}
+
+.dropdown-notification .dropdown-menu ul > li > a:hover, .dropdown-notification .dropdown-menu ul > li.open > a:hover {
+    background-color: #f5f5f5 !important;
+    color: #555;
+}
+
+.dropdown-notification .dropdown-menu ul > li.active > a {
+    border-bottom: none;
+    color: #555;
+    background: #f9f9f9;
+}
+
+.feeds li:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.feeds li {
+    background-color: #fcfcfc;
+}
+
+.icon2-earth {
+    margin-right: 10px;
+    height: 18px;
+    width: 18px;
+    color: #ffffff;
+}
+
+.dropdown > .dropdown-menu:before, .dropdown-toggle > .dropdown-menu:before, .btn-group > .dropdown-menu:before {
+    position: absolute;
+    top: -9px;
+    left: 115px;
+    right: auto;
+    display: inline-block !important;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ffffff;
+    border-left: 8px solid transparent;
+    content: '';
+}
+
+.dropdown > .dropdown-menu:after, .dropdown-toggle > .dropdown-menu:after, .btn-group > .dropdown-menu:after {
+    position: absolute;
+    top: -8px;
+    left: 116px;
+    right: auto;
+    display: inline-block !important;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #eaedf2;
+    border-left: 7px solid transparent;
+    content: '';
+}
+
+.hover-remove {
+    cursor: pointer;
+}
+
+.slimScrollBar {
+    background:#3dc2c5 !important;
+}

@@ -31,6 +31,8 @@ namespace TestingSystem.Data.Repositories
         IEnumerable<Question> GetAllQuestions();
         IEnumerable<Answer> GetAllAnswers();
 
+        
+
     }
     public class QuestionRepository : RepositoryBase<Question>, IQuestionRepository
     {

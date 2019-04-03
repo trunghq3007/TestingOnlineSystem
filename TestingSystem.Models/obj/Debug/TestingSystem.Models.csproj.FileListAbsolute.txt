@@ -1,40 +1,19 @@
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\TestingSystem.Models.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\TestingSystem.Models.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\Microsoft.Web.Infrastructure.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.Helpers.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.Mvc.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.Razor.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.WebPages.Deployment.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.WebPages.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.WebPages.Razor.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.Helpers.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.Mvc.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.Razor.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.WebPages.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.WebPages.Deployment.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\bin\Debug\System.Web.WebPages.Razor.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\obj\Debug\TestingSystem.Models.csprojAssemblyReference.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\obj\Debug\TestingSystem.Models.csproj.CoreCompileInputs.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\obj\Debug\TestingSystem.Models.csproj.CopyComplete
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\obj\Debug\TestingSystem.Models.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Models\obj\Debug\TestingSystem.Models.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\TestingSystem.Models.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\TestingSystem.Models.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.Helpers.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.Mvc.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.Razor.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.WebPages.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.Helpers.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.Mvc.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.Razor.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.WebPages.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\obj\Debug\TestingSystem.Models.csprojAssemblyReference.cache
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\obj\Debug\TestingSystem.Models.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\obj\Debug\TestingSystem.Models.csproj.CopyComplete
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\obj\Debug\TestingSystem.Models.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Models\obj\Debug\TestingSystem.Models.pdb
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\TestingSystem.Models.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\TestingSystem.Models.pdb
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.Helpers.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.Mvc.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.Razor.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.WebPages.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.WebPages.Razor.dll
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.Helpers.xml
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.Mvc.xml
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.Razor.xml
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.WebPages.xml
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\TestingOnline1\TestingSystem.Models\bin\Debug\System.Web.WebPages.Razor.xml
+D:\TestingOnline1\TestingSystem.Models\obj\Debug\TestingSystem.Models.csproj.CoreCompileInputs.cache
+D:\TestingOnline1\TestingSystem.Models\obj\Debug\TestingSystem.Models.csproj.CopyComplete
+D:\TestingOnline1\TestingSystem.Models\obj\Debug\TestingSystem.Models.dll
+D:\TestingOnline1\TestingSystem.Models\obj\Debug\TestingSystem.Models.pdb

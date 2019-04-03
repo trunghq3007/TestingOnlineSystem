@@ -26,6 +26,7 @@ namespace TestingSystem.Sevice
         IEnumerable<Answer> GetAnswersByQuestionId(int? id);
         IEnumerable<Question> GetAllQuestions();
         IEnumerable<Answer> GetAllAnswers();
+        
 
     }
     public class QuestionService : IQuestionService
@@ -121,5 +122,7 @@ namespace TestingSystem.Sevice
         {
             return questionRepository.GetAllQuestionDtos(searchModel);
         }
+
+        
     }
 }

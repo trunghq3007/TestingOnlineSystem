@@ -1,0 +1,29 @@
+﻿
+<div class="sidebar col-md-2 col-sm-5 no-padding no-padding-right menu-left-course-home">
+    <div class="searchbar">
+        <div class="search-box">
+            @*<form action="#">
+                <div class="input-group">
+                    <input type="text" placeholder="Tìm kiếm" class="form-control grey-cascade">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                    </span>
+                </div>
+            </form>*@
+        </div>
+    </div>
+    <div class="course-category" style="padding: 10px;">
+        <i class="fa fa-briefcase caticon"></i>
+        DANH MỤC KỲ THI
+    </div>
+    <div class="all-menu-listcatemnu">
+        <ul class="list-group margin-bottom-0 sidebar-menu">
+            @foreach (var item in ViewBag.ListExam)
+            {
+                <li style="padding: 10px;cursor: pointer;">
+                    <a href="@Url.Action("ListExamClient", "ExamClient", new { idExam = item.ExamID})">@item.ExamName</a>
+                </li>
+            }
+        </ul>
+    </div>
+</div>

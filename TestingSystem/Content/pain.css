@@ -1,0 +1,30 @@
+﻿.portlet-title {
+    background-color: #009CDE !important;
+}
+
+.portlet {
+    border-color: #009CDE !important;
+}
+
+.portlet-body .progress .progress-bar {
+    background-color: #009CDE;
+}
+
+.custom-table {
+    background: #fff;
+}
+
+    .custom-table thead tr {
+        color: #009CDE;
+        text-transform: uppercase;
+    }
+
+    .custom-table .green.btn {
+        background-color: #bfcad1;
+        color: #3e4d5c;
+    }
+
+        .custom-table .green.btn:hover {
+            background-color: #009CDE;
+            color: #fff;
+        }

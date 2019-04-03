@@ -1,0 +1,144 @@
+﻿
+@model TestingSystem.Models.Exam
+@{
+	ViewBag.Title = "Create new Exam";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@*<link href="~/Scripts/DatetimePicker/css/gijgo.min.css" rel="stylesheet" />*@
+<style>
+	.gj-icon {
+		position: absolute;
+		left: 191px;
+		margin-top: 5px;
+	}
+
+	#StartDate, #EndDate {
+		margin-right: 0;
+		width: 220px;
+		position: relative;
+		border: 1px solid #cccccc;
+	}
+
+	#Description {
+		height: 200px;
+		width: 776px;
+	}
+</style>
+<section class="content-header">
+	<h4>
+		Create Exam
+	</h4>
+	<ol class="breadcrumb">
+		<li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+		<li class="active">Create New Exam</li>
+	</ol>
+</section>
+<section class="content">
+	<div class="box box-info">
+		<div class="box-header with-border">
+			<h3 class="box-title">Create New Exam</h3>
+		</div><!-- /.box-header -->
+		<!-- form start -->
+		<form class="form-horizontal" novalidate role="form" action="@Url.Action("Create", "Exams", new { area = "Admin" })" method="post">
+			@Html.AntiForgeryToken()
+			<div class="box-body">
+				@Html.ValidationSummary(true, "", new { @class = "text-danger" })
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Exam Name</label>
+					<div class="col-sm-6">
+						<input type="text" name="ExamName" id="ExamName" class="form-control" onchange="CategoryCheckCreate()" />
+						<span class="check-input" style="color:red;display:none">Please input Exam Name!</span>
+					</div>
+					<span id="Status"></span>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Start Date</label>
+					<div class="col-sm-6">
+						<input name="StartDate" id="StartDate" type="date" class="form-control"/>
+						<span class="check-input" style="color:red;display:none">Please input </span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">End Date</label>
+					<div class="col-sm-6">
+						<input name="EndDate" id="EndDate" type="date" class="form-control" />
+						<span class="check-input" style="color:red;display:none">Please input Content Question!</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Status</label>
+					<div class="col-sm-6">
+						<select class="form-control" id="" name="Status" style="width: 222px;" required>
+							<option value="" selected disabled hidden>--Choice one--</option>
+							<option value="1">Public</option>
+							<option value="1">Private</option>
+						</select>
+						<span class="check-input" style="color:red;display:none">Please input Content Question!</span>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">Description</label>
+					<div class="col-sm-6">
+						<textarea name="Description" id="Description"></textarea>
+						@Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+					</div>
+				</div>
+
+
+			</div><!-- /.box-body -->
+			<div class="box-footer">
+				<a href="@Url.Action("Index","Exams")" class="btn-cancel">Cancel</a>
+				<button type="submit" class="btn btn-success pull-right" id="btnsub2">Save</button>
+			</div><!-- /.box-footer -->
+		</form>
+	</div><!-- /.box -->
+</section>
+<script language="JavaScript">
+    function checkstatus(id) {
+        if (id.checked == true)
+            id.value = true;
+        else
+            id.value = false;
+    }
+    function CategoryCheckCreate() {
+        $("#Status").html("Checking...");
+        $.post("@Url.Action("_CheckExamsAvailableCreate", "Exams")",
+	        {
+				userdata: $("#ExamName").val()
+	        },
+	        function (data) {
+				if ($("#ExamName").val() == "") {
+			        $("#Name-error").css("display", "none");
+		        }
+		        if (data == 0) {
+			        $("#Status").html('<font color="Green">Available !. you can take it.</font>');
+					$("#ExamName").css("border-color", "Green");
+			        $("#btnsub2").css("display", "block");
+		        }
+		        else {
+			        $("#Status").html('<font color="Red">Exams Exists!</font>');
+					$("#ExamName").css("border-color", "Red");
+			        $("#btnsub2").css("display", "none");
+		        }
+	        });
+    }
+</script>
+@*<script src="~/Scripts/DatetimePicker/JS/gijgo.min.js"></script>*@
+@*<script>
+		//
+		$('#StartDate').datepicker({
+			uiLibrary: 'bootstrap3'
+		});
+		$('#EndDate').datepicker({
+			uiLibrary: 'bootstrap3'
+		});
+	</script>*@
+@*<script src="~/Scripts/Question/ckeditor/ckeditor.js"></script>
+	<script src="~/Scripts/jquery-3.3.1.min.js"></script>*@
+@*<script>
+		$(document).ready(function () {
+			CKEDITOR.replace('Description');
+		});
+	</script>*@

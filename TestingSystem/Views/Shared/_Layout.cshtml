@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿
+<!DOCTYPE html>
 <!-- saved from url=(0025)https://learn.cmc.com.vn/ -->
 <html>
 <head>
@@ -34,13 +35,18 @@
                             Trang Chủ
                         </a>
                     </li>
+                    @{
+                        if (Session["Name"] == null)
+                        {
+                            <li>
+                                <a class="dropdown-toggle" href="/Auditions/AuditionsTest">
+                                    Thi
+                                </a>
+                            </li>
+                        }
+                    }
                     <li>
-                        <a class="dropdown-toggle" href="/">
-                            Thông tin
-                        </a>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" href="/">
+                        <a class="dropdown-toggle" href="/Admin/ExamClient/ListExamClient">
                             Đợt Thi
                         </a>
                     </li>
@@ -52,7 +58,33 @@
                     <li>
                         @if (Session["Name"] != null)
                         {
-                            <a href="/Account/logout" class="login-cmc"><i class="fa fa-user fa-fw"></i> Đăng xuất</a>
+                            <ul class="list-unstyled-nav list-inline pull-right">
+                                <li class="drop-menu-admin hidden-xs">
+                                    <a class="dropdown-toggle" data-toggle="dropdown">
+                                        <i class="fa fa-angle-down " style="color: #ffffff;"></i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li>
+                                            <a href="https://learn.cmc.com.vn/trang-ca-nhan/?cid=1">
+                                                <i class="fa fa-user"></i> Trang cá nhân
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="/Account/logout">
+                                                <i class="fa fa-key"></i> Đăng xuất
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="wrap-user hidden-xs">
+                                    <img alt="" class="img-circle" src="https://learn.cmc.com.vn/File/User/Avt/avatar-default.png"><a href="https://learn.cmc.com.vn/trang-ca-nhan/?cid=1">
+                                        <span>
+                                            @TempData["Name"]
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
                         }
                         else
                         {
@@ -60,6 +92,7 @@
                         }
                     </li>
                 </ul>
+
             </div>
             <!-- /.navbar-collapse -->
         </div>

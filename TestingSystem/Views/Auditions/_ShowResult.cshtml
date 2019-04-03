@@ -1,0 +1,175 @@
+﻿
+@{
+	ViewBag.Title = "_ShowResult";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/css_elearning_course_frontend.css" rel="stylesheet" />
+<link href="~/Content/xembaithinhanh.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.css" rel="stylesheet" />
+<link href="~/Content/font-awesome.min.css" rel="stylesheet" />
+<style type="text/css">
+	#Content {
+		margin-top: 5%;
+	}
+</style>
+<!-- BEGIN PAGE Content-->
+
+
+<div class="container" id="Content">
+	<div class="row section-page detail-science">
+		<div class="col-md-12 col-sm-12">
+			<div class="row ">
+				<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12  margin-top-20">
+					<ul class="breadcrumb">
+						<li><a href="http://localhost:56562/"><i class="fa fa-home"></i>Trang chủ</a></li>
+						<li><a href="http://localhost:56562/Exam/Index">Danh sách bài thi</a></li>
+						<li class="active">Kết quả</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row ">
+		<div class="col-md-12 col-sm-12">
+			<div class="portlet box blue-hoki tasks-widget">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-calendar"></i>Kết quả tổng kết
+					</div>
+					<div class="tools">
+						<a href="javascript:;" data-original-title="" title="" class="collapse"></a>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12">
+							<p class="h5" style="border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+								Bài thi: <b> @ViewBag.TestTitle</b>
+							</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<p class="h5">
+								Họ và tên: <b>Guest Member</b>
+							</p>
+							<p class="h5">
+								Email: <b>Guest Member </b>
+							</p>
+						</div>
+						<div class="col-md-6">
+
+							<div class="row">
+								<div class="col-md-6">
+									<p class="h5">
+
+
+										Kết quả tổng kết: <b>@ViewBag.Score/@ViewBag.CountQ</b>
+									</p>
+								</div>
+								<div class="col-md-6">
+									<p class="h5">
+
+										Xếp loại:
+
+										<b>
+											@if (ViewBag.CheckPass == true)
+											{
+												<span>Đỗ</span>
+											}
+											else
+											{
+												<span>Trượt</span>
+											}
+										</b>
+
+									</p>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<div class="portlet-body">
+				<div class="row">
+				</div>
+				<div class="row">
+				</div>
+				<div class="row">
+				</div>
+				<table class="responsive-table custom-table" id="sample_1">
+					<thead>
+						<tr>
+							<th style="text-align: center">
+								Điểm thi
+							</th>
+							<th>
+								Xếp loại
+							</th>
+							<th>
+								Trạng thái
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<b>@ViewBag.Score/@ViewBag.CountQ</b>
+							</td>
+
+							<td>
+								@if (ViewBag.CheckPass == true)
+								{
+									<span>Đỗ</span>
+								}
+								else
+								{
+									<span>Trượt</span>
+								}
+							</td>
+							<td>
+								Đã thi
+							</td>
+						</tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="~/Scripts/nguoidung_xembaithi.js"></script>
+<script src="~/Scripts/js_frontend_dkp_course.js"></script>
+<script src="~/Scripts/jquerymin.js"></script>
+<script src="~/Scripts/js_elearning_notify.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        $(".mobi-toggler").click(function (evt) {
+            var style = $(".header-navigation").attr("style");
+            if (style == undefined || style === "display:none !important") {
+                $(".header-navigation").removeAttr("style");
+                $(".header-navigation").attr("style", "display:block !important");
+                $(".header-navigation").show(600);
+            } else {
+                $(".header-navigation").removeAttr("style");
+                $(".header-navigation").hide(600);
+                $(".header-navigation").attr("style", "display:none !important");
+            }
+        });
+
+        $(window).on("resize", function (evt) {
+            if ($(this).width() > 1024) {
+                $(".header-navigation").attr("style", "display:block !important");
+            } else {
+                $(".header-navigation").attr("style", "display:none !important");
+            }
+        });
+    });
+</script>

@@ -1,0 +1,37 @@
+﻿@model TestingSystem.Models.Test
+@{
+	ViewBag.Title = "Show Info Test";
+	Layout = "~/Views/Shared/_LayoutAuditionTest.cshtml";
+}
+<div style="border: 1px solid #cccccc; background-color: white;padding: 50px 10px;">
+	<div><span style="color: blue; font-weight: bold;">Tên Bài Thi: </span>@Model.TestName</div><br />
+	<div>
+		<span style="color: blue;font-weight: bold;">Trạng Thái: </span>
+		@if (Model.IsActive == true)
+		{
+			<span>Sẵn sàng</span>
+		}
+		else
+		{
+			<span>Chưa sẵn sàng</span>
+		}
+	</div>
+	<br />
+	<div>
+		<span style="color: blue;font-weight: bold;">Ngày tạo: </span>@Model.CreateDate.ToString(string.Format("dd/MM/yyyy"))
+	</div>
+	<br><div>
+		<span style="color: blue;font-weight: bold;">Điểm qua: </span>@Model.PassingScore %
+
+	</div>
+	<button class="btn-test-online">
+		<a href="@Url.Action("ShowExamPaperById", "Auditions", new { idExamPaper = Model.ExamPaperID, idExam = ViewBag.IdExam, idTest = Model.TestID})">
+			Tiếp tục thi
+		</a>
+	</button>
+	<button class="btn-test-online" style="background: #f39c12;">
+		<a href="@Url.Action("ListExamClient", "ExamClient")">Quay lại</a>
+	</button>
+</div>
+
+

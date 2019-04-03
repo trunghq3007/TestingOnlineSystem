@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "ShowAllTestByDedicateId";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Content/pain.css" rel="stylesheet" />
+
+<div style="clear: both; height: 200px;">
+
+</div>
+
+<div class="container-fluid" id="">
+    <div class="col-md-1 col-sm-1"></div>
+    <div class="col-md-10 col-sm-10">
+        <div class="portlet box blue-hoki tasks-widget">
+            <div class="portlet-title">
+                <div class="caption">
+                    <i class="fa fa-calendar"></i>Các bài thi đã làm
+                </div>
+                <div class="tools">
+                    <a href="javascript:;" data-original-title="" title="" class="collapse"></a>
+                </div>
+            </div>
+            <div class="portlet-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="h5" style="border-bottom: 1px solid #ccc; padding-bottom: 10px;">
+                            Họ tên: <b> @ViewBag.NameDedicate</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="content-master-hot bxslider" style="padding-left: 20px;">
+                        @foreach (var item in ViewBag.ListReviewTestResult)
+                        {
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 box-info-home">
+                                <div class="list-exam" data-toggle="tooltip" data-placement="top" title="" data-original-title="Exam_EntryTest C# Basic_Corp_18_01">
+                                    <div class="col-md-3 no-padding ">
+                                        <div class="event-icon">
+                                            <h4>
+                                                <b>
+                                                    Tháng @item.dateTest.Month
+                                                </b>
+                                                <span></span>
+                                            </h4>
+                                            <p class="exam-calendar-date text-center">
+                                                <b>13</b>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-9 col-xs-9 margin-top-10 padding-left-15 pull-left" style="overflow: hidden">
+                                        
+                                        <span class="exam-title">
+                                            <a href="@Url.Action("ShowTestResultById", "ReviewTestResult", new { idTest = item.TestId, dateTest = @item.dateTest, turnTest = item.numRank})">@item.TestName</a>
+</span>
+
+                                        <div class="box-label-exam">
+                                            <div class="col-md-12 col-xs-12 no-padding">
+                                                
+                                            </div>
+                                            <div class="hidden-sm no-padding margin-top-5">
+                                                <p class="col-md-6 col-xs-6 no-padding">
+                                                    <i class="fa fa-calendar"></i>
+                                                    @item.dateTest.Month/@item.dateTest.Day/@item.dateTest.Year
+                                                </p>
+                                                <p class="col-md-6 col-xs-6 no-padding  padding-left-20 pull-left">
+                                                    <i class="fa fa-calendar"></i>
+                                                    Không giới hạn
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1 col-sm-1"></div>
+</div>
+
+

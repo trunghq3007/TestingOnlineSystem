@@ -1,0 +1,62 @@
+﻿@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_LayoutExamine.cshtml";
+	int i = 0;
+}
+<style>
+	.checkboxva {
+		float: left;
+	}
+
+	.myquestion {
+		padding-left: 20px;
+	}
+	.radiova {
+		float: left;
+	}
+	.myanswer {
+		padding-left: 19px;		
+	}
+</style>
+<div>
+	@foreach (var item in ViewBag.ListQuestion)
+	{
+		i++;
+		<div style="float:left; width: 55%;padding-left: 20px;">
+			<div><input type="checkbox" name="checkbox" value="@i" class="checkboxva" /> <p class="myquestion">Câu hỏi số @i</p>  </div>
+			<div>@item.Content</div>
+		</div>
+		<div style="float:left; width: 43%;">
+			@foreach (var item2 in ViewBag.ListAnswer)
+			{
+				if (item.QuestionID == item2.QuestionID)
+				{
+					<div>
+						<input type="radio" name="@item2.QuestionID" value="@i" class="radiova" id="@item2.AnswerID" style="margin-top: 5px" /><p class="myanswer">@item2.AnswerContent</p>
+					</div>
+				}
+			}
+		</div>
+		<div style="clear: both;">
+			<hr>
+		</div>
+	}
+</div>
+<script>
+	$(document).ready(function () {
+		$('.radiova').click(function (e) {
+			var i = $(this).val();
+			$("#" + (i - 1)).addClass("datraloi");
+		});
+		$('.checkboxva').click(function (e) {
+			var i = $(this).val();
+			if ($(this).prop('checked') == true) {
+				$("#" + (i - 1)).addClass("dangcannhac");
+			} else {
+
+				$("#" + (i - 1)).removeClass("dangcannhac");
+			}
+		});
+	});
+</script>
+

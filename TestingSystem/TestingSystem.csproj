@@ -182,17 +182,28 @@
     <Compile Include="App_Start\UnityMvcActivator.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\ActionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CandidatatesTestController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ExamClientController.cs" />
     <Compile Include="Areas\Admin\Controllers\ExamPaperQuestion\ExamPaperQuestionController.cs" />
     <Compile Include="Areas\Admin\Controllers\ExamPaper\ExamPaperController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ExamsController.cs" />
     <Compile Include="Areas\Admin\Controllers\GroupController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeAdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\QuestionCategory\QuestionCategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\Question\QuestionController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ReviewTestResultController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleActionController.cs" />
     <Compile Include="Areas\Admin\Controllers\RoleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TestController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TestLoginController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TestResultController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="BaseController\AdminControllter.cs" />
     <Compile Include="BaseController\ClientController.cs" />
+    <Compile Include="Controllers\AuditionsController.cs" />
+    <Compile Include="Controllers\ExamController.cs" />
+    <Compile Include="Controllers\ExamPaperController.cs" />
+    <Compile Include="Controllers\TestNotLoginController.cs" />
     <Compile Include="Controllers\_AccountController.cs" />
     <Compile Include="Controllers\ActionsController.cs" />
     <Compile Include="Controllers\_ErrorController.cs" />
@@ -6712,6 +6723,10 @@
     <Content Include="Assets\AdminLayout\plugins\timepicker\bootstrap-timepicker.min.js" />
     <Content Include="Assets\HomeLayout\css-frontend-dkp-home.css" />
     <Content Include="Assets\HomeLayout\jsfontend.js" />
+    <Content Include="Assets\Image\44270184_127945954847306_6548503655157334016_n7cd8aa0c-716b-4264-9e46-7470db0814fb.jpg" />
+    <Content Include="Assets\Image\logo.png" />
+    <Content Include="Assets\Image\logo_vn_white.png" />
+    <Content Include="Assets\Image\PREVIAHOJACARTAIMAGEN2890781d2-b372-491b-b17b-c4a76dbcd305.png" />
     <Content Include="Assets\Image\slider1.png" />
     <Content Include="Assets\Image\slider2.png" />
     <Content Include="Assets\Image\slider3.png" />
@@ -6724,10 +6739,15 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\checkicon.jpg" />
+    <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\loadding.css" />
+    <Content Include="Content\oclock.gif" />
     <Content Include="Content\PagedList.css" />
+    <Content Include="Content\pain.css" />
+    <Content Include="Content\question.png" />
     <Content Include="Content\QuestionUpload\Images\250px-Terry_Crews_by_Gage_Skidmore_5.jpg" />
     <Content Include="Content\QuestionUpload\Images\Chelsea_old_logo.png" />
     <Content Include="Content\QuestionUpload\Images\i.png" />
@@ -6738,10 +6758,25 @@
     <Content Include="Content\QuestionUpload\Images\skysports-david-luiz-emerson_4574973.jpg" />
     <Content Include="Content\QuestionUpload\Images\Team1 %281%29.png" />
     <Content Include="Content\remove.png" />
+    <Content Include="Content\Root\2017119141915274_logocmc.png" />
+    <Content Include="Content\Root\3.jpg" />
+    <Content Include="Content\Root\4.jpg" />
+    <Content Include="Content\Root\avatar-default.png" />
+    <Content Include="Content\Root\bootstrap.min.css" />
+    <Content Include="Content\Root\bundles_js_dangnhap.js" />
+    <Content Include="Content\Root\components.css" />
+    <Content Include="Content\Root\customize.css" />
+    <Content Include="Content\Root\customize.js" />
+    <Content Include="Content\Root\font-awesome.min.css" />
+    <Content Include="Content\Root\jquery.backstretch.min.js" />
+    <Content Include="Content\Root\login.min.css" />
+    <Content Include="Content\Root\simple-line-icons.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\style-export-to-pdf.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\stylenotfound.css" />
+    <Content Include="Content\thongbao_menu.css" />
+    <Content Include="Content\xembaithinhanh.css" />
     <Content Include="Controllers\Content\add.png" />
     <Content Include="Controllers\Content\bg.jpg" />
     <Content Include="Controllers\Content\bootstrap-theme.css" />
@@ -6762,6 +6797,10 @@
     <Content Include="Rotativa\wkhtmltopdf.exe" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\DatetimePicker\css\Annou.css" />
+    <Content Include="Scripts\DatetimePicker\css\gijgo.min.css" />
+    <Content Include="Scripts\DatetimePicker\JS\gijgo.min.js" />
+    <Content Include="Scripts\DatetimePicker\JS\jquery-3.3.1.min.js" />
     <Content Include="Scripts\myjquery.js" />
     <Content Include="Scripts\notify.min.js" />
     <Content Include="Scripts\Question\ckeditor\adapters\jquery.js" />
@@ -7701,6 +7740,32 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap.min.css.map" />
     <Content Include="Areas\Admin\Views\ExamPaper\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Test\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Exams\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Exams\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Exams\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ExamPaper\Code.cshtml" />
+    <Content Include="Areas\Admin\Views\Exams\UpdateTest.cshtml" />
+    <Content Include="Scripts\DatetimePicker\fonts\gijgo-material.eot" />
+    <Content Include="Scripts\DatetimePicker\fonts\gijgo-material.ttf" />
+    <Content Include="Scripts\DatetimePicker\fonts\gijgo-material.woff" />
+    <Content Include="Areas\Admin\Views\ExamClient\ListExamClient.cshtml" />
+    <Content Include="Areas\Admin\Views\TestLogin\ShowExamPaperById.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_LayoutExamine.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\PartialViewListExam.cshtml" />
+    <Content Include="Areas\Admin\Views\Test\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\TestLogin\_ShowResult.cshtml" />
+    <Content Include="Areas\Admin\Views\Test\Edit.cshtml" />
+    <Content Include="Scripts\danhsach.js" />
+    <Content Include="Content\css_elearning_course_frontend.css" />
+    <Content Include="Areas\Admin\Views\TestResult\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ReviewTestResult\ShowAllTestByDedicateId.cshtml" />
+    <Content Include="Areas\Admin\Views\ReviewTestResult\ShowTestResultById.cshtml" />
+    <Content Include="Areas\Admin\Views\CandidatatesTest\UpdateCandidates.cshtml" />
+    <Content Include="Areas\Admin\Views\TestLogin\ShowInfoTest.cshtml" />
+    <Content Include="Areas\Admin\Views\TestResult\Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\Test\_Detail.cshtml" />
+    <Content Include="Areas\Admin\Views\ExamClient\_CountUser.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -7747,6 +7812,25 @@
     <Content Include="Scripts\Question\ckeditor\samples\toolbarconfigurator\font\fontello.woff" />
     <Content Include="Scripts\Question\ckeditor\samples\toolbarconfigurator\lib\codemirror\LICENSE" />
     <Content Include="Scripts\Question\ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="Views\Exam\Index.cshtml" />
+    <Content Include="Views\Shared\PartialExamPaper.cshtml" />
+    <Content Include="Views\Shared\_LayoutExamine.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Shared\_AuditionLayout.cshtml" />
+    <Content Include="Views\Test\ShowExamPaperById.cshtml" />
+    <Content Include="Views\TestNotLogin\ShowExamPaperById.cshtml" />
+    <Content Include="Views\Auditions\AuditionsTest.cshtml" />
+    <Content Include="Views\Auditions\MyAuditionsTest.cshtml" />
+    <Content Include="Views\Shared\TestPartialView.cshtml" />
+    <Content Include="Views\Auditions\ShowExamPaperById.cshtml" />
+    <Content Include="Views\Shared\_LayoutAuditionTest.cshtml" />
+    <Content Include="Views\Auditions\_RepostTest.cshtml" />
+    <Content Include="Views\Auditions\_ShowResult.cshtml" />
+    <Content Include="Scripts\jquerymin.js" />
+    <Content Include="Scripts\js_elearning_notify.js" />
+    <Content Include="Scripts\js_frontend_dkp_course.js" />
+    <Content Include="Scripts\nguoidung_xembaithi.js" />
+    <Content Include="Views\Auditions\_ShowInfoTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -7755,6 +7839,7 @@
     <Folder Include="Areas\Admin\Models\Exam\" />
     <Folder Include="FileExcel\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\ExamPaper\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -7816,7 +7901,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56562</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56562/</IISUrl>
+          <IISUrl>http://localhost:56568/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

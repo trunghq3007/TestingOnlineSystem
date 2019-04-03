@@ -87,6 +87,23 @@ namespace TestingSystem
             container.RegisterType<IExamPaperService, ExamPaperService>();
             container.RegisterType<IExamPaperQuestionService, ExamPaperQuestionService>();
             container.RegisterType<IExamPaperQuestionRepository, ExamPaperQuestionRepository>();
-        }
-    }
+
+			//
+			container.RegisterType<IExamRepository, ExamRepository>();
+			container.RegisterType<IExamService, ExamService>();
+
+			container.RegisterType<ITestRepository, TestRepository>();
+			container.RegisterType<ITestService, TestService>();
+
+            container.RegisterType<ITestResultRepository, TestResultRepository>();
+            container.RegisterType<ITestResultService, TestResultService>();
+
+            container.RegisterType<ICandidateRepository, CandidateRepository>();
+            container.RegisterType<ICandidateService, CandidateService>();
+
+            container.RegisterType<ICandidatesTestService, CandidatesTestService>();
+            container.RegisterType<ICandidatesTestRepository, CandidatesTestRepository>();
+
+		}
+	}
 }

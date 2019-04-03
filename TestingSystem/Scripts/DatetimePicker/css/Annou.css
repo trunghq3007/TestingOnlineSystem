@@ -1,0 +1,13 @@
+﻿ input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        height: 160px;
+        width: 450px;
+    }
+
+    .in1 {
+        width: 200px;
+    }

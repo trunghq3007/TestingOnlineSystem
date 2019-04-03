@@ -1,0 +1,173 @@
+﻿
+@model TestingSystem.Models.Test
+@{
+    ViewBag.Title = "Create New Test";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/jqueryval")
+@*<link href="~/Scripts/DatetimePicker/css/gijgo.min.css" rel="stylesheet" />*@
+<style>
+    .gj-icon {
+        position: absolute;
+        left: 191px;
+        margin-top: 5px;
+    }
+
+    #StartDate, #EndDate {
+        margin-right: 0;
+        width: 220px;
+        position: relative;
+        border: 1px solid #cccccc;
+    }
+
+    #Description {
+        height: 200px;
+        width: 776px;
+    }
+    .mydate {
+        font-size: 14px;
+        font-family: inherit;
+        padding-left: 11px;
+    }
+    #passScore {
+        width: 222px;
+    }
+</style>
+<section class="content-header">
+    <h4>
+        Create Test
+    </h4>
+    <ol class="breadcrumb">
+        <li><a href=""><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Create New Test</li>
+    </ol>
+</section>
+<section class="content">
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Create New Test</h3>
+        </div><!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal" novalidate role="form" action="@Url.Action("Create", "Test", new { area = "Admin" })" method="post">
+            @Html.AntiForgeryToken()
+            <div class="box-body">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Test Name</label>
+                    <div class="col-sm-6">
+                        <input type="text" name="TestName" id="TestName" class="form-control" onchange="CategoryCheckCreate()" />
+                        @Html.ValidationMessageFor(model => model.TestName, "", new { @class = "text-danger" })
+                    </div>
+                    <span id="Status"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">Exam Paper</label>
+                    <div class="col-sm-6">
+                        @Html.DropDownListFor(model => model.ExamPaperID, null, new { @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Start Date</label>
+                    <div class="col-sm-6">
+                        <input name="StartDate" id="StartDate" class="form-control mydate" type="date" />
+                        @Html.ValidationMessageFor(model => model.StartDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">End Date</label>
+                    <div class="col-sm-6">
+                        <input name="EndDate" id="EndDate" class="form-control mydate" type="date" />
+                        @Html.ValidationMessageFor(model => model.EndDate, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Pass Score</label>
+                    <div class="col-sm-2">
+                        <input name="PassingScore" id="passScore" type="number" class="form-control" />
+                        @Html.ValidationMessageFor(model => model.PassingScore, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Description</label>
+                    <div class="col-sm-6">
+                        <textarea name="Description" id="Description"></textarea>
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Is Active</label>
+                    <div class="col-md-10 ">
+                        <div class="checkbox" style="margin-left:20px">
+                            @Html.EditorFor(model => model.IsActive)
+                            @Html.ValidationMessageFor(model => model.IsActive, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">Status</label>
+                    <div class="col-md-10 ">
+                        <div class="checkbox" style="margin-left:20px">
+                            @Html.EditorFor(model => model.Status)
+                            @Html.ValidationMessageFor(model => model.Status, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.box-body -->
+            <div class="box-footer">
+                <a href="@Url.Action("Index","Exams")" class="btn-cancel">Cancel</a>
+                <button type="submit" class="btn btn-success pull-right" id="btnsub2">Save</button>
+            </div><!-- /.box-footer -->
+        </form>
+    </div><!-- /.box -->
+</section>
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/Question/ckeditor/ckeditor.js"></script>
+<script src="~/Scripts/DatetimePicker/JS/gijgo.min.js"></script>
+<script>
+    $(document).ready(function () {
+        CKEDITOR.replace('Content');
+    });
+</script>
+
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('myCtrl', function ($scope) {
+        $scope.firstName = "John",
+        $scope.lastName = "Doe"
+    });
+</script>
+<script language="JavaScript">
+    function checkstatus(id) {
+        if (id.checked == true)
+            id.value = true;
+        else
+            id.value = false;
+    }
+    function CategoryCheckCreate() {
+        $("#Status").html("Checking...");
+        $.post("@Url.Action("_CheckExamsAvailableCreate", "Test")",
+	        {
+                userdata: $("#TestName").val()
+	        },
+	        function (data) {
+                if ($("#TestName").val() == "") {
+			        $("#Name-error").css("display", "none");
+		        }
+		        if (data == 0) {
+			        $("#Status").html('<font color="Green">Available !. you can take it.</font>');
+                    $("#TestName").css("border-color", "Green");
+			        $("#btnsub2").css("display", "block");
+		        }
+		        else {
+			        $("#Status").html('<font color="Red">Test Exists!</font>');
+                    $("#TestName").css("border-color", "Red");
+			        $("#btnsub2").css("display", "none");
+		        }
+	        });
+    }
+</script>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<TestingSystem.Models.Exam>
+
+@{
+    ViewBag.Title = "ListExamClient";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header id="myCarousel" class="main-header " style="z-index: -1; padding-bottom:50px">
+    <section class="slide-wrapper">
+
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item slides active">
+                    <div class="slide-1">
+                        <img src="~/Assets/Image/slider1.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-2">
+                        <img src="~/Assets/Image/slider2.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-3">
+                        <img src="~/Assets/Image/slider3.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-4">
+                        <img src="~/Assets/Image/slider4.png" class="img-responsive">
+                    </div>
+                </div>
+                <div class="item slides">
+                    <div class="slide-5">
+                        <img src="~/Assets/Image/slider5.png" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="fa fa-angle-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="fa fa-angle-right"></span>
+            </a>
+        </div>
+        <!-- Controls -->
+    </section>
+</header>
+@Html.Partial("PartialViewListExam")
+<div class="col-md-10 col-sm-7 no-padding menu-riight-course-home" style="padding: 20px !important;">
+    @foreach (var item in ViewBag.ListExamPaperInExam)
+    {
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 box-info-home">
+            <div class="list-exam" data-toggle="tooltip" data-html="true" data-placement="top" title="" data-original-title="Exam_TOEIC_CORP_19_01">
+                <div class="col-md-3 no-padding ">
+                    <div class="event-icon">
+                        <h4>
+                            <b>
+                                Tháng @item.CreateDate.Month
+                            </b>
+                            <span></span>
+                        </h4>
+                        <p class="exam-calendar-date text-center">
+                            <b>@item.CreateDate.Day</b>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-9 col-xs-9 margin-top-10">
+                    <a href="/thong-tin-bai-thi/5279?cid=3">
+                        <span class="exam-title">
+                            <a href="@Url.Action("ShowInfoTest", "TestLogin", new { idExamPaper = item.ExamPaperID, idExam = ViewBag.IdExam, idTest = item.TestID})">@item.TestName
+                        </span>
+                    </a>
+                    <div class="box-label-exam">
+                        <div class="col-md-6 col-xs-6 no-padding">
+                            <span>
+                                Không cho đăng ký
+                            </span>
+
+                        </div>
+                        <div class="col-md-6 col-xs-6 no-padding ">
+                            <div class="pull-right">
+                                <i class="fa fa-user"></i> @Html.Action("_CountUser", new { TestId = item.TestID })
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
+</div>
+<div style="clear: both;"></div>

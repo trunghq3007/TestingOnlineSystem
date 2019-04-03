@@ -24,11 +24,6 @@ namespace TestingSystem.Controllers
         /// <value>The failure.</value>
         public string Failure { set { TempData["Failure"] = ViewData["Failure"] = value; } }
 
-
-       
-
-
-
         /// <summary>
         /// Defines the userService
         /// </summary>

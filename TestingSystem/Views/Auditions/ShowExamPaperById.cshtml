@@ -1,0 +1,93 @@
+﻿﻿@{
+	ViewBag.Title = "ShowExamPaperById";
+	Layout = "~/Views/Shared/_LayoutAuditionTest.cshtml";
+	int i = 0;
+	bool checkmulti = false;
+	int countTrue = 0;
+	int x = 0;
+}
+<style>
+	.checkboxva {
+		float: left;
+	}
+
+	.myquestion {
+		padding-left: 20px;
+	}
+
+	.radiova {
+		float: left;
+	}
+
+	.myanswer {
+		padding-left: 10px;
+	}
+</style>
+<div>
+	@foreach (var item in ViewBag.ListQuestion)
+	{
+		i++;
+		<div style="float:left; width: 55%;padding-left: 20px;">
+			<div><input type="checkbox" name="checkbox" value="@i" class="checkboxva" /><p class="myquestion">Câu hỏi số @i</p></div>
+			<div>@item.Content</div>
+		</div>
+		<div style="float:left; width: 43%;">
+			@foreach (var itemMulti in ViewBag.ListQuestionCheckMulti)
+			{
+				if (item.QuestionID == itemMulti.QuestionID)
+				{
+					checkmulti = itemMulti.CheckMulti;
+				}
+			}
+			@if (checkmulti == true)
+			{
+				foreach (var item2 in ViewBag.ListAnswer)
+				{
+					if (item.QuestionID == item2.QuestionID)
+					{
+						<p><input type="checkbox" name="@item2.QuestionID" value="@i" class="radiova" id="@item2.AnswerID" /><span class="myanswer">@item2.AnswerContent</span></p>
+					}
+				}
+			}
+			else
+			{
+				foreach (var item2 in ViewBag.ListAnswer)
+				{
+					if (item.QuestionID == item2.QuestionID)
+					{
+						<p><input type="radio" name="@item2.QuestionID" value="@i" class="radiova" id="@item2.AnswerID" /><span class="myanswer">@item2.AnswerContent</span></p>
+					}
+				}
+			}
+			@{
+				checkmulti = false;
+			}
+		</div>
+		<div style="clear: both;">
+			<hr>
+		</div>
+	}
+	<input type="hidden" name="countTrue" id="countTrue" value="">
+	@if (TempData["countTrue"] != null)
+	{
+		@Html.Hidden("RedirectTo", Url.Action("_ShowResult", "Auditions", new { countQ = Enumerable.Count(ViewBag.ListQuestion), passscore = ViewBag.PassScore, title = ViewBag.TitleTest }))
+	}
+</div>
+<script>
+	$(document).ready(function () {
+		$('.radiova').click(function (e) {
+			var i = $(this).val();
+			$("#" + (i - 1)).addClass("datraloi");
+		});
+		$('.checkboxva').click(function (e) {
+			var i = $(this).val();
+			if ($(this).prop('checked') == true) {
+				$("#" + (i - 1)).addClass("dangcannhac");
+			} else {
+
+				$("#" + (i - 1)).removeClass("dangcannhac");
+			}
+		});
+	});
+</script>
+

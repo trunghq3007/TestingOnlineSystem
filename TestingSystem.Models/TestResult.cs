@@ -1,52 +1,31 @@
-﻿namespace TestingSystem.Models
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TestingSystem.Models
 {
-    using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
+	public class TestResult
+	{
+		[Key]
+		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+		public int TestResultID { get; set; }
+		[Required]
+		public int TestID { get; set; }
+		[Required]
+		public int CandidateID { get; set; }
+		[Required]
+		public string TestName { get; set; }
+		public string Description { get; set; }
+		[Required]
+		public DateTime CreatedDate { get; set; }
+		[Required]
+		public int Score { get; set; }
 
-    /// <summary>
-    /// Defines the <see cref="TestResult" />
-    /// </summary>
-    public class TestResult
-    {
-        /// <summary>
-        /// Gets or sets the TestResultID
-        /// </summary>
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int TestResultID { get; set; }
+		public int Turns { get; set; }
+		public int QuestionID { get; set; }
+		public int AnswerID { get; set; }
 
-        /// <summary>
-        /// Gets or sets the CandidatesID
-        /// </summary>
-        [ForeignKey("Candidates")]
-        public int CandidatesID { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Candidates
-        /// </summary>
-        public virtual Candidate Candidates { get; set; }
-
-        /// <summary>
-        /// Gets or sets the TestID
-        /// </summary>
-        [ForeignKey("Tests")]
-        public int TestID { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Tests
-        /// </summary>
-        public virtual Test Tests { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Score
-        /// </summary>
-        [Required]
-        public int Score { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Description
-        /// </summary>
-        [Required]
-        public string Description { get; set; }
-    }
+		public virtual Candidate Candidate { get; set; }
+		public virtual Test Test { get; set; }
+	}
 }

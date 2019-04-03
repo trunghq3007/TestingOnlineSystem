@@ -1,0 +1,198 @@
+﻿
+@using TestingSystem.Models
+@model IEnumerable<TestingSystem.Models.Candidate>
+
+@{
+	ViewBag.Title = "Update Candidates";
+	Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+	int i = 0;
+	bool check = false;
+	bool checkUrl = false;
+	int count = 0;
+	int stt = 0;
+}
+<style>
+	.nhleft {
+		margin-left: 10px;
+	}
+	#form-delete {
+		padding-bottom: 42px;
+	}
+
+	.btnaddmultiple {
+		margin-left: 19px;
+	}
+</style>
+<section class="content-header">
+	<h4>
+		Update Test:@ViewBag.Testname
+	</h4>
+	<ol class="breadcrumb">
+		<li><a href="@Url.Action("Index", "Test")"><i class="fa fa-dashboard"></i> Home</a></li>
+		<li><a href="@Url.Action("Edit", "Test", new { id = @ViewBag.TestID})"><i class="fa fa-dashboard"></i> Edit</a></li>
+		<li><a href="@Url.Action("UpdateCandidates", "CandidatatesTest", new { id = @ViewBag.TestID})"><i class="fa fa-dashboard"></i> Update Candidates</a></li>
+	</ol>
+</section>
+
+<section class="content">
+	<div class="box box-info">
+		<p></p>
+		@using (Html.BeginForm("UpdateCandidates", "CandidatatesTest", FormMethod.Post))
+		{
+			<div class="row nhleft">
+				<div class="col-md-6" style="margin-bottom: 15px">
+					<div class="input-group">
+						<input type="hidden" name="id" value="@ViewBag.TestID" />
+						<input type="text" class="form-control" value="@ViewBag.SearchString" name="keySearch" placeholder="Key search">
+						<span class="input-group-btn">
+							<button class="btn btn-default" type="submit">Tìm kiếm</button>
+						</span>
+					</div><!-- /input-group -->
+				</div>
+				@*<div class="col-md-6">
+						<a href="/Admin/User/Create">
+							<div class="btn btn-success">Thêm mới</div>
+						</a>
+
+					</div>*@
+			</div>
+		}
+		<!-- form start -->
+		<form action="@Url.Action("_AddOrDeleteMultiTestInExams", "CandidatatesTest")" id="form-delete" method="post">
+			<input type="hidden" name="testID" value="@ViewBag.TestID"/>
+			<table class="table nhleft">
+				<tr>
+					<td width="5%"><input name="all" id="checkall" type="checkbox" onchange="Check(this)"/></td>
+					<th width="7%">Number</th>
+					<th>@Html.DisplayNameFor(model => model.Users.UserName)</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Users.Name)
+					</th>
+					<th>
+						@Html.DisplayNameFor(model => model.Users.Email)
+					</th>
+					<th>Status</th>
+					<th>Action</th>
+				</tr>
+
+				@foreach (User item in @ViewBag.listUser)
+				{
+					stt++;
+					<tr>
+						<td><input type="checkbox" id="checkone" name="ids" value="@item.UserId" onchange="changee(this);"/></td>
+						<td>@stt</td>
+						<td>@item.UserName</td>
+						<td>
+							@item.Name
+						</td>
+						<td>
+							@item.Email
+						</td>
+						<td>
+							@if (ViewBag.CountlistCandidatesByTestID > 0)
+							{
+								checkUrl = true;
+								foreach (Candidate obj in @ViewBag.listCandidatesByTestID)
+								{
+									if (item.UserId == obj.Users.UserId)
+									{
+										check = true;
+										<img src="~/Content/add.png" alt="Sample Image" width="20px"/>
+										break;
+									}
+									else
+									{
+										i++;
+									}
+									if (i >= ViewBag.CountlistCandidatesByTestID)
+									{
+										<img src="~/Content/remove.png" width="20px"/>
+										i = 0;
+										check = false;
+										break;
+
+									}
+								}
+								i = 0;
+							}
+							else
+							{
+								<img src="~/Content/remove.png" width="20px"/>
+							}
+						</td>
+						<td>
+							@if (check == true && ViewBag.CountlistCandidatesByTestID > 0)
+							{
+
+								@*@Html.ActionLink("Remove", "RemoveCandidatesFromTest", "CandidatatesTest", new {ids = item.UserId, testID = ViewBag.TestID}, null)*@
+								<a href="@Url.Action( "RemoveCandidatesFromTest", "CandidatatesTest",  new { ids = item.UserId, testID = ViewBag.TestID }, null)" class="btn btn-google" onclick="return confirm('Are you sure you want to delete this candidate?');"><i class="glyphicon glyphicon-trash"></i></a>
+
+								check = false;
+							}
+							else if (check == false && ViewBag.CountTestInExam > 0)
+							{
+								@*@Html.ActionLink("Add", "AddCandidatesIntoTest", "CandidatatesTest", new {testID = ViewBag.TestID, candidatesID = item.UserId}, null)*@
+								<a href="@Url.Action( "AddCandidatesIntoTest", "CandidatatesTest", new {testID = ViewBag.TestID, candidatesID = item.UserId}, null)" class="btn btn-github " onclick="return confirm('Are you sure you want to add this test?');"><i class="glyphicon glyphicon-plus"></i></a>
+
+								check = true;
+							}
+							else
+							{
+								<a href="@Url.Action( "AddCandidatesIntoTest", "CandidatatesTest", new {testID = ViewBag.TestID, candidatesID = item.UserId}, null)" class="btn btn-github " onclick="return confirm('Are you sure you want to add this test?');"><i class="glyphicon glyphicon-plus"></i></a>
+								check = true;
+							}
+						</td>
+					</tr>
+				}
+
+			</table>
+			<a onclick="return confirm('Are you sure you want to add multiple candidates ?');">
+				<button type="submit" class="btn btn-success btnaddmultiple" id="btn-delete" name="addMultipleCandidates" value="submit1" disabled>Add Multiple </button>
+			</a>
+			<a onclick="return confirm('Are you sure you want to delete multiple candidates ?');">
+				<button type="submit" class="btn btn-danger" id="btn-delete1" name="deleteMultipleCandidates" value="submit2" disabled>Delete Multiple </button>
+			</a>
+			@*<a href="@Url.Action("Edit", "Exams", new { id = ViewBag.examID})"><button class="btn btn-github ">Back</button></a>*@
+			<a href="@Url.Action("Edit", "Test", new {Id = @ViewBag.TestID})" class="btn btn-github">Back</a>
+		</form>
+
+	</div><!-- /.box -->
+	@*<a href="@Url.Action("Edit", "Test", new { id = ViewBag.TestID})"><button class="btn btn-success">Back</button></a>*@
+</section>
+<script language="JavaScript">
+	function Check(source) {
+		checkboxes = document.getElementsByName('ids');
+		for (var i = 0, n = checkboxes.length; i < n; i++) {
+			checkboxes[i].checked = source.checked;
+		}
+		if (source.checked == true) {
+			document.getElementById("btn-delete").disabled = false;
+			document.getElementById("btn-delete1").disabled = false;
+		} else {
+			document.getElementById("btn-delete").disabled = true;
+			document.getElementById("btn-delete1").disabled = true;
+		}
+
+	}
+
+	function changee(id) {
+		var j = 0;
+		checkboxes = document.getElementsByName('ids');
+		for (var i = 0, n = checkboxes.length; i < n; i++) {
+			if (checkboxes[i].checked == true)
+				j = 1;
+		}
+		if (j == 1) {
+			document.getElementById("btn-delete").disabled = false;
+			document.getElementById("btn-delete1").disabled = false;
+		}
+		else {
+			document.getElementById("btn-delete").disabled = true;
+			document.getElementById("btn-delete1").disabled = true;
+		}
+	}
+	function reload() {
+		window.location.href = "Exams/UpdateTest/@ViewBag.examID ";
+	}
+
+</script>

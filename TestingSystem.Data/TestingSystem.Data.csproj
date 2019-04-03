@@ -81,17 +81,59 @@
     <Compile Include="Migrations\201903040845333_updatepassword.Designer.cs">
       <DependentUpon>201903040845333_updatepassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201903190721101_Duc.cs" />
+    <Compile Include="Migrations\201903190721101_Duc.Designer.cs">
+      <DependentUpon>201903190721101_Duc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903200141366_adfdafdf.cs" />
+    <Compile Include="Migrations\201903200141366_adfdafdf.Designer.cs">
+      <DependentUpon>201903200141366_adfdafdf.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903220221097_ducupdate.cs" />
+    <Compile Include="Migrations\201903220221097_ducupdate.Designer.cs">
+      <DependentUpon>201903220221097_ducupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903220244524_duc_update.cs" />
+    <Compile Include="Migrations\201903220244524_duc_update.Designer.cs">
+      <DependentUpon>201903220244524_duc_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903220442125_duc_update01.cs" />
+    <Compile Include="Migrations\201903220442125_duc_update01.Designer.cs">
+      <DependentUpon>201903220442125_duc_update01.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903260344344_pain.cs" />
+    <Compile Include="Migrations\201903260344344_pain.Designer.cs">
+      <DependentUpon>201903260344344_pain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903260646169_delete row score.cs" />
+    <Compile Include="Migrations\201903260646169_delete row score.Designer.cs">
+      <DependentUpon>201903260646169_delete row score.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903280201421_updateturnrow.cs" />
+    <Compile Include="Migrations\201903280201421_updateturnrow.Designer.cs">
+      <DependentUpon>201903280201421_updateturnrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201903290403321_createnewtablecandidatestest.cs" />
+    <Compile Include="Migrations\201903290403321_createnewtablecandidatestest.Designer.cs">
+      <DependentUpon>201903290403321_createnewtablecandidatestest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ActionRepository.cs" />
     <Compile Include="Repositories\AnswerRepository.cs" />
+    <Compile Include="Repositories\CandidateRepository.cs" />
+    <Compile Include="Repositories\CandidatesTestRepository.cs" />
+    <Compile Include="Repositories\ExamPaperExamRepository.cs" />
     <Compile Include="Repositories\ExamPaperQuestionRepository.cs" />
     <Compile Include="Repositories\ExamPaperRepository.cs" />
+    <Compile Include="Repositories\ExamRepository.cs" />
     <Compile Include="Repositories\GroupRepository.cs" />
     <Compile Include="Repositories\QuestionCategoryRepository.cs" />
     <Compile Include="Repositories\QuestionRepository.cs" />
     <Compile Include="Repositories\RoleActionRepository.cs" />
     <Compile Include="Repositories\RoleRepository.cs" />
+    <Compile Include="Repositories\TestRepository.cs" />
+    <Compile Include="Repositories\TestResultRepository.cs" />
     <Compile Include="Repositories\UserGroupRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
     <Compile Include="SeedData.cs" />
@@ -133,6 +175,33 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201903040845333_updatepassword.resx">
       <DependentUpon>201903040845333_updatepassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903190721101_Duc.resx">
+      <DependentUpon>201903190721101_Duc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903200141366_adfdafdf.resx">
+      <DependentUpon>201903200141366_adfdafdf.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903220221097_ducupdate.resx">
+      <DependentUpon>201903220221097_ducupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903220244524_duc_update.resx">
+      <DependentUpon>201903220244524_duc_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903220442125_duc_update01.resx">
+      <DependentUpon>201903220442125_duc_update01.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903260344344_pain.resx">
+      <DependentUpon>201903260344344_pain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903260646169_delete row score.resx">
+      <DependentUpon>201903260646169_delete row score.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903280201421_updateturnrow.resx">
+      <DependentUpon>201903280201421_updateturnrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201903290403321_createnewtablecandidatestest.resx">
+      <DependentUpon>201903290403321_createnewtablecandidatestest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

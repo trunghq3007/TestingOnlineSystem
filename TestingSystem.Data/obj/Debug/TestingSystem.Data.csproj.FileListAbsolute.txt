@@ -1,114 +1,47 @@
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\AppLog.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll.config
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Data.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\EntityFramework.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\log4net.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Common.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Models.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.Mvc.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.WebPages.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.Razor.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Common.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\TestingSystem.Models.pdb
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\EntityFramework.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\log4net.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.Mvc.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.WebPages.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.Razor.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.xml
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.csprojAssemblyReference.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.CodeFirst.resources
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Update252.resources
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.ModifiedTeam1.resources
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Modified13team1v10.resources
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.updatepassword.resources
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.GenerateResource.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CoreCompileInputs.cache
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CopyComplete
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.dll
-D:\TheAnh\Git\Mock-Project\Team02-theanh\TestingSystem.Data\obj\Debug\TestingSystem.Data.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\AppLog.config
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll.config
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Data.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\EntityFramework.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\log4net.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Common.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Models.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.Mvc.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.WebPages.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.Razor.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Common.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\TestingSystem.Models.pdb
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\EntityFramework.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\log4net.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.Mvc.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.WebPages.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.Razor.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.xml
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.csprojAssemblyReference.cache
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.CodeFirst.resources
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Update252.resources
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.ModifiedTeam1.resources
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Modified13team1v10.resources
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.updatepassword.resources
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.GenerateResource.cache
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CoreCompileInputs.cache
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CopyComplete
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.dll
-C:\Users\admin\Desktop\New folder\TestingSystem.Data\obj\Debug\TestingSystem.Data.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\AppLog.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll.config
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Data.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\log4net.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Common.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Models.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.Mvc.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.WebPages.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.Razor.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Common.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\TestingSystem.Models.pdb
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\log4net.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.Mvc.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.WebPages.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.Razor.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.xml
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csprojAssemblyReference.cache
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.CodeFirst.resources
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Update252.resources
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.ModifiedTeam1.resources
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Modified13team1v10.resources
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.updatepassword.resources
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.GenerateResource.cache
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CoreCompileInputs.cache
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CopyComplete
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.dll
-D:\TheAnh\Git\Mock-Project\OnlineTestingSystem\TestingSystem.Data\obj\Debug\TestingSystem.Data.pdb
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\AppLog.config
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll.config
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Data.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Data.pdb
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\EntityFramework.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\log4net.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Common.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Models.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.Mvc.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.WebPages.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.Razor.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Common.pdb
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.DataTranferObject.pdb
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\TestingSystem.Models.pdb
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\EntityFramework.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\log4net.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.Mvc.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.WebPages.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.WebPages.Razor.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.Razor.xml
+D:\TestingOnline1\TestingSystem.Data\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.csprojAssemblyReference.cache
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.CodeFirst.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Update252.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.ModifiedTeam1.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Modified13team1v10.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.updatepassword.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.Duc.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.adfdafdf.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.ducupdate.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.duc_update.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.duc_update01.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.pain.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.deleterowscore.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.updateturnrow.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.Migrations.createnewtablecandidatestest.resources
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.GenerateResource.cache
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CoreCompileInputs.cache
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.csproj.CopyComplete
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.dll
+D:\TestingOnline1\TestingSystem.Data\obj\Debug\TestingSystem.Data.pdb
